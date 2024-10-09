@@ -1,0 +1,935 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>12. Array Speedrun | WY CS</title>
+<meta name="description" content="Make create a two dimensional array of a given width and height filled in a snake pattern with 0 and 1 as described below.
+The snake pattern starts with a 1, then has longer and longer sequences of zeros separated by ones: 0 zeros, one, 1 zero, one, 2 zeroes, one, 3 zeroes, one, etc.
+11010010001000010000010000001 The array is filled in by rows, first going to the right, then going to the left, in the pattern shown by these &ldquo;ascii arrows&rdquo;:">
+<meta property="og:url" content="https://wy-cs.info/ap-cs/jm/ch12/12-array-ex-5-speedrun/">
+  <meta property="og:site_name" content="WY CS">
+  <meta property="og:title" content="12. Array Speedrun">
+  <meta property="og:description" content="Make create a two dimensional array of a given width and height filled in a snake pattern with 0 and 1 as described below.
+The snake pattern starts with a 1, then has longer and longer sequences of zeros separated by ones: 0 zeros, one, 1 zero, one, 2 zeroes, one, 3 zeroes, one, etc.
+11010010001000010000010000001 The array is filled in by rows, first going to the right, then going to the left, in the pattern shown by these “ascii arrows”:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ap-cs">
+    <meta property="article:published_time" content="2019-01-10T09:41:00-06:00">
+    <meta property="article:modified_time" content="2023-08-18T21:41:43-05:00">
+
+  <meta itemprop="name" content="12. Array Speedrun">
+  <meta itemprop="description" content="Make create a two dimensional array of a given width and height filled in a snake pattern with 0 and 1 as described below.
+The snake pattern starts with a 1, then has longer and longer sequences of zeros separated by ones: 0 zeros, one, 1 zero, one, 2 zeroes, one, 3 zeroes, one, etc.
+11010010001000010000010000001 The array is filled in by rows, first going to the right, then going to the left, in the pattern shown by these “ascii arrows”:">
+  <meta itemprop="datePublished" content="2019-01-10T09:41:00-06:00">
+  <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
+  <meta itemprop="wordCount" content="110">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="12. Array Speedrun">
+  <meta name="twitter:description" content="Make create a two dimensional array of a given width and height filled in a snake pattern with 0 and 1 as described below.
+The snake pattern starts with a 1, then has longer and longer sequences of zeros separated by ones: 0 zeros, one, 1 zero, one, 2 zeroes, one, 3 zeroes, one, etc.
+11010010001000010000010000001 The array is filled in by rows, first going to the right, then going to the left, in the pattern shown by these “ascii arrows”:">
+
+
+
+
+<link rel="preload" href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" as="style">
+<link href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">WY CS</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/ecs/"><span>ECS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/intermediate-cs/"><span>IntermediateCS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/ap-cs/"><span>AP CS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ai/"><span>AI</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ml/"><span>ML</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/nand/"><span>NAND</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/docs/"><span>Resources</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ap-cs-li">
+  <a href="/ap-cs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-ap-cs"><span class="">AP CS</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cshaskell-li">
+  <a href="/ap-cs/haskell/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskell"><span class="">Haskell</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellstart-li">
+  <a href="/ap-cs/haskell/start/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellstart"><span class="">Starting</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellstartreplit-li">
+  <a href="/ap-cs/haskell/start/replit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellstartreplit"><span class="">Replit</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellstartcodeworld-li">
+  <a href="/ap-cs/haskell/start/codeworld/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellstartcodeworld"><span class="">Code.World</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcheck-expect-li">
+  <a href="/ap-cs/haskell/check-expect/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcheck-expect"><span class="">Check Expects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch01-li">
+  <a href="/ap-cs/haskell/ch01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch01"><span class="">1. Intro</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch01ch01-reading-guide-li">
+  <a href="/ap-cs/haskell/ch01/ch01-reading-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch01ch01-reading-guide"><span class="">Ch01 Reading Guide</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch02-li">
+  <a href="/ap-cs/haskell/ch02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch02"><span class="">2. Starting Out</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02ch02-reading-guide-li">
+  <a href="/ap-cs/haskell/ch02/ch02-reading-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02ch02-reading-guide"><span class="">Chapter 2 Reading Guide</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-2a-li">
+  <a href="/ap-cs/haskell/ch02/cw-2a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-2a"><span class="">Haskell CW II.2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-3a-li">
+  <a href="/ap-cs/haskell/ch02/cw-3a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-3a"><span class="">Haskell CW II.3a</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-3b-li">
+  <a href="/ap-cs/haskell/ch02/cw-3b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-3b"><span class="">Haskell CW II.3b</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-4-li">
+  <a href="/ap-cs/haskell/ch02/cw-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-4"><span class="">Haskell CW II.4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-5-li">
+  <a href="/ap-cs/haskell/ch02/cw-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-5"><span class="">Haskell CW II.5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-6-li">
+  <a href="/ap-cs/haskell/ch02/cw-6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-6"><span class="">Haskell CW II.6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-b1-li">
+  <a href="/ap-cs/haskell/ch02/cw-b1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-b1"><span class="">Haskell CW II.B1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02cw-b2-li">
+  <a href="/ap-cs/haskell/ch02/cw-b2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02cw-b2"><span class="">Haskell CW II.B2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02hw-a2-li">
+  <a href="/ap-cs/haskell/ch02/hw-a2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02hw-a2"><span class="">Haskell HW 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02ch02-test-li">
+  <a href="/ap-cs/haskell/ch02/ch02-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02ch02-test"><span class="">Chapter 2 Test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02quiz-1-li">
+  <a href="/ap-cs/haskell/ch02/quiz-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02quiz-1"><span class="">Ch 02 Quiz 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02quiz-4-li">
+  <a href="/ap-cs/haskell/ch02/quiz-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02quiz-4"><span class="">Ch 02 Quiz 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch02ch02-summary-li">
+  <a href="/ap-cs/haskell/ch02/ch02-summary/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch02ch02-summary"><span class="">Chapter 2 Summary</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch03-li">
+  <a href="/ap-cs/haskell/ch03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch03"><span class="">3. Types and Typeclasses</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03ch03-reading-guide-haskell-li">
+  <a href="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03ch03-reading-guide-haskell"><span class="">Chapter 3 Reading Guide</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03ch03-hw1-li">
+  <a href="/ap-cs/haskell/ch03/ch03-hw1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03ch03-hw1"><span class="">Chapter 3 Problem Set</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03ch03-walkthrough-li">
+  <a href="/ap-cs/haskell/ch03/ch03-walkthrough/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03ch03-walkthrough"><span class="">Chapter 3 Walkthrough</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-01-li">
+  <a href="/ap-cs/haskell/ch03/daily-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-01"><span class="">Chapter 3 Daily 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-02-li">
+  <a href="/ap-cs/haskell/ch03/daily-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-02"><span class="">Chapter 3 Daily 02</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-03-li">
+  <a href="/ap-cs/haskell/ch03/daily-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-03"><span class="">Chapter 3 Daily 03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-04-li">
+  <a href="/ap-cs/haskell/ch03/daily-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-04"><span class="">Chapter 3 Daily 04</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-05-li">
+  <a href="/ap-cs/haskell/ch03/daily-05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-05"><span class="">Chapter 3 Daily 05 Problem Set</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-06-li">
+  <a href="/ap-cs/haskell/ch03/daily-06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-06"><span class="">Chapter 3 Daily 06</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03daily-07-li">
+  <a href="/ap-cs/haskell/ch03/daily-07/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03daily-07"><span class="">Chapter 3 Daily 07</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch03ch03-quiz-2-li">
+  <a href="/ap-cs/haskell/ch03/ch03-quiz-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch03ch03-quiz-2"><span class="">Chapter 3 Quiz 2</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch04-li">
+  <a href="/ap-cs/haskell/ch04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch04"><span class="">4. Syntax in Functions</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-reading-guide-li">
+  <a href="/ap-cs/haskell/ch04/ch04-reading-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-reading-guide"><span class="">Chapter 4 Reading Guide</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-01-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-01"><span class="">Chapter 4 Discussion I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-02-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-02"><span class="">Chapter 4 Discussion II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch04ch04-discussion-03-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch04ch04-discussion-03"><span class="">Chapter 4 Discussion III</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-03ch04disc03tests-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-03/ch04disc03tests/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-03ch04disc03tests"><span class="">Test cases for Chapter 4 Discussion III</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-04-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-04"><span class="">Chapter 4 Discussion IV</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-05-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-05"><span class="">Chapter 4 Discussion V</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-discussion-06-li">
+  <a href="/ap-cs/haskell/ch04/ch04-discussion-06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-discussion-06"><span class="">Chapter 4 Discussion VI</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-problemset-li">
+  <a href="/ap-cs/haskell/ch04/ch04-problemset/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-problemset"><span class="">Chapter 4 Problem Set II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-quiz-c-li">
+  <a href="/ap-cs/haskell/ch04/ch04-quiz-c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-quiz-c"><span class="">Chapter 4 Quiz C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch04ch04-summary-li">
+  <a href="/ap-cs/haskell/ch04/ch04-summary/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch04ch04-summary"><span class="">Chapter 4 Summary</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch05-li">
+  <a href="/ap-cs/haskell/ch05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch05"><span class="">5. Recursion</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch05ch05-reading-guide-li">
+  <a href="/ap-cs/haskell/ch05/ch05-reading-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch05ch05-reading-guide"><span class="">Chapter 5 Reading Guide</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch05ch05-daily-2-li">
+  <a href="/ap-cs/haskell/ch05/ch05-daily-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch05ch05-daily-2"><span class="">Ch 05 Daily 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch05ch05-daily-3-li">
+  <a href="/ap-cs/haskell/ch05/ch05-daily-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch05ch05-daily-3"><span class="">Chapter 05 Daily 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch05ch05-quiz-li">
+  <a href="/ap-cs/haskell/ch05/ch05-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch05ch05-quiz"><span class="">Chapter 5 Quiz</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch06-li">
+  <a href="/ap-cs/haskell/ch06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch06"><span class="">6. Higher Order Functions</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-discussion-01-li">
+  <a href="/ap-cs/haskell/ch06/ch6-discussion-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-discussion-01"><span class="">Ch6 Discussion 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-discussion-02-li">
+  <a href="/ap-cs/haskell/ch06/ch6-discussion-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-discussion-02"><span class="">Ch6 Discussion 02</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-discussion-03-li">
+  <a href="/ap-cs/haskell/ch06/ch6-discussion-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-discussion-03"><span class="">Ch6 Discussion 03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-discussion-04-li">
+  <a href="/ap-cs/haskell/ch06/ch6-discussion-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-discussion-04"><span class="">Ch6 Discussion 04</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-misc-ex-li">
+  <a href="/ap-cs/haskell/ch06/ch6-misc-ex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-misc-ex"><span class="">Ch 6 Misc Exercises</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-quiz-1-li">
+  <a href="/ap-cs/haskell/ch06/ch6-quiz-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-quiz-1"><span class="">Ch6 Quiz A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch6-advanced-notes-li">
+  <a href="/ap-cs/haskell/ch06/ch6-advanced-notes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch6-advanced-notes"><span class="">Ch6 Advanced Notes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch06ch06-reading-guide-li">
+  <a href="/ap-cs/haskell/ch06/ch06-reading-guide/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch06ch06-reading-guide"><span class="">Chapter 6 Reading Guide</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch07-li">
+  <a href="/ap-cs/haskell/ch07/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch07"><span class="">7. Modules</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch07ch7-intro-ex-li">
+  <a href="/ap-cs/haskell/ch07/ch7-intro-ex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-intro-ex"><span class="">7. Intro Ex</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch07ch7-maybe-li">
+  <a href="/ap-cs/haskell/ch07/ch7-maybe/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-maybe"><span class="">7. Maybe</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch0720-maybe-b-li">
+  <a href="/ap-cs/haskell/ch07/20-maybe-b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch0720-maybe-b"><span class="">7. HW B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch07ch7-data-list-li">
+  <a href="/ap-cs/haskell/ch07/ch7-data-list/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-data-list"><span class="">7. Data.List</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch07ch7-data-ord-li">
+  <a href="/ap-cs/haskell/ch07/ch7-data-ord/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-data-ord"><span class="">7. Data.Ord</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellch08-li">
+  <a href="/ap-cs/haskell/ch08/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellch08"><span class="">8. Structures</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch0810-survey-li">
+  <a href="/ap-cs/haskell/ch08/10-survey/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch0810-survey"><span class="">8. Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch0815-warmup-li">
+  <a href="/ap-cs/haskell/ch08/15-warmup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch0815-warmup"><span class="">8. Warmups</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch0820-sum-types-li">
+  <a href="/ap-cs/haskell/ch08/20-sum-types/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch0820-sum-types"><span class="">8. Sum Types I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch08pothole-li">
+  <a href="/ap-cs/haskell/ch08/pothole/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch08pothole"><span class="">Pothole</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellch08tictactoe-li">
+  <a href="/ap-cs/haskell/ch08/tictactoe/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch08tictactoe"><span class="">Tic-Tac-Toe</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskelladvanced-li">
+  <a href="/ap-cs/haskell/advanced/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskelladvanced"><span class="">Advanced</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced10-classes-li">
+  <a href="/ap-cs/haskell/advanced/10-classes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced10-classes"><span class="">Creating Classes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced15-classes-param-li">
+  <a href="/ap-cs/haskell/advanced/15-classes-param/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced15-classes-param"><span class="">Data Types with Parameters</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced20-semigroup-li">
+  <a href="/ap-cs/haskell/advanced/20-semigroup/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced20-semigroup"><span class="">Semigroup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced40-functor-li">
+  <a href="/ap-cs/haskell/advanced/40-functor/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced40-functor"><span class="">Functor</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskelladvanced110-randomness-li">
+  <a href="/ap-cs/haskell/advanced/110-randomness/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskelladvanced110-randomness"><span class="">Randomness</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced110-randomnessinfo-li">
+  <a href="/ap-cs/haskell/advanced/110-randomness/info/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced110-randomnessinfo"><span class="">Randomness Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelladvanced110-randomnessrng-ex-1-li">
+  <a href="/ap-cs/haskell/advanced/110-randomness/rng-ex-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelladvanced110-randomnessrng-ex-1"><span class="">Random A</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellusaco-li">
+  <a href="/ap-cs/haskell/usaco/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellusaco"><span class="">USACO Practice</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellusacohaybales-li">
+  <a href="/ap-cs/haskell/usaco/haybales/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellusacohaybales"><span class="">Haybales</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellscrabble-li">
+  <a href="/ap-cs/haskell/scrabble/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellscrabble"><span class="">Scrabble</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellconnect-four-li">
+  <a href="/ap-cs/haskell/connect-four/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellconnect-four"><span class="">Connect Four</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fouroverview-li">
+  <a href="/ap-cs/haskell/connect-four/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fouroverview"><span class="">Connect Four Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourtimeline-li">
+  <a href="/ap-cs/haskell/connect-four/timeline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourtimeline"><span class="">Connect Four Timeline</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourui-li">
+  <a href="/ap-cs/haskell/connect-four/ui/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourui"><span class="">Connect Four UI</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourtestcases-li">
+  <a href="/ap-cs/haskell/connect-four/testcases/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourtestcases"><span class="">Connect Four Testcases</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourspoilers-li">
+  <a href="/ap-cs/haskell/connect-four/spoilers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourspoilers"><span class="">Connect Four Spoilers</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourprimer-2-li">
+  <a href="/ap-cs/haskell/connect-four/primer-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourprimer-2"><span class="">Primer 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourprimer-3-li">
+  <a href="/ap-cs/haskell/connect-four/primer-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourprimer-3"><span class="">Primer 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellconnect-fourrubric-li">
+  <a href="/ap-cs/haskell/connect-four/rubric/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellconnect-fourrubric"><span class="">Connect Four Rubric</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskelltic-tac-toe-li">
+  <a href="/ap-cs/haskell/tic-tac-toe/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskelltic-tac-toe"><span class="">Tic-Tac-Toe</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelltic-tac-toeoverview-li">
+  <a href="/ap-cs/haskell/tic-tac-toe/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelltic-tac-toeoverview"><span class="">Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelltic-tac-toedrawhandler-li">
+  <a href="/ap-cs/haskell/tic-tac-toe/drawhandler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelltic-tac-toedrawhandler"><span class="">Draw Handler</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelltic-tac-toemousehandler-li">
+  <a href="/ap-cs/haskell/tic-tac-toe/mousehandler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelltic-tac-toemousehandler"><span class="">Mouse Handler</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelltic-tac-toemisc-li">
+  <a href="/ap-cs/haskell/tic-tac-toe/misc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelltic-tac-toemisc"><span class="">Troubleshooting</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskelldaily-li">
+  <a href="/ap-cs/haskell/daily/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskelldaily"><span class="">Haskell Daily Notes</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2023-12-14-li">
+  <a href="/ap-cs/haskell/daily/2023-12-14/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2023-12-14"><span class="">2023 Exam Review I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2022-12-20-li">
+  <a href="/ap-cs/haskell/daily/2022-12-20/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2022-12-20"><span class="">2022-12-20 AoC 09</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2022-11-30-li">
+  <a href="/ap-cs/haskell/daily/2022-11-30/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2022-11-30"><span class="">2022-11-30 Composite Poly</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2022-08-29-li">
+  <a href="/ap-cs/haskell/daily/2022-08-29/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2022-08-29"><span class="">2022-08-29</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2022-08-25-li">
+  <a href="/ap-cs/haskell/daily/2022-08-25/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2022-08-25"><span class="">2022-08-25</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-11-22-li">
+  <a href="/ap-cs/haskell/daily/2021-11-22/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-11-22"><span class="">2021-11-22</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-11-08-li">
+  <a href="/ap-cs/haskell/daily/2021-11-08/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-11-08"><span class="">2021-11-08</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-11-01-li">
+  <a href="/ap-cs/haskell/daily/2021-11-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-11-01"><span class="">2021-11-01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-28-li">
+  <a href="/ap-cs/haskell/daily/2021-10-28/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-28"><span class="">2021-10-28</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-27-li">
+  <a href="/ap-cs/haskell/daily/2021-10-27/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-27"><span class="">2021-10-27</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-25-li">
+  <a href="/ap-cs/haskell/daily/2021-10-25/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-25"><span class="">2021-10-25</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-18-li">
+  <a href="/ap-cs/haskell/daily/2021-10-18/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-18"><span class="">2021-10-18</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-14-li">
+  <a href="/ap-cs/haskell/daily/2021-10-14/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-14"><span class="">2021-10-14</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-12-li">
+  <a href="/ap-cs/haskell/daily/2021-10-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-12"><span class="">2021-10-12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-06-li">
+  <a href="/ap-cs/haskell/daily/2021-10-06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-06"><span class="">2021-10-06</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-10-04-li">
+  <a href="/ap-cs/haskell/daily/2021-10-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-10-04"><span class="">2021-10-04</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2021-09-30-li">
+  <a href="/ap-cs/haskell/daily/2021-09-30/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2021-09-30"><span class="">2021-09-30</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2018-10-16-li">
+  <a href="/ap-cs/haskell/daily/2018-10-16/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2018-10-16"><span class="">2018-10-16</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2018-10-09-li">
+  <a href="/ap-cs/haskell/daily/2018-10-09/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2018-10-09"><span class="">2018-10-09 Project</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2018-10-04-li">
+  <a href="/ap-cs/haskell/daily/2018-10-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2018-10-04"><span class="">2018.10.04 Square Pasture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2018-10-03-li">
+  <a href="/ap-cs/haskell/daily/2018-10-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2018-10-03"><span class="">2018.10.03 Cow Signal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-10-04-li">
+  <a href="/ap-cs/haskell/daily/2017-10-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-10-04"><span class="">2017-10-04</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-10-03-li">
+  <a href="/ap-cs/haskell/daily/2017-10-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-10-03"><span class="">2017-10-03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-09-18-li">
+  <a href="/ap-cs/haskell/daily/2017-09-18/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-09-18"><span class="">2017-09-18</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-09-13-li">
+  <a href="/ap-cs/haskell/daily/2017-09-13/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-09-13"><span class="">2017-09-14 Indentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-09-12-li">
+  <a href="/ap-cs/haskell/daily/2017-09-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-09-12"><span class="">2017-09-12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelldaily2017-09-11-li">
+  <a href="/ap-cs/haskell/daily/2017-09-11/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelldaily2017-09-11"><span class="">2017-09-11</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellvideos-li">
+  <a href="/ap-cs/haskell/videos/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellvideos"><span class="">Video Resources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellcode-world-li">
+  <a href="/ap-cs/haskell/code-world/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellcode-world"><span class="">Code World</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world01-intro-li">
+  <a href="/ap-cs/haskell/code-world/01-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world01-intro"><span class="">CodeWorld Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world02-graphics-li">
+  <a href="/ap-cs/haskell/code-world/02-graphics/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world02-graphics"><span class="">Graphics</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world03-handler-li">
+  <a href="/ap-cs/haskell/code-world/03-handler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world03-handler"><span class="">Handling Events</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellcode-world04-further-li">
+  <a href="/ap-cs/haskell/code-world/04-further/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellcode-world04-further"><span class="">Further Exercises</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world04-furthercircle-grid-li">
+  <a href="/ap-cs/haskell/code-world/04-further/circle-grid/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world04-furthercircle-grid"><span class="">Circle Grid</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellcode-world04-furtherlights-out-li">
+  <a href="/ap-cs/haskell/code-world/04-further/lights-out/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellcode-world04-furtherlights-out"><span class="">Lights Out</span></a>
+  <ul class="ul-5 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world04-furtherlights-out60-extra-li">
+  <a href="/ap-cs/haskell/code-world/04-further/lights-out/60-extra/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world04-furtherlights-out60-extra"><span class="">Hints for Lights Out</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world04-furtherlights-out90-errors-li">
+  <a href="/ap-cs/haskell/code-world/04-further/lights-out/90-errors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world04-furtherlights-out90-errors"><span class=""></span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cshaskellcode-world05-misc-ex-li">
+  <a href="/ap-cs/haskell/code-world/05-misc-ex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cshaskellcode-world05-misc-ex"><span class="">Short Practice</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world05-misc-exmini-a-li">
+  <a href="/ap-cs/haskell/code-world/05-misc-ex/mini-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world05-misc-exmini-a"><span class="">Mini A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world05-misc-exmini-b-li">
+  <a href="/ap-cs/haskell/code-world/05-misc-ex/mini-b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world05-misc-exmini-b"><span class="">Mini B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellcode-world05-misc-exmini-c-li">
+  <a href="/ap-cs/haskell/code-world/05-misc-ex/mini-c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellcode-world05-misc-exmini-c"><span class="">Mini C</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskelltypeclass-notes-li">
+  <a href="/ap-cs/haskell/typeclass-notes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskelltypeclass-notes"><span class="">Typeclass Notes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cshaskellghci-details-li">
+  <a href="/ap-cs/haskell/ghci-details/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellghci-details"><span class="">Source Code Files (ghci)</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csgit-li">
+  <a href="/ap-cs/git/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csgit"><span class="">Git</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csgitgetting-started-li">
+  <a href="/ap-cs/git/getting-started/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csgitgetting-started"><span class="">Git-ting Started</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csgiteveryday-li">
+  <a href="/ap-cs/git/everyday/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csgiteveryday"><span class="">Everyday Git</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cskarel-li">
+  <a href="/ap-cs/karel/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cskarel"><span class="">Karel the Robot</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelbook-li">
+  <a href="/ap-cs/karel/book/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelbook"><span class="">Book</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelessentials-li">
+  <a href="/ap-cs/karel/essentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelessentials"><span class="">Essentials</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch12-li">
+  <a href="/ap-cs/karel/ch1&#43;2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch12"><span class="">Karel 1 and 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch3-li">
+  <a href="/ap-cs/karel/ch3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch3"><span class="">Karel 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4a-li">
+  <a href="/ap-cs/karel/ch4a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4a"><span class="">Karel 4.1-4.4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4b-li">
+  <a href="/ap-cs/karel/ch4b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4b"><span class="">Karel 4.5-4.6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelcodingbat-li">
+  <a href="/ap-cs/karel/codingbat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelcodingbat"><span class="">CodingBat Interlude</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4b-hw1-li">
+  <a href="/ap-cs/karel/ch4b-hw1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4b-hw1"><span class="">4.6 PrettyBoxBot</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4b-hw2-li">
+  <a href="/ap-cs/karel/ch4b-hw2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4b-hw2"><span class="">4.6 FishBot</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4c-classes-li">
+  <a href="/ap-cs/karel/ch4c-classes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4c-classes"><span class="">4.6 More Classes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4d-review-li">
+  <a href="/ap-cs/karel/ch4d-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4d-review"><span class="">4.6 MurderBot</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4b-adv-li">
+  <a href="/ap-cs/karel/ch4b-adv/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4b-adv"><span class="">4.* Advanced</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4e-test-li">
+  <a href="/ap-cs/karel/ch4e-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4e-test"><span class="">4. Test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelch4f-project-li">
+  <a href="/ap-cs/karel/ch4f-project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelch4f-project"><span class="">4. Robot Drama</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelkarel-intellij-li">
+  <a href="/ap-cs/karel/karel-intellij/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelkarel-intellij"><span class="">Karel Intellij</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cskarelkarel-hack-li">
+  <a href="/ap-cs/karel/karel-hack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cskarelkarel-hack"><span class="">Karel Hacked</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csbpj-li">
+  <a href="/ap-cs/bpj/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csbpj"><span class="">BPJ</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-01-03-a-li">
+  <a href="/ap-cs/bpj/bpj-q-01-03-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-01-03-a"><span class="">BPJ Quiz 01-03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-07-09-li">
+  <a href="/ap-cs/bpj/bpj-q-07-09/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-07-09"><span class="">BPJ Quiz 07-09</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-11-12-li">
+  <a href="/ap-cs/bpj/bpj-q-11-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-11-12"><span class="">BPJ Quiz 11-12 A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-12-li">
+  <a href="/ap-cs/bpj/bpj-q-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-12"><span class="">50 Ch12 Quiz</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-1117-li">
+  <a href="/ap-cs/bpj/bpj-q-11&#43;17/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-1117"><span class="">BPJ Quiz 11&#43;17 B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csbpjbpj-q-1518-a-li">
+  <a href="/ap-cs/bpj/bpj-q-15&#43;18-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csbpjbpj-q-1518-a"><span class="">BPJ Quiz 15&#43;18 A</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ap-csjm-li">
+  <a href="/ap-cs/jm/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjm"><span class="">Java Methods</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmintro-li">
+  <a href="/ap-cs/jm/intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmintro"><span class="">0. Intro</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmintro10-java-vs-haskell-li">
+  <a href="/ap-cs/jm/intro/10-java-vs-haskell/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmintro10-java-vs-haskell"><span class="">Java vs Haskell</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmintro20-assign-bpj-li">
+  <a href="/ap-cs/jm/intro/20-assign-bpj/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmintro20-assign-bpj"><span class="">Basic HW</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch01-li">
+  <a href="/ap-cs/jm/ch01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch01"><span class="">1. CS Basics</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch02-li">
+  <a href="/ap-cs/jm/ch02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch02"><span class="">2. Software Engineering</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch03-li">
+  <a href="/ap-cs/jm/ch03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch03"><span class="">3. Intro to OOP</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch03class-basic-1-li">
+  <a href="/ap-cs/jm/ch03/class-basic-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch03class-basic-1"><span class="">3. Writing Basic Classes 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch03class-basic-2-li">
+  <a href="/ap-cs/jm/ch03/class-basic-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch03class-basic-2"><span class="">3. Writing Basic Classes 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch03class-basic-3-li">
+  <a href="/ap-cs/jm/ch03/class-basic-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch03class-basic-3"><span class="">3. Writing Basic Classes 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch03ch03-quiz-li">
+  <a href="/ap-cs/jm/ch03/ch03-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch03ch03-quiz"><span class="">3. Classes Quiz</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch06-li">
+  <a href="/ap-cs/jm/ch06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch06"><span class="">6. Data Types</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch10-li">
+  <a href="/ap-cs/jm/ch10/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch10"><span class="">10. Strings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1010-overview-li">
+  <a href="/ap-cs/jm/ch10/10-overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1010-overview"><span class="">10. Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1010-exercises-li">
+  <a href="/ap-cs/jm/ch10/10-exercises/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1010-exercises"><span class="">10. Exercises</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1010-test-li">
+  <a href="/ap-cs/jm/ch10/10-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1010-test"><span class="">10. Test</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjminterlude-jan-li">
+  <a href="/ap-cs/jm/interlude-jan/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjminterlude-jan"><span class="">Interlude: January</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-janjan-return-1-li">
+  <a href="/ap-cs/jm/interlude-jan/jan-return-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-janjan-return-1"><span class="">Jan Return 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-janjan-return-2-li">
+  <a href="/ap-cs/jm/interlude-jan/jan-return-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-janjan-return-2"><span class="">Jan Return 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-janjan-return-3-li">
+  <a href="/ap-cs/jm/interlude-jan/jan-return-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-janjan-return-3"><span class="">Jan Return 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-janjan-review-20-li">
+  <a href="/ap-cs/jm/interlude-jan/jan-review-20/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-janjan-review-20"><span class="">Jan Review 20</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch11-li">
+  <a href="/ap-cs/jm/ch11/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch11"><span class="">11. Classes</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11animal-li">
+  <a href="/ap-cs/jm/ch11/animal/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11animal"><span class="">11. Animal</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11candy-li">
+  <a href="/ap-cs/jm/ch11/candy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11candy"><span class="">11. Candy</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11inheritance-1-li">
+  <a href="/ap-cs/jm/ch11/inheritance-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11inheritance-1"><span class="">11. Inheritance 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11inheritance-2-li">
+  <a href="/ap-cs/jm/ch11/inheritance-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11inheritance-2"><span class="">11. Inheritance 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11abstract-classes-li">
+  <a href="/ap-cs/jm/ch11/abstract-classes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11abstract-classes"><span class="">Abstract Classes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11interfaces-li">
+  <a href="/ap-cs/jm/ch11/interfaces/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11interfaces"><span class="">Interfaces</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1111-answers-aquiz-li">
+  <a href="/ap-cs/jm/ch11/11-answers-aquiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1111-answers-aquiz"><span class="">11. AQuiz IAnswers</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1111-quiz-b-li">
+  <a href="/ap-cs/jm/ch11/11-quiz-b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1111-quiz-b"><span class="">11. Quiz B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1111-quiz-c-li">
+  <a href="/ap-cs/jm/ch11/11-quiz-c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1111-quiz-c"><span class="">11. Quiz C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11inheritance-3-li">
+  <a href="/ap-cs/jm/ch11/inheritance-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11inheritance-3"><span class="">11. Inheritance Calls I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11inheritance-4-li">
+  <a href="/ap-cs/jm/ch11/inheritance-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11inheritance-4"><span class="">11. Inheritance Calls II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11treasurehunt-li">
+  <a href="/ap-cs/jm/ch11/treasurehunt/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11treasurehunt"><span class="">11. Treasure Hunt</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch11instanceof-li">
+  <a href="/ap-cs/jm/ch11/instanceof/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch11instanceof"><span class="">11. Instanceof</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-ap-csjmch12-li">
+  <a href="/ap-cs/jm/ch12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch12"><span class="">12. Arrays</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-array-intro-1-li">
+  <a href="/ap-cs/jm/ch12/12-array-intro-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-intro-1"><span class="">12. Array Basic Facts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-array-ex-1-li">
+  <a href="/ap-cs/jm/ch12/12-array-ex-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-ex-1"><span class="">12. Array Exercises 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-array-ex-2-li">
+  <a href="/ap-cs/jm/ch12/12-array-ex-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-ex-2"><span class="">12. Array Exercises 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-array-ex-3-li">
+  <a href="/ap-cs/jm/ch12/12-array-ex-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-ex-3"><span class="">12. Arrays Exercises 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-array-ex-4-li">
+  <a href="/ap-cs/jm/ch12/12-array-ex-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-ex-4"><span class="">12. Arrays Exercises 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-book-ex-li">
+  <a href="/ap-cs/jm/ch12/12-book-ex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-book-ex"><span class="">12. Book Exercises</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-arrays-2d-li">
+  <a href="/ap-cs/jm/ch12/12-arrays-2d/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-arrays-2d"><span class="">12. Two Dimensional Arrays</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-arr2d-scan-li">
+  <a href="/ap-cs/jm/ch12/12-arr2d-scan/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-arr2d-scan"><span class="">12. Scanning 2D</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-ap-csjmch1212-array-ex-5-speedrun-li">
+  <a href="/ap-cs/jm/ch12/12-array-ex-5-speedrun/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-array-ex-5-speedrun"><span class="td-sidebar-nav-active-item">12. Array Speedrun</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-quiz-2d-a-li">
+  <a href="/ap-cs/jm/ch12/12-quiz-2d-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-quiz-2d-a"><span class="">12. Isthmus 2D</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-quiz-1d-m-li">
+  <a href="/ap-cs/jm/ch12/12-quiz-1d-m/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-quiz-1d-m"><span class="">12. Quiz M</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-quiz-1d-n-li">
+  <a href="/ap-cs/jm/ch12/12-quiz-1d-n/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-quiz-1d-n"><span class="">12. Quiz N</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch12string-dolphin-li">
+  <a href="/ap-cs/jm/ch12/string-dolphin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch12string-dolphin"><span class="">12. String Dolphin</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-arraylist-li">
+  <a href="/ap-cs/jm/ch12/12-arraylist/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-arraylist"><span class="">12. AL - hasPieee</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-csjmch1212-chomp-li">
+  <a href="/ap-cs/jm/ch12/12-chomp/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1212-chomp"><span class="">12. Chomp</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmsem1final-li">
+  <a href="/ap-cs/jm/sem1final/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmsem1final"><span class="">Semester 1 Final</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmsem1final2-final-codingbat-li">
+  <a href="/ap-cs/jm/sem1final/2-final-codingbat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmsem1final2-final-codingbat"><span class="">2. Final - CodingBat</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmsem1final4-final-codingbat-li">
+  <a href="/ap-cs/jm/sem1final/4-final-codingbat/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmsem1final4-final-codingbat"><span class="">4. Final - CodingBat</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch13-li">
+  <a href="/ap-cs/jm/ch13/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch13"><span class="">13. ArrayList</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch13aardvark-li">
+  <a href="/ap-cs/jm/ch13/aardvark/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch13aardvark"><span class="">13. Avoid Aardvark</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch13shopping-list-li">
+  <a href="/ap-cs/jm/ch13/shopping-list/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch13shopping-list"><span class="">13. Shopping List</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch1313-quiz-1-li">
+  <a href="/ap-cs/jm/ch13/13-quiz-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch1313-quiz-1"><span class="">13. ArrayList Quiz</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch14-li">
+  <a href="/ap-cs/jm/ch14/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch14"><span class="">14. Sorting</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14comparable-intro-li">
+  <a href="/ap-cs/jm/ch14/comparable-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14comparable-intro"><span class="">14. Comparable Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14comparable-li">
+  <a href="/ap-cs/jm/ch14/comparable/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14comparable"><span class="">14. Comparable</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14comparable-ex-li">
+  <a href="/ap-cs/jm/ch14/comparable-ex/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14comparable-ex"><span class="">14. Comparable Exercises</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14comparable-clock-li">
+  <a href="/ap-cs/jm/ch14/comparable-clock/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14comparable-clock"><span class="">14. Comparable Clock</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14binary-search-li">
+  <a href="/ap-cs/jm/ch14/binary-search/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14binary-search"><span class="">14. Binary Search</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14comparable-bug-li">
+  <a href="/ap-cs/jm/ch14/comparable-bug/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14comparable-bug"><span class="">14 .Comparable Bug</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch14ch14-test-corr-li">
+  <a href="/ap-cs/jm/ch14/ch14-test-corr/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch14ch14-test-corr"><span class="">14. Test Corrections</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjminterlude-feb-li">
+  <a href="/ap-cs/jm/interlude-feb/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjminterlude-feb"><span class="">Programming Practice</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-febap-programming-practice-1-li">
+  <a href="/ap-cs/jm/interlude-feb/ap-programming-practice-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-febap-programming-practice-1"><span class="">Programming Practice 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-febap-programming-practice-2-li">
+  <a href="/ap-cs/jm/interlude-feb/ap-programming-practice-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-febap-programming-practice-2"><span class="">Programming Practice 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-febap-programming-practice-3-li">
+  <a href="/ap-cs/jm/interlude-feb/ap-programming-practice-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-febap-programming-practice-3"><span class="">Programming Practice 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-febprogramming-project-li">
+  <a href="/ap-cs/jm/interlude-feb/programming-project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-febprogramming-project"><span class="">Programming Project</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjminterlude-febbloopers-li">
+  <a href="/ap-cs/jm/interlude-feb/bloopers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjminterlude-febbloopers"><span class="">Java Bloopers</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch15-li">
+  <a href="/ap-cs/jm/ch15/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch15"><span class="">15. Files</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15file-li">
+  <a href="/ap-cs/jm/ch15/file/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15file"><span class="">15. File</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15file-intro-li">
+  <a href="/ap-cs/jm/ch15/file-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15file-intro"><span class="">15. File Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15scanner-li">
+  <a href="/ap-cs/jm/ch15/scanner/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15scanner"><span class="">15. Scanner</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15file-assign-li">
+  <a href="/ap-cs/jm/ch15/file-assign/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15file-assign"><span class="">15. File Assignments</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15file-quiz-li">
+  <a href="/ap-cs/jm/ch15/file-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15file-quiz"><span class="">15. File Quiz</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch15file-divvy-li">
+  <a href="/ap-cs/jm/ch15/file-divvy/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch15file-divvy"><span class="">15. File Divvy</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmq3review-li">
+  <a href="/ap-cs/jm/q3review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmq3review"><span class="">Q3. Review</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmq3reviewclasses-more-1-li">
+  <a href="/ap-cs/jm/q3review/classes-more-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmq3reviewclasses-more-1"><span class="">Q3. Classes More 1</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmch20-li">
+  <a href="/ap-cs/jm/ch20/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmch20"><span class="">20. Set and Map</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch2010-set-map-intro-li">
+  <a href="/ap-cs/jm/ch20/10-set-map-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch2010-set-map-intro"><span class="">20. Set Map Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch2020-word-freq-li">
+  <a href="/ap-cs/jm/ch20/20-word-freq/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch2020-word-freq"><span class="">20. Frequency Analysis</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch2025-substitution-cipher-li">
+  <a href="/ap-cs/jm/ch20/25-substitution-cipher/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch2025-substitution-cipher"><span class="">20. Substitution Cipher</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch2030-linked-list-li">
+  <a href="/ap-cs/jm/ch20/30-linked-list/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch2030-linked-list"><span class="">20. Linked Lists</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmch2040-cookie-monster-li">
+  <a href="/ap-cs/jm/ch20/40-cookie-monster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmch2040-cookie-monster"><span class="">20. Cookie Monster</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csjmsem2final-li">
+  <a href="/ap-cs/jm/sem2final/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csjmsem2final"><span class="">Sem.II Final Index</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csjmsem2finalfinal-splash-li">
+  <a href="/ap-cs/jm/sem2final/final-splash/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csjmsem2finalfinal-splash"><span class="">Sem.II Final Splash</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cssolving-li">
+  <a href="/ap-cs/solving/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cssolving"><span class="">Problem Solving</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingnumber-triangle-li">
+  <a href="/ap-cs/solving/number-triangle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingnumber-triangle"><span class="">Number Triangle</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingcollatz-li">
+  <a href="/ap-cs/solving/collatz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingcollatz"><span class="">Collatz</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingprimes-li">
+  <a href="/ap-cs/solving/primes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingprimes"><span class="">Primes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cssolvingpro-com-3-li">
+  <a href="/ap-cs/solving/pro-com-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cssolvingpro-com-3"><span class="">Pro Com 3</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingpro-com-3hints-li">
+  <a href="/ap-cs/solving/pro-com-3/hints/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingpro-com-3hints"><span class="">Hints 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingpro-com-3twenty-one-li">
+  <a href="/ap-cs/solving/pro-com-3/twenty-one/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingpro-com-3twenty-one"><span class="">Twenty One</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cssolvingpro-com-5-li">
+  <a href="/ap-cs/solving/pro-com-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cssolvingpro-com-5"><span class="">Pro Com 5</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingpro-com-5shopping-li">
+  <a href="/ap-cs/solving/pro-com-5/shopping/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingpro-com-5shopping"><span class="">Shopping</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-ap-cssolvingpro-com-6-li">
+  <a href="/ap-cs/solving/pro-com-6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cssolvingpro-com-6"><span class="">Pro Com 6</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssolvingpro-com-6toystory-li">
+  <a href="/ap-cs/solving/pro-com-6/toystory/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssolvingpro-com-6toystory"><span class="">Toy Story</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-csprep-li">
+  <a href="/ap-cs/prep/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-csprep"><span class="">Preparation</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csprepskills-intro-li">
+  <a href="/ap-cs/prep/skills-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csprepskills-intro"><span class="">AP CS Skills Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csprepsummer-assign-li">
+  <a href="/ap-cs/prep/summer-assign/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csprepsummer-assign"><span class="">AP CS Summer Assignment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-csprepreversi-walkthrough-li">
+  <a href="/ap-cs/prep/reversi-walkthrough/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-csprepreversi-walkthrough"><span class="">Reversi Details</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cstesting-li">
+  <a href="/ap-cs/testing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cstesting"><span class="">Unit Testing</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cstestingtesting-intro-li">
+  <a href="/ap-cs/testing/testing-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cstestingtesting-intro"><span class="">Unit Testing Level I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cstestingtesting-medium-li">
+  <a href="/ap-cs/testing/testing-medium/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cstestingtesting-medium"><span class="">Unit Testing Level II</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cssem1-li">
+  <a href="/ap-cs/sem1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-ap-cssem1"><span class="">I. Semester Review</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-ap-cssem1classes-review-li">
+  <a href="/ap-cs/sem1/classes-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cssem1classes-review"><span class="">Classes Review</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/maueroats/teaching--2024-2025/tree/main/www/content/ap-cs/jm/ch12/12-array-ex-5-speedrun.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/edit/main/www/content/ap-cs/jm/ch12/12-array-ex-5-speedrun.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/new/main/www/content/ap-cs/jm/ch12?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/issues/new?title=12.%20Array%20Speedrun" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  
+</div>
+
+            
+            
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/ap-cs/">AP CS</a></li>
+  <li class="breadcrumb-item">
+    <a href="/ap-cs/jm/">Java Methods</a></li>
+  <li class="breadcrumb-item">
+    <a href="/ap-cs/jm/ch12/">12. Arrays</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    12. Array Speedrun</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>12. Array Speedrun</h1>
+	
+	<header class="article-meta">
+		
+  </header>
+	<p>Make create a two dimensional array of a given width and height filled
+in a snake pattern with 0 and 1 as described below.</p>
+<p>The snake pattern starts with a 1, then has longer and longer
+sequences of zeros separated by ones: 0 zeros, one, 1 zero, one, 2
+zeroes, one, 3 zeroes, one, etc.</p>
+<pre><code>11010010001000010000010000001
+</code></pre>
+<p>The array is filled in by rows, first going to the right, then going
+to the left, in the pattern shown by these &ldquo;ascii arrows&rdquo;:</p>
+<pre><code>--1--&gt;&gt;
+&lt;&lt;--2--
+--3--&gt;&gt;
+&lt;&lt;--4--
+--5--&gt;&gt;
+</code></pre>
+<p>The filled in result of <code>snakeSpeedrun(6,5)</code> would be:</p>
+<pre><code> 110100
+ 010001
+ 000100
+ 001000
+ 000010
+</code></pre>
+<p>You write the function:
+<code>public static int[][] snakeSpeedrun(int width, int height)</code></p>
+
+	<div class="td-page-meta__lastmod">
+  Last modified August 18, 2023: <a href="https://github.com/maueroats/teaching--2024-2025/commit/7352e874ce3f4f06ad847de97e1dbbf6523866ae">2022-2023 End State (7352e87)</a>
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Racket Docs" aria-label="Racket Docs">
+    <a target="_blank" rel="noopener" href="https://docs.racket-lang.org/" aria-label="Racket Docs">
+      <i class="fab fa-galactic-republic"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Picturing Programs" aria-label="Picturing Programs">
+    <a target="_blank" rel="noopener" href="https://picturingprograms.com" aria-label="Picturing Programs">
+      <i class="fas fa-book"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Python 3 Docs" aria-label="Python 3 Docs">
+    <a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/index.html" aria-label="Python 3 Docs">
+      <i class="fab fa-python"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Learn You a Haskell" aria-label="Learn You a Haskell">
+    <a target="_blank" rel="noopener" href="https://learnyouahaskell.github.io/" aria-label="Learn You a Haskell">
+      <i class="fas fa-brain"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">A. Mauer-Oats</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.9f2d532ad613261cb02731a6aeb7adbc1a95b305450a6141ac2bafafacec523a.js" integrity="sha256-ny1TKtYTJhywJzGmrretvBqVswVFCmFBrCuvr6zsUjo=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
