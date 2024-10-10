@@ -48,7 +48,7 @@ f 0 = 0 f 1 = 1 f n = f (n-1) &#43; f (n-2) Basic functions like arithmetic, : a
 Avoid Conditionals (guards) and if statements. Use “multiple definitions” whenever possible. Using head and tail. Choose pattern matching instead. Counting the items in a list (length and similar constructions). Look for another way to achive what you want, maybe with a recursive function. Group I You can just use a type of Int if you prefer not to think about the generic type parameter a.">
   <meta itemprop="datePublished" content="2022-10-17T06:58:59-05:00">
   <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
-  <meta itemprop="wordCount" content="367">
+  <meta itemprop="wordCount" content="430">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ch 05 Daily 2">
   <meta name="twitter:description" content="Stone age functions: write using a minimum of Haskell tools. Concentrate on writing well-crafted functions.
@@ -841,8 +841,11 @@ Avoid Conditionals (guards) and if statements. Use “multiple definitions” wh
     </li>
     <li><a href="#group-i">Group I</a></li>
     <li><a href="#group-ii">Group II</a></li>
-    <li><a href="#group-iii-skip">Group III (Skip)</a></li>
-    <li><a href="#group-iv-combinations">Group IV: Combinations</a></li>
+    <li><a href="#group-iv-combinations">Group IV: Combinations</a>
+      <ul>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -922,12 +925,13 @@ generic type parameter <code>a</code>.</p>
 <li><code>mytake :: Int -&gt; [a] -&gt; [a]</code></li>
 <li><code>myreverse :: [a] -&gt; [a]</code></li>
 </ul>
-<h2 id="group-iii-skip">Group III (Skip)</h2>
-<ul>
-<li>Very light work: <code>mychoice :: a -&gt; a -&gt; Bool -&gt; a</code>. This one gives the
-first input when the boolean value is true, otherwise it gives the
-second input.</li>
-</ul>
+<!-- deleted October 2024
+## Group III (Skip)
+
+* Very light work: `mychoice :: a -> a -> Bool -> a`. This one gives the
+  first input when the boolean value is true, otherwise it gives the
+  second input.
+-->
 <h2 id="group-iv-combinations">Group IV: Combinations</h2>
 <p>there is one function to write: produce all of the k element
 combinations of the elements in a given list.
@@ -949,7 +953,33 @@ approach.</li>
 <li>Ignore the possibility that some of the elements are the same (&ldquo;not
 distinct&rdquo;).</li>
 </ul>
-
+<h3 id="examples">Examples</h3>
+<p>Taking combinations of two items out of a list <code>[1,2,3]</code> should
+produce <code>[[1,2],[1,3],[2,3]]</code>.</p>
+<pre tabindex="0"><code>_3C2 = allComb 2 [1,2,3]
+checks3 = [
+  _3C2 == [[1,2],[1,3],[2,3]],
+  length _3C2 == 3,
+  ]
+</code></pre><p>Taking three objects out of the list <code>[1,2,3,4,5]</code> should produce:</p>
+<pre><code>123 124 125 134 135 145
+234 235 245
+345
+</code></pre>
+<p>This:</p>
+<pre tabindex="0"><code>_5C3 = allComb 5 [1..5]
+checks5 = [
+  _3C2 == [[1,2],[1,3],[2,3]],
+  length _3C2 == 3,
+  _5C3 ==
+    [[1,2,3],[1,2,4],[1,2,5],[1,3,4],[1,3,5],[1,4,5],
+     [2,3,4],[2,3,5],[2,4,5],
+     [3,4,5]],
+  length _5C3 == 10
+  ]
+</code></pre><p>Choosing 5 items from a list of 10 should give 252 items.</p>
+<pre tabindex="0"><code>checks10 = [length (allComb 5 [1..10]) == 252]
+</code></pre>
 	<div class="td-page-meta__lastmod">
   Last modified August 18, 2023: <a href="https://github.com/maueroats/teaching--2024-2025/commit/7352e874ce3f4f06ad847de97e1dbbf6523866ae">2022-2023 End State (7352e87)</a>
 </div>
