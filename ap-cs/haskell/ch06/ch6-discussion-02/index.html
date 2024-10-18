@@ -22,7 +22,7 @@
 Example:
 cityscape [4,2,6,1] Output:
 x x x x x x xxx xxxx Make sure you test your program to verify that it works with two skyscrapers of the same height.
-Editing Checklist Only uses of length are absolutely essential. Recursion uses (x:xs) not head and tail. Choices are made by patterns and guards, not if...then...else. Functions have names that indicate what they do. ">
+Notes Make multiline output by adding \n characters into a string.">
 <meta property="og:url" content="https://wy-cs.info/ap-cs/haskell/ch06/ch6-discussion-02/">
   <meta property="og:site_name" content="WY CS">
   <meta property="og:title" content="Ch6 Discussion 02">
@@ -30,29 +30,29 @@ Editing Checklist Only uses of length are absolutely essential. Recursion uses (
 Example:
 cityscape [4,2,6,1] Output:
 x x x x x x xxx xxxx Make sure you test your program to verify that it works with two skyscrapers of the same height.
-Editing Checklist Only uses of length are absolutely essential. Recursion uses (x:xs) not head and tail. Choices are made by patterns and guards, not if...then...else. Functions have names that indicate what they do. ">
+Notes Make multiline output by adding \n characters into a string.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="ap-cs">
     <meta property="article:published_time" content="2019-11-15T13:31:01-06:00">
-    <meta property="article:modified_time" content="2023-08-18T21:41:43-05:00">
+    <meta property="article:modified_time" content="2024-10-17T09:28:37-05:00">
 
   <meta itemprop="name" content="Ch6 Discussion 02">
   <meta itemprop="description" content="The cityscape function takes in a list of integers representing the heights of buildings and puts out a single string that will show skyscrapers built of X’s in columns whose heights correspond to the integers.
 Example:
 cityscape [4,2,6,1] Output:
 x x x x x x xxx xxxx Make sure you test your program to verify that it works with two skyscrapers of the same height.
-Editing Checklist Only uses of length are absolutely essential. Recursion uses (x:xs) not head and tail. Choices are made by patterns and guards, not if...then...else. Functions have names that indicate what they do. ">
+Notes Make multiline output by adding \n characters into a string.">
   <meta itemprop="datePublished" content="2019-11-15T13:31:01-06:00">
-  <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
-  <meta itemprop="wordCount" content="98">
+  <meta itemprop="dateModified" content="2024-10-17T09:28:37-05:00">
+  <meta itemprop="wordCount" content="114">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ch6 Discussion 02">
   <meta name="twitter:description" content="The cityscape function takes in a list of integers representing the heights of buildings and puts out a single string that will show skyscrapers built of X’s in columns whose heights correspond to the integers.
 Example:
 cityscape [4,2,6,1] Output:
 x x x x x x xxx xxxx Make sure you test your program to verify that it works with two skyscrapers of the same height.
-Editing Checklist Only uses of length are absolutely essential. Recursion uses (x:xs) not head and tail. Choices are made by patterns and guards, not if...then...else. Functions have names that indicate what they do. ">
+Notes Make multiline output by adding \n characters into a string.">
 
 
 
@@ -829,6 +829,7 @@ Editing Checklist Only uses of length are absolutely essential. Recursion uses (
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#notes">Notes</a></li>
     <li><a href="#editing-checklist">Editing Checklist</a></li>
   </ul>
 </nav>
@@ -876,6 +877,11 @@ xxx
 xxxx
 </code></pre><p>Make sure you test your program to verify that it works with two
 skyscrapers of the same height.</p>
+<h2 id="notes">Notes</h2>
+<p>Make multiline output by adding <code>\n</code> characters into a string.</p>
+<pre><code>main = do
+  putStrLn &quot;Top\nMiddle\nBottom\nUnderground&quot;
+</code></pre>
 <h2 id="editing-checklist">Editing Checklist</h2>
 <ul>
 <li>Only uses of <code>length</code> are absolutely essential.</li>
@@ -885,7 +891,7 @@ skyscrapers of the same height.</p>
 </ul>
 
 	<div class="td-page-meta__lastmod">
-  Last modified August 18, 2023: <a href="https://github.com/maueroats/teaching--2024-2025/commit/7352e874ce3f4f06ad847de97e1dbbf6523866ae">2022-2023 End State (7352e87)</a>
+  Last modified October 17, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/04a25d983a51a947d1052cb13166e2f812cdd28d">Minor edits and whitespace. (04a25d9)</a>
 </div>
 
 </div>

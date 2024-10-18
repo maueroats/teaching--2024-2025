@@ -1,9 +1,9 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -18,31 +18,31 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Writing Checks | WY CS</title>
-<meta name="description" content="How to write checks that you can use for debugging.">
-<meta property="og:url" content="http://localhost:1313/nand/ch05/writing-checks/">
+<meta name="description" content="How to write CPU Emulator checks that you can use for debugging.">
+<meta property="og:url" content="https://wy-cs.info/nand/ch05/writing-checks/">
   <meta property="og:site_name" content="WY CS">
   <meta property="og:title" content="Writing Checks">
-  <meta property="og:description" content="How to write checks that you can use for debugging.">
+  <meta property="og:description" content="How to write CPU Emulator checks that you can use for debugging.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="nand">
     <meta property="article:published_time" content="2024-10-09T19:57:13-05:00">
-    <meta property="article:modified_time" content="2024-10-09T19:57:13-05:00">
+    <meta property="article:modified_time" content="2024-10-17T10:58:55-05:00">
 
   <meta itemprop="name" content="Writing Checks">
-  <meta itemprop="description" content="How to write checks that you can use for debugging.">
+  <meta itemprop="description" content="How to write CPU Emulator checks that you can use for debugging.">
   <meta itemprop="datePublished" content="2024-10-09T19:57:13-05:00">
-  <meta itemprop="dateModified" content="2024-10-09T19:57:13-05:00">
-  <meta itemprop="wordCount" content="60">
+  <meta itemprop="dateModified" content="2024-10-17T10:58:55-05:00">
+  <meta itemprop="wordCount" content="414">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Writing Checks">
-  <meta name="twitter:description" content="How to write checks that you can use for debugging.">
+  <meta name="twitter:description" content="How to write CPU Emulator checks that you can use for debugging.">
 
 
 
 
-
-<link href="/scss/main.css" rel="stylesheet">
+<link rel="preload" href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" as="style">
+<link href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -102,7 +102,7 @@
   <a href="/nand/" title="Nand to Tetris" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-nand"><span class="">NAND</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandch01-li">
-  <a href="/nand/ch01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch01"><span class="">Ch01</span></a>
+  <a href="/nand/ch01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch01"><span class="">1. Logic</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch01project-li">
   <a href="/nand/ch01/project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch01project"><span class="">1.Project</span></a>
@@ -110,19 +110,12 @@
   <a href="/nand/ch01/poster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch01poster"><span class="">Poster</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandch02-li">
-  <a href="/nand/ch02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch02"><span class="">Ch02</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch02project-li">
-  <a href="/nand/ch02/project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch02project"><span class="">2.Project</span></a>
-</li>
-  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandch02-li">
+  <a href="/nand/ch02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch02"><span class="">2. Arithmetic</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandch03-li">
-  <a href="/nand/ch03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch03"><span class="">Ch03</span></a>
+  <a href="/nand/ch03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch03"><span class="">3. Memory</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch03test-li">
-  <a href="/nand/ch03/test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch03test"><span class="">3. Test</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch03review-questions-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch03review-questions-li">
   <a href="/nand/ch03/review-questions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch03review-questions"><span class="">3. Review Questions</span></a>
 </li>
   </ul>
@@ -131,8 +124,6 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch04summary-li">
   <a href="/nand/ch04/summary/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch04summary"><span class="">Summary</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch04quiz-1-li">
-  <a href="/nand/ch04/quiz-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch04quiz-1"><span class="">4. Quiz 1</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-nandch04examples-li">
   <a href="/nand/ch04/examples/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch04examples"><span class="">Examples</span></a>
   <ul class="ul-3 foldable">
@@ -144,6 +135,13 @@
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch04asm-ws01-li">
   <a href="/nand/ch04/asm-ws01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch04asm-ws01"><span class="">4. Assembler WS 1</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-nandch05-li">
+  <a href="/nand/ch05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch05"><span class="">5. Computer Architecture</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-nandch05writing-checks-li">
+  <a href="/nand/ch05/writing-checks/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-nandch05writing-checks"><span class="td-sidebar-nav-active-item">Writing Checks</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandracket-li">
@@ -159,13 +157,6 @@
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandresources-li">
   <a href="/nand/resources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandresources"><span class="">Resources</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-nandch05-li">
-  <a href="/nand/ch05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch05"><span class="">Ch05</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-nandch05writing-checks-li">
-  <a href="/nand/ch05/writing-checks/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-nandch05writing-checks"><span class="td-sidebar-nav-active-item">Writing Checks</span></a>
-</li>
-  </ul>
 </li>
   </ul>
 </li>
@@ -187,6 +178,15 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#review">Review</a></li>
+    <li><a href="#testing-jumps">Testing Jumps</a>
+      <ul>
+        <li><a href="#global-setup">Global setup</a></li>
+        <li><a href="#test-1-a17">Test 1: A=17</a></li>
+        <li><a href="#test-2-d-jle">Test 2: D; JLE</a></li>
+        <li><a href="#test-3-0-jgt">Test 3: 0; JGT</a></li>
+      </ul>
+    </li>
+    <li><a href="#documentation">Documentation</a></li>
   </ul>
 </nav>
       </div>
@@ -203,7 +203,7 @@
   <li class="breadcrumb-item">
     <a href="/nand/">NAND</a></li>
   <li class="breadcrumb-item">
-    <a href="/nand/ch05/">Ch05</a></li>
+    <a href="/nand/ch05/">5. Computer Architecture</a></li>
   <li class="breadcrumb-item active" aria-current="page">
     Writing Checks</li>
   </ol>
@@ -217,6 +217,7 @@
   </header>
 	<p>We will practice setting up situations that test to see if pieces of
 your CPU are working.</p>
+<p>Appendix A3.3 covers testing programs on the CPU emulator.</p>
 <h2 id="review">Review</h2>
 <p>The CPU has inputs: <code>inM</code>, <code>instruction</code>, and <code>reset</code>.
 It has outputs <code>outM</code>, <code>writeM</code>, <code>addressM</code>, and <code>pc</code>.</p>
@@ -225,9 +226,71 @@ It has outputs <code>outM</code>, <code>writeM</code>, <code>addressM</code>, an
 <li>Instruction memory (&ldquo;ROM&rdquo;) - determined by loading a program.</li>
 <li>Data memory (&ldquo;RAM&rdquo;) - visible in the emulator.</li>
 <li>Program counter (&ldquo;PC&rdquo;).</li>
+<li>Registers: (&ldquo;ARegister&rdquo;, &ldquo;DRegister&rdquo;).</li>
 </ul>
+<h2 id="testing-jumps">Testing Jumps</h2>
+<p>In the CPU, we want to test the instruction <code>D;JLE</code>. Our initial setup
+will be <code>A=17</code>, <code>D=-23</code>, and <code>RAM[17] = 31</code>.
+The instructions to create the  initial setup are:</p>
+<ul>
+<li><code>set instruction %B1110001100000110</code>, where the binary comes from
+the lookup table in Figure 4.5 (page 95).</li>
+<li><code>set ARegister 17</code></li>
+<li><code>set DRegister -23</code></li>
+<li><code>set inM 31</code></li>
+<li><code>set reset 0</code></li>
+<li><code>set PC 5</code></li>
+</ul>
+<p>After one instruction (tick/tock), the program counter should become
+17 because D&lt;0 jumps (JLE) so the next instruction executed is at PC =
+the value in the A register.</p>
+<p>The first lines of the code are copied from the CPU testing
+script.</p>
+<p>Use <code>%B</code> to define values in binary.</p>
+<h3 id="global-setup">Global setup</h3>
+<pre tabindex="0"><code>load CPU.hdl;
 
-	
+output-list time%S0.4.0 inM%D0.6.0 instruction%B0.16.0 reset%B2.1.2 outM%D1.6.0 writeM%B3.1.3 addressM%D0.5.0 pc%D0.5.0;
+</code></pre><h3 id="test-1-a17">Test 1: A=17</h3>
+<p>The first test is just to load 17 into the A register.
+It&rsquo;s good to start with a test you know will work.</p>
+<pre tabindex="0"><code>set reset 0;
+set PC 5;
+set ARegister 1;
+set DRegister -23;
+set inM %B011111;
+set instruction %B00010001; // load 17 into A register
+
+tick, output;
+tock, output;
+</code></pre><p>After the first test, the PC is 6.</p>
+<h3 id="test-2-d-jle">Test 2: D; JLE</h3>
+<p>Now we have D=-23 and JLE, which should be true so execution jumps to
+PC=17 (the value in the A register). It is not necessary to reset
+those values, but be aware that if your coding is wrong the values
+might get changed by accident.</p>
+<pre tabindex="0"><code>set instruction %B1110001100000110; // D; JLE
+tick, output;
+tock, output;
+</code></pre><p>Make sure PC is 17 after this test.</p>
+<h3 id="test-3-0-jgt">Test 3: 0; JGT</h3>
+<p>This jump should not be taken, so the PC should be 7 when it completes.</p>
+<pre tabindex="0"><code>set ARegister 3;
+set PC 6;
+set instruction %B1110101010000001; // 0; JGT
+tick, output;
+tock, output;
+</code></pre><h2 id="documentation">Documentation</h2>
+<p>Notice that you need to use the variables named for the internal chips
+in the CPU. There is only a general mention of how to do this in the
+book on Figure A3.2 (page 334).</p>
+<p>Write <code>%B</code> to give a binary value. Write <code>%X</code> to give a
+hexadecimal value. Examples: <code>%B011100</code> or <code>%X0FA9</code>.</p>
+
+	<div class="td-page-meta__lastmod">
+  Last modified October 17, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/470022e301b0212748c806b093a0d18c30902b10">Chapter 5 and Racket material added. (470022e)</a>
+</div>
+
 </div>
 
 
@@ -281,8 +344,8 @@ It has outputs <code>outM</code>, <code>writeM</code>, <code>addressM</code>, an
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.9f2d532ad613261cb02731a6aeb7adbc1a95b305450a6141ac2bafafacec523a.js" integrity="sha256-ny1TKtYTJhywJzGmrretvBqVswVFCmFBrCuvr6zsUjo=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>
