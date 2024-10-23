@@ -1,0 +1,984 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>I.6 Semester I Review 6 | WY CS</title>
+<meta name="description" content="Random numbers. Gas gauge. Graphing in people coordinates.">
+<meta property="og:url" content="https://wy-cs.info/intermediate-cs/sem1review/sem-review-6/">
+  <meta property="og:site_name" content="WY CS">
+  <meta property="og:title" content="I.6 Semester I Review 6">
+  <meta property="og:description" content="Random numbers. Gas gauge. Graphing in people coordinates.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="intermediate-cs">
+    <meta property="article:published_time" content="2018-01-26T07:56:22-06:00">
+    <meta property="article:modified_time" content="2024-01-09T16:00:41-06:00">
+
+  <meta itemprop="name" content="I.6 Semester I Review 6">
+  <meta itemprop="description" content="Random numbers. Gas gauge. Graphing in people coordinates.">
+  <meta itemprop="datePublished" content="2018-01-26T07:56:22-06:00">
+  <meta itemprop="dateModified" content="2024-01-09T16:00:41-06:00">
+  <meta itemprop="wordCount" content="231">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="I.6 Semester I Review 6">
+  <meta name="twitter:description" content="Random numbers. Gas gauge. Graphing in people coordinates.">
+
+
+
+
+<link rel="preload" href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" as="style">
+<link href="/scss/main.min.6a990459d4ba0f2a4da1ca3e37582d3e4ded9c264800d3ef65db81477ff68a8d.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">WY CS</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/ecs/"><span>ECS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/intermediate-cs/"><span>IntermediateCS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ap-cs/"><span>AP CS</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ai/"><span>AI</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ml/"><span>ML</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/nand/"><span>NAND</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/docs/"><span>Resources</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-intermediate-cs-li">
+  <a href="/intermediate-cs/" title="Intermediate CS" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-intermediate-cs"><span class="">IntermediateCS</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch01-li">
+  <a href="/intermediate-cs/ch01/" title="1. Introduction" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch01"><span class="">1. Intro</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch01ch01b-review-li">
+  <a href="/intermediate-cs/ch01/ch01b-review/" title="HW 01 B" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch01ch01b-review"><span class="">1.B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch01ch01c-li">
+  <a href="/intermediate-cs/ch01/ch01c/" title="HW 01 C" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch01ch01c"><span class="">1.C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch01ch01e-li">
+  <a href="/intermediate-cs/ch01/ch01e/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch01ch01e"><span class="">01.E</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch01ch01quiza-li">
+  <a href="/intermediate-cs/ch01/ch01quiza/" title="Ch01.QuizA" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch01ch01quiza"><span class="">1.Quiz A</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch03-li">
+  <a href="/intermediate-cs/ch03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch03"><span class="">3. Images</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch03book-pictures-li">
+  <a href="/intermediate-cs/ch03/book-pictures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch03book-pictures"><span class="">Book Pictures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch03additional-exercises-li">
+  <a href="/intermediate-cs/ch03/additional-exercises/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch03additional-exercises"><span class="">Exercises</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch03tangrams-li">
+  <a href="/intermediate-cs/ch03/tangrams/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch03tangrams"><span class="">Tangrams</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch03ch03-art-project-li">
+  <a href="/intermediate-cs/ch03/ch03-art-project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch03ch03-art-project"><span class="">Art Project</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch04-li">
+  <a href="/intermediate-cs/ch04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch04"><span class="">4. Functions</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch04under-li">
+  <a href="/intermediate-cs/ch04/under/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch04under"><span class="">Ch 04-05 Worksheets</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch04undersample-design-process-li">
+  <a href="/intermediate-cs/ch04/under/sample-design-process/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch04undersample-design-process"><span class="">Sample Design Process</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch06-li">
+  <a href="/intermediate-cs/ch06/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch06"><span class="">6. Animations I</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06animation0-li">
+  <a href="/intermediate-cs/ch06/animation0/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06animation0"><span class="">Animations Summary</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06animation1-li">
+  <a href="/intermediate-cs/ch06/animation1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06animation1"><span class="">Animations Intro Slides</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06animation2-li">
+  <a href="/intermediate-cs/ch06/animation2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06animation2"><span class="">Animations Outline</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06animation3-li">
+  <a href="/intermediate-cs/ch06/animation3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06animation3"><span class="">Animations Key, Mouse</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06examples-li">
+  <a href="/intermediate-cs/ch06/examples/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06examples"><span class="">Animation Examples</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06portfolio-1-li">
+  <a href="/intermediate-cs/ch06/portfolio-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06portfolio-1"><span class="">Animation Portfolio I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06portfolio-2-li">
+  <a href="/intermediate-cs/ch06/portfolio-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06portfolio-2"><span class="">Animation Portfolio II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06project-li">
+  <a href="/intermediate-cs/ch06/project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06project"><span class="">Animation Project</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-sig-li">
+  <a href="/intermediate-cs/ch06/bigbang-sig/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-sig"><span class="">Info: Signature Story</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-check-li">
+  <a href="/intermediate-cs/ch06/bigbang-check/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-check"><span class="">Info: Check-Expects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-diagram-li">
+  <a href="/intermediate-cs/ch06/bigbang-diagram/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-diagram"><span class="">big-bang diagram</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-00-li">
+  <a href="/intermediate-cs/ch06/bigbang-00/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-00"><span class="">big-bang 00</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-01-li">
+  <a href="/intermediate-cs/ch06/bigbang-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-01"><span class="">big-bang 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-02-li">
+  <a href="/intermediate-cs/ch06/bigbang-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-02"><span class="">big-bang 02</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-03-li">
+  <a href="/intermediate-cs/ch06/bigbang-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-03"><span class="">big-bang 03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-04-li">
+  <a href="/intermediate-cs/ch06/bigbang-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-04"><span class="">big-bang 04</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06bigbang-05-li">
+  <a href="/intermediate-cs/ch06/bigbang-05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06bigbang-05"><span class="">big-bang 05</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06tiny-01-li">
+  <a href="/intermediate-cs/ch06/tiny-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06tiny-01"><span class="">Tiny 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch06daily-li">
+  <a href="/intermediate-cs/ch06/daily/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch06daily"><span class="">Daily Animations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06daily2018-10-12-li">
+  <a href="/intermediate-cs/ch06/daily/2018-10-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06daily2018-10-12"><span class="">2018.10.12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06daily2018-10-11-li">
+  <a href="/intermediate-cs/ch06/daily/2018-10-11/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06daily2018-10-11"><span class="">2018.10.11</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06daily2017-10-12-li">
+  <a href="/intermediate-cs/ch06/daily/2017-10-12/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06daily2017-10-12"><span class="">2017-10-12</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06daily2017-10-10-li">
+  <a href="/intermediate-cs/ch06/daily/2017-10-10/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06daily2017-10-10"><span class="">2017-10-10</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06dailyanimation-practice-li">
+  <a href="/intermediate-cs/ch06/daily/animation-practice/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06dailyanimation-practice"><span class="">Animation Practice</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch06resources-li">
+  <a href="/intermediate-cs/ch06/resources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch06resources"><span class="">Resources</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch07-li">
+  <a href="/intermediate-cs/ch07/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch07"><span class="">7. Numbers</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07ch07-summary-li">
+  <a href="/intermediate-cs/ch07/ch07-summary/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07ch07-summary"><span class="">7. Summary</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-1-li">
+  <a href="/intermediate-cs/ch07/exercises-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-1"><span class="">7. Exercises 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-2-li">
+  <a href="/intermediate-cs/ch07/exercises-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-2"><span class="">7. Exercises 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-3-li">
+  <a href="/intermediate-cs/ch07/exercises-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-3"><span class="">7. Exercises 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-4-li">
+  <a href="/intermediate-cs/ch07/exercises-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-4"><span class="">7. Exercises 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-5-li">
+  <a href="/intermediate-cs/ch07/exercises-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-5"><span class="">7. Exercises 5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07exercises-6-li">
+  <a href="/intermediate-cs/ch07/exercises-6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07exercises-6"><span class="">7. Exercises 6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07review-1-li">
+  <a href="/intermediate-cs/ch07/review-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07review-1"><span class="">7. Review 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07review-2-li">
+  <a href="/intermediate-cs/ch07/review-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07review-2"><span class="">7. Review 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07ch07-quiz-a-li">
+  <a href="/intermediate-cs/ch07/ch07-quiz-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07ch07-quiz-a"><span class="">7. Numbers Quiz A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07maxmin-li">
+  <a href="/intermediate-cs/ch07/maxmin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07maxmin"><span class="">Slides: Max and min</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07random-li">
+  <a href="/intermediate-cs/ch07/random/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07random"><span class="">Randomness</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch07worksheets-li">
+  <a href="/intermediate-cs/ch07/worksheets/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch07worksheets"><span class="">Worksheets</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07worksheetsch07ws01-li">
+  <a href="/intermediate-cs/ch07/worksheets/ch07ws01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07worksheetsch07ws01"><span class="">Ch07 WS 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07worksheetsch07ws03-li">
+  <a href="/intermediate-cs/ch07/worksheets/ch07ws03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07worksheetsch07ws03"><span class="">Ch07 WS 03</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07worksheetsch07ws04-li">
+  <a href="/intermediate-cs/ch07/worksheets/ch07ws04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07worksheetsch07ws04"><span class="">Ch07 WS 04</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch07resources-li">
+  <a href="/intermediate-cs/ch07/resources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch07resources"><span class="">Resources</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch08-li">
+  <a href="/intermediate-cs/ch08/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch08"><span class="">8. Number Models</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08models-1-li">
+  <a href="/intermediate-cs/ch08/models-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08models-1"><span class="">8. Number Models 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-1-li">
+  <a href="/intermediate-cs/ch08/number-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-1"><span class="">Number Models 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-2-li">
+  <a href="/intermediate-cs/ch08/number-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-2"><span class="">Number Models 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-3-li">
+  <a href="/intermediate-cs/ch08/number-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-3"><span class="">Number Models 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-4-li">
+  <a href="/intermediate-cs/ch08/number-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-4"><span class="">Number Models 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-5-li">
+  <a href="/intermediate-cs/ch08/number-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-5"><span class="">Number Models 5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-review-li">
+  <a href="/intermediate-cs/ch08/number-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-review"><span class="">Number Model Review</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-review-2-li">
+  <a href="/intermediate-cs/ch08/number-review-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-review-2"><span class="">Number Model Review II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-graph-zoom-li">
+  <a href="/intermediate-cs/ch08/number-graph-zoom/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-graph-zoom"><span class="">Number Graph Zoom</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-project-li">
+  <a href="/intermediate-cs/ch08/number-project/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-project"><span class="">8. Number Project</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-finale-li">
+  <a href="/intermediate-cs/ch08/number-finale/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-finale"><span class="">8. Number Finale</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-test-li">
+  <a href="/intermediate-cs/ch08/number-test/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-test"><span class="">8. Build It Test</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08test-corrections-li">
+  <a href="/intermediate-cs/ch08/test-corrections/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08test-corrections"><span class="">8. Test Corrections</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch08number-review-more-li">
+  <a href="/intermediate-cs/ch08/number-review-more/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch08number-review-more"><span class="">Number Review More</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch09-li">
+  <a href="/intermediate-cs/ch09/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch09"><span class="">9. Strings</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch09strings-1-li">
+  <a href="/intermediate-cs/ch09/strings-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch09strings-1"><span class="">Strings 1</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch13-li">
+  <a href="/intermediate-cs/ch13/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch13"><span class="">13. Booleans</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-exb-li">
+  <a href="/intermediate-cs/ch13/ch13-exb/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-exb"><span class="">13. Exercises B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-exc-li">
+  <a href="/intermediate-cs/ch13/ch13-exc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-exc"><span class="">13. Exercises C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-intro-ex0-li">
+  <a href="/intermediate-cs/ch13/ch13-intro-ex0/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-intro-ex0"><span class="">13. Intro Exercises 0</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-intro-ex1-li">
+  <a href="/intermediate-cs/ch13/ch13-intro-ex1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-intro-ex1"><span class="">13. Intro Exercises 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-intro-ex2-li">
+  <a href="/intermediate-cs/ch13/ch13-intro-ex2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-intro-ex2"><span class="">13. Intro Exercises 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-intro-ex3-li">
+  <a href="/intermediate-cs/ch13/ch13-intro-ex3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-intro-ex3"><span class="">13. Intro Exercises 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch13ch13-exa-li">
+  <a href="/intermediate-cs/ch13/ch13-exa/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch13ch13-exa"><span class="">Ch13 Exercises</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch14-li">
+  <a href="/intermediate-cs/ch14/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch14"><span class="">14. Booleans II</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch14ch14-essentials-li">
+  <a href="/intermediate-cs/ch14/ch14-essentials/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch14ch14-essentials"><span class="">14. Essentials</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch15-li">
+  <a href="/intermediate-cs/ch15/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch15"><span class="">15. Conditionals</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-book-li">
+  <a href="/intermediate-cs/ch15/15-book/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-book"><span class="">15. Book</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-slides-li">
+  <a href="/intermediate-cs/ch15/15-slides/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-slides"><span class="">15. Slides</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-warmups-a-li">
+  <a href="/intermediate-cs/ch15/15-warmups-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-warmups-a"><span class="">15. Warmups A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-cond-patterns-li">
+  <a href="/intermediate-cs/ch15/15-cond-patterns/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-cond-patterns"><span class="">15. Cond Patterns</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-challenge-li">
+  <a href="/intermediate-cs/ch15/15-challenge/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-challenge"><span class="">15. Another Challenge</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-graphing-review-li">
+  <a href="/intermediate-cs/ch15/15-graphing-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-graphing-review"><span class="">15. Graphing Review</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-heatmap-li">
+  <a href="/intermediate-cs/ch15/15-heatmap/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-heatmap"><span class="">15. Heatmap</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-heat-contour-li">
+  <a href="/intermediate-cs/ch15/15-heat-contour/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-heat-contour"><span class="">15. Heatmap with Contours</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-practice-all-li">
+  <a href="/intermediate-cs/ch15/15-practice-all/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-practice-all"><span class="">15. Practice All</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1515-practice-quiz-li">
+  <a href="/intermediate-cs/ch15/15-practice-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1515-practice-quiz"><span class="">15. Practice Quiz</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch17-li">
+  <a href="/intermediate-cs/ch17/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch17"><span class="">17. Cond Animations</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1717c-li">
+  <a href="/intermediate-cs/ch17/17c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1717c"><span class="">17.C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1717d-li">
+  <a href="/intermediate-cs/ch17/17d/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1717d"><span class="">17.D</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch1717e-li">
+  <a href="/intermediate-cs/ch17/17e/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch1717e"><span class="">17.E</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch17jan-a-li">
+  <a href="/intermediate-cs/ch17/jan-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch17jan-a"><span class="">Jan A</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-intermediate-cssem1review-li">
+  <a href="/intermediate-cs/sem1review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-cssem1review"><span class="">Sem.I Review</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-1-li">
+  <a href="/intermediate-cs/sem1review/sem-review-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-1"><span class="">I.1 Semester I Review 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-2-li">
+  <a href="/intermediate-cs/sem1review/sem-review-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-2"><span class="">I.2 Semester I Review 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-3-li">
+  <a href="/intermediate-cs/sem1review/sem-review-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-3"><span class="">I.3 Semester I Review 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-4-li">
+  <a href="/intermediate-cs/sem1review/sem-review-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-4"><span class="">I.4 Semester I Review 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-5-li">
+  <a href="/intermediate-cs/sem1review/sem-review-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-5"><span class="">I.5 Semester I Review 5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-intermediate-cssem1reviewsem-review-6-li">
+  <a href="/intermediate-cs/sem1review/sem-review-6/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-6"><span class="td-sidebar-nav-active-item">I.6 Semester I Review 6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-7-li">
+  <a href="/intermediate-cs/sem1review/sem-review-7/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-7"><span class="">I.7 Semester I Review 7</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-8-li">
+  <a href="/intermediate-cs/sem1review/sem-review-8/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-8"><span class="">I.8 Semester I Review 8</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-e-li">
+  <a href="/intermediate-cs/sem1review/sem-review-e/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-e"><span class="">I.E Semester Review E</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-f-li">
+  <a href="/intermediate-cs/sem1review/sem-review-f/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-f"><span class="">I.F Semester Review F</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-g-li">
+  <a href="/intermediate-cs/sem1review/sem-review-g/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-g"><span class="">I.G Semester Review G</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem1final2021-li">
+  <a href="/intermediate-cs/sem1review/sem1final2021/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem1final2021"><span class="">Sem.I Final 2021</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1review2020-sem1-review-notes-li">
+  <a href="/intermediate-cs/sem1review/2020-sem1-review-notes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1review2020-sem1-review-notes"><span class="">Sem.I 2020 Review Notes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cssem1reviewsem-review-topics-1-li">
+  <a href="/intermediate-cs/sem1review/sem-review-topics-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem1reviewsem-review-topics-1"><span class="">Semester Review Topics List</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch20-li">
+  <a href="/intermediate-cs/ch20/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch20"><span class="">20. Using Structures</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20posn-util-li">
+  <a href="/intermediate-cs/ch20/posn-util/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20posn-util"><span class="">20. Posn Util</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2020-require-li">
+  <a href="/intermediate-cs/ch20/20-require/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2020-require"><span class="">20. Libraries</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2020-troubleshoot-li">
+  <a href="/intermediate-cs/ch20/20-troubleshoot/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2020-troubleshoot"><span class="">20. Troubleshoot</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20posnmath-li">
+  <a href="/intermediate-cs/ch20/posnmath/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20posnmath"><span class="">20. Posn Math</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2020-intro-ex-1-li">
+  <a href="/intermediate-cs/ch20/20-intro-ex-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2020-intro-ex-1"><span class="">20. Posn Math Programming</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20click-circle-li">
+  <a href="/intermediate-cs/ch20/click-circle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20click-circle"><span class="">20. Click Circle</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20click-circle-questions-li">
+  <a href="/intermediate-cs/ch20/click-circle-questions/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20click-circle-questions"><span class="">20. Click Circle Questions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20click-mega-li">
+  <a href="/intermediate-cs/ch20/click-mega/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20click-mega"><span class="">20. Click Mega</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20square-a-li">
+  <a href="/intermediate-cs/ch20/square-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20square-a"><span class="">20. Silly Square</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20tightrope-li">
+  <a href="/intermediate-cs/ch20/tightrope/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20tightrope"><span class="">20. Tightrope</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20click-rect-li">
+  <a href="/intermediate-cs/ch20/click-rect/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20click-rect"><span class="">20. Click Rectangle</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20chase-li">
+  <a href="/intermediate-cs/ch20/chase/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20chase"><span class="">20. Chase</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20map-image-li">
+  <a href="/intermediate-cs/ch20/map-image/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20map-image"><span class="">20. Map Image</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20color-enhancing-li">
+  <a href="/intermediate-cs/ch20/color-enhancing/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20color-enhancing"><span class="">20. Color Enhancing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ch20-review-li">
+  <a href="/intermediate-cs/ch20/ch20-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ch20-review"><span class="">20. Review</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch20ball-driving-li">
+  <a href="/intermediate-cs/ch20/ball-driving/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch20ball-driving"><span class="">20. Ball Driving</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivingintro-li">
+  <a href="/intermediate-cs/ch20/ball-driving/intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivingintro"><span class="">1. Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivingstarter-code-li">
+  <a href="/intermediate-cs/ch20/ball-driving/starter-code/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivingstarter-code"><span class="">2. Starter Code</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivingcontrols-li">
+  <a href="/intermediate-cs/ch20/ball-driving/controls/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivingcontrols"><span class="">3. Controls</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivingmotion-li">
+  <a href="/intermediate-cs/ch20/ball-driving/motion/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivingmotion"><span class="">4. Motion</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivingend-game-li">
+  <a href="/intermediate-cs/ch20/ball-driving/end-game/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivingend-game"><span class="">5. End Game</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ball-drivinganimation-li">
+  <a href="/intermediate-cs/ch20/ball-driving/animation/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ball-drivinganimation"><span class="">6. Animation</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ch20-quiz-c-li">
+  <a href="/intermediate-cs/ch20/ch20-quiz-c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ch20-quiz-c"><span class="">20. Quiz C - Solar Jump</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ch20-quiz-d-li">
+  <a href="/intermediate-cs/ch20/ch20-quiz-d/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ch20-quiz-d"><span class="">20. Quiz D</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20aimbooster-li">
+  <a href="/intermediate-cs/ch20/aimbooster/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20aimbooster"><span class="">Advanced: Aimbooster</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20trollquiz-li">
+  <a href="/intermediate-cs/ch20/trollquiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20trollquiz"><span class="">Troll Quiz Practice</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2020-intro-ex-120-intro-checkexpect-li">
+  <a href="/intermediate-cs/ch20/20-intro-ex-1/20-intro-checkexpect/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2020-intro-ex-120-intro-checkexpect"><span class=""></span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch21-li">
+  <a href="/intermediate-cs/ch21/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch21"><span class="">21. Structures</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2121-ws-a-li">
+  <a href="/intermediate-cs/ch21/21-ws-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2121-ws-a"><span class="">21. Worksheet A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2121-ws-b-li">
+  <a href="/intermediate-cs/ch21/21-ws-b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2121-ws-b"><span class="">21. Worksheet B</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2121-ws-c-li">
+  <a href="/intermediate-cs/ch21/21-ws-c/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2121-ws-c"><span class="">21. Worksheet C</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch2121-star-circle-li">
+  <a href="/intermediate-cs/ch21/21-star-circle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch2121-star-circle"><span class="">21. Star-Circle</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21pv-intro-li">
+  <a href="/intermediate-cs/ch21/pv-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21pv-intro"><span class="">21. PV Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch21pv-tick-handler-li">
+  <a href="/intermediate-cs/ch21/pv-tick-handler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch21pv-tick-handler"><span class="">21. Two Actions, One Tick</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21pv-tick-handlermath-soln-1-li">
+  <a href="/intermediate-cs/ch21/pv-tick-handler/math-soln-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21pv-tick-handlermath-soln-1"><span class="">Math Soln 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21pv-tick-handlermath-soln-2-li">
+  <a href="/intermediate-cs/ch21/pv-tick-handler/math-soln-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21pv-tick-handlermath-soln-2"><span class="">Math Soln 2</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21moving-ball-li">
+  <a href="/intermediate-cs/ch21/moving-ball/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21moving-ball"><span class="">Moving Ball</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21speed-typer-li">
+  <a href="/intermediate-cs/ch21/speed-typer/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21speed-typer"><span class="">Speed Typer</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch21agar-io-li">
+  <a href="/intermediate-cs/ch21/agar-io/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch21agar-io"><span class="">Agar.io</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch22a-li">
+  <a href="/intermediate-cs/ch22a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch22a"><span class="">22a. Recursion</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a10-learnrec-li">
+  <a href="/intermediate-cs/ch22a/10-learnrec/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a10-learnrec"><span class="">22a. Learn Recursion</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a30-fibonacci-li">
+  <a href="/intermediate-cs/ch22a/30-fibonacci/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a30-fibonacci"><span class="">22a. Fibonacci</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a35-num-digits-li">
+  <a href="/intermediate-cs/ch22a/35-num-digits/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a35-num-digits"><span class="">22a. Digits</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a40-sum-digits-li">
+  <a href="/intermediate-cs/ch22a/40-sum-digits/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a40-sum-digits"><span class="">22a. Sum Digits</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a42-digits-ii-li">
+  <a href="/intermediate-cs/ch22a/42-digits-ii/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a42-digits-ii"><span class="">22a. Digits II</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a44-digits-iii-li">
+  <a href="/intermediate-cs/ch22a/44-digits-iii/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a44-digits-iii"><span class="">22a. Digits III</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a48-digits-v-li">
+  <a href="/intermediate-cs/ch22a/48-digits-v/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a48-digits-v"><span class="">22a. Digits V</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a50-fibsum-li">
+  <a href="/intermediate-cs/ch22a/50-fibsum/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a50-fibsum"><span class="">22a. Fibsum</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a60-more-rec-li">
+  <a href="/intermediate-cs/ch22a/60-more-rec/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a60-more-rec"><span class="">22a. More Recursion</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a61-harmonic-li">
+  <a href="/intermediate-cs/ch22a/61-harmonic/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a61-harmonic"><span class="">22a. Harmonic</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a62-rec-plus-li">
+  <a href="/intermediate-cs/ch22a/62-rec-plus/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a62-rec-plus"><span class="">22a. Practice&#43;&#43;</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a63-ssa-li">
+  <a href="/intermediate-cs/ch22a/63-ssa/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a63-ssa"><span class="">22a. ss3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a70-rec-helpers-li">
+  <a href="/intermediate-cs/ch22a/70-rec-helpers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a70-rec-helpers"><span class="">22a. Recursive Helpers</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a80-rec-practice-q-li">
+  <a href="/intermediate-cs/ch22a/80-rec-practice-q/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a80-rec-practice-q"><span class="">22a. Recursion Quiz Practice</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a81-rec-quiz-li">
+  <a href="/intermediate-cs/ch22a/81-rec-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a81-rec-quiz"><span class="">22a. Recursion Quiz 2018</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a82-quiz-li">
+  <a href="/intermediate-cs/ch22a/82-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a82-quiz"><span class="">22a. Recursion Practice I 2019</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22aroygbiv-code-li">
+  <a href="/intermediate-cs/ch22a/roygbiv-code/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22aroygbiv-code"><span class="">Roygbiv Code</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a84-strings-li">
+  <a href="/intermediate-cs/ch22a/84-strings/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a84-strings"><span class="">22a. Strings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a90-helpers-li">
+  <a href="/intermediate-cs/ch22a/90-helpers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a90-helpers"><span class="">22a. Helpers</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a91-count-divisors-li">
+  <a href="/intermediate-cs/ch22a/91-count-divisors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a91-count-divisors"><span class="">22a. Helpers: Count Divisors</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a92-helpers-2-li">
+  <a href="/intermediate-cs/ch22a/92-helpers-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a92-helpers-2"><span class="">22a. Recursion Practice 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a93-self-quiz-li">
+  <a href="/intermediate-cs/ch22a/93-self-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a93-self-quiz"><span class="">22a. Recursion Self Quiz</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a94-rec-practice-4-li">
+  <a href="/intermediate-cs/ch22a/94-rec-practice-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a94-rec-practice-4"><span class="">22a. Recursion Practice 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a95-0-quiz-li">
+  <a href="/intermediate-cs/ch22a/95-0-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a95-0-quiz"><span class="">22a. Memorization Quiz 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a95-1-quiz-li">
+  <a href="/intermediate-cs/ch22a/95-1-quiz/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a95-1-quiz"><span class="">22a. Mini-Quiz</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a95-rec-quiz-2-li">
+  <a href="/intermediate-cs/ch22a/95-rec-quiz-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a95-rec-quiz-2"><span class="">22a. Recursion Quiz 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a96-rec-practice-5-li">
+  <a href="/intermediate-cs/ch22a/96-rec-practice-5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a96-rec-practice-5"><span class="">22a. Recursion Practice 5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a97-rec-practice-6-li">
+  <a href="/intermediate-cs/ch22a/97-rec-practice-6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a97-rec-practice-6"><span class="">22a. Recursion Practice 6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a98-quiz-3-hard-li">
+  <a href="/intermediate-cs/ch22a/98-quiz-3-hard/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a98-quiz-3-hard"><span class="">Quiz 3 (Hard)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a99-quiz-4-medium-li">
+  <a href="/intermediate-cs/ch22a/99-quiz-4-medium/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a99-quiz-4-medium"><span class="">Quiz 4 (Medium)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a110-febg-review-li">
+  <a href="/intermediate-cs/ch22a/110-febg-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a110-febg-review"><span class="">22a. Feb.G Review</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch22a199-hangman-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch22a199-hangman"><span class="">22a. Hangman Project</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a199-hangman99a-hangman-outline-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/99a-hangman-outline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a199-hangman99a-hangman-outline"><span class="">22a. Hangman Outline</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a199-hangman99b-hangman-images-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/99b-hangman-images/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a199-hangman99b-hangman-images"><span class="">22a. Hangman Images</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a199-hangman99c-hangman-keyhandler-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/99c-hangman-keyhandler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a199-hangman99c-hangman-keyhandler"><span class="">22a. Hangman Key Handler</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a199-hangman99d-hangman-drawhandler-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/99d-hangman-drawhandler/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a199-hangman99d-hangman-drawhandler"><span class="">22a. Hangman DH Warmup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22a199-hangman99e-hangman-drawhandler-2-li">
+  <a href="/intermediate-cs/ch22a/199-hangman/99e-hangman-drawhandler-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22a199-hangman99e-hangman-drawhandler-2"><span class="">22a. Hangman Draw Handler</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csch22b-li">
+  <a href="/intermediate-cs/ch22b/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch22b"><span class="">22b. Lists</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-intro-li">
+  <a href="/intermediate-cs/ch22b/list-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-intro"><span class="">22. List Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-1-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-1"><span class="">22b. List Exercises 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-15-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-1.5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-15"><span class="">22b. List Exercises 1.5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-2-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-2"><span class="">22b. List Exercises 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bbubble-wrap-li">
+  <a href="/intermediate-cs/ch22b/bubble-wrap/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bbubble-wrap"><span class="">22b. Bubble Wrap</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bbubble-review-li">
+  <a href="/intermediate-cs/ch22b/bubble-review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bbubble-review"><span class="">Bubble Review</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-3-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-3"><span class="">22b. List Exercises 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-4-q-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-4-q/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-4-q"><span class="">22b. List Exercises 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-6-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-6"><span class="">22b. List Exercises 6</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-exercises-7-li">
+  <a href="/intermediate-cs/ch22b/list-exercises-7/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-exercises-7"><span class="">22b. List Exercises 7</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22blist-resources-li">
+  <a href="/intermediate-cs/ch22b/list-resources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22blist-resources"><span class="">22. Additional Resources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csch22bparcels-li">
+  <a href="/intermediate-cs/ch22b/parcels/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csch22bparcels"><span class="">Parcels</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bparcelsgrid-li">
+  <a href="/intermediate-cs/ch22b/parcels/grid/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bparcelsgrid"><span class="">Grid</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bparcelsdistances-li">
+  <a href="/intermediate-cs/ch22b/parcels/distances/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bparcelsdistances"><span class="">Distances</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bparcelsparcels-colors-li">
+  <a href="/intermediate-cs/ch22b/parcels/parcels-colors/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bparcelsparcels-colors"><span class="">Coloring</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bparcelsparcels-animation-li">
+  <a href="/intermediate-cs/ch22b/parcels/parcels-animation/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bparcelsparcels-animation"><span class="">Animation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch22bparcelsvideos-li">
+  <a href="/intermediate-cs/ch22b/parcels/videos/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch22bparcelsvideos"><span class="">Parcels Videos</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csuniverse-li">
+  <a href="/intermediate-cs/universe/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csuniverse"><span class="">24. Universe</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-overview-li">
+  <a href="/intermediate-cs/universe/u-overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-overview"><span class="">Universe Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csuniverseu-walkthrough-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csuniverseu-walkthrough"><span class="">U Walkthrough</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough00-description-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/00-description/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough00-description"><span class="">Description</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough01-model-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/01-model/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough01-model"><span class="">01 Model</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough02-message-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/02-message/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough02-message"><span class="">02 Message</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough03-checkpt-1-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/03-checkpt-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough03-checkpt-1"><span class="">03 Checkpoint</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough04-drawh-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/04-drawh/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough04-drawh"><span class="">04 Draw-H</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough05-receive-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/05-receive/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough05-receive"><span class="">05 Receive H</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough06-key-h-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/06-key-h/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough06-key-h"><span class="">06 Key H</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough07-big-bang-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/07-big-bang/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough07-big-bang"><span class="">07 Big Bang</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough08-server-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/08-server/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough08-server"><span class="">08 Server</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-walkthrough09-enhance-li">
+  <a href="/intermediate-cs/universe/u-walkthrough/09-enhance/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-walkthrough09-enhance"><span class="">09 Enhance</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniversemoney-li">
+  <a href="/intermediate-cs/universe/money/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniversemoney"><span class="">Money on the Table</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-mini-proj-li">
+  <a href="/intermediate-cs/universe/u-mini-proj/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-mini-proj"><span class="">Universe Mini Projects</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-color-li">
+  <a href="/intermediate-cs/universe/u-color/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-color"><span class="">Universe Color</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-take-turns-li">
+  <a href="/intermediate-cs/universe/u-take-turns/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-take-turns"><span class="">Universe Taking Turns</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-quiz-4-li">
+  <a href="/intermediate-cs/universe/u-quiz-4/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-quiz-4"><span class="">Universe Quiz 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-slapjack-li">
+  <a href="/intermediate-cs/universe/u-slapjack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-slapjack"><span class="">Universe Slapjack</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniversechat-app-li">
+  <a href="/intermediate-cs/universe/chat-app/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniversechat-app"><span class="">Chat App</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-paint-li">
+  <a href="/intermediate-cs/universe/u-paint/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-paint"><span class="">Universe Paint</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniversegray-rect-li">
+  <a href="/intermediate-cs/universe/gray-rect/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniversegray-rect"><span class="">Gray Rectangles</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-resources-li">
+  <a href="/intermediate-cs/universe/u-resources/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-resources"><span class="">Universe Resources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-mistakes-li">
+  <a href="/intermediate-cs/universe/u-mistakes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-mistakes"><span class="">Universe Mistakes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csuniverseu-ws-01-li">
+  <a href="/intermediate-cs/universe/u-ws-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csuniverseu-ws-01"><span class="">U WS 01</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csmisc-li">
+  <a href="/intermediate-cs/misc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csmisc"><span class="">Misc</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csmiscmisc-01-li">
+  <a href="/intermediate-cs/misc/misc-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csmiscmisc-01"><span class="">Misc 01</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csmiscmisc-02-li">
+  <a href="/intermediate-cs/misc/misc-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csmiscmisc-02"><span class="">Misc 02</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csmiscmisc-03-li">
+  <a href="/intermediate-cs/misc/misc-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csmiscmisc-03"><span class="">Misc 03</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csprojects-li">
+  <a href="/intermediate-cs/projects/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csprojects"><span class="">Projects</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csprojectsduck-shoot-li">
+  <a href="/intermediate-cs/projects/duck-shoot/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csprojectsduck-shoot"><span class="">Duck Shoot</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsduck-shoot05-description-li">
+  <a href="/intermediate-cs/projects/duck-shoot/05-description/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsduck-shoot05-description"><span class="">Description</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsduck-shoot10-model-li">
+  <a href="/intermediate-cs/projects/duck-shoot/10-model/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsduck-shoot10-model"><span class="">Model and Draw</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csprojectsbattleship-li">
+  <a href="/intermediate-cs/projects/battleship/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csprojectsbattleship"><span class="">Battleship</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipmodel-li">
+  <a href="/intermediate-cs/projects/battleship/model/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipmodel"><span class="">Battleship Model</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipexamples-li">
+  <a href="/intermediate-cs/projects/battleship/examples/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipexamples"><span class="">Battleship Examples</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipoutline-li">
+  <a href="/intermediate-cs/projects/battleship/outline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipoutline"><span class="">Battleship Outline</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipchecks-li">
+  <a href="/intermediate-cs/projects/battleship/checks/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipchecks"><span class="">Battleship Checks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipdraw-li">
+  <a href="/intermediate-cs/projects/battleship/draw/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipdraw"><span class="">Battleship Action</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsbattleshipfinal-li">
+  <a href="/intermediate-cs/projects/battleship/final/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsbattleshipfinal"><span class="">Battleship Complete</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csprojectssnake-li">
+  <a href="/intermediate-cs/projects/snake/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csprojectssnake"><span class="">Snake</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectssnake10-snake-intro-li">
+  <a href="/intermediate-cs/projects/snake/10-snake-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectssnake10-snake-intro"><span class="">Snake Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectssnake100-snake-li">
+  <a href="/intermediate-cs/projects/snake/100-snake/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectssnake100-snake"><span class="">Snake Functions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectssnake110-multiplayer-li">
+  <a href="/intermediate-cs/projects/snake/110-multiplayer/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectssnake110-multiplayer"><span class="">Snake Multiplayer</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectssnake120-ai-li">
+  <a href="/intermediate-cs/projects/snake/120-ai/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectssnake120-ai"><span class="">Snake AI</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-csprojectsreversi-li">
+  <a href="/intermediate-cs/projects/reversi/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csprojectsreversi"><span class="">Reversi</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi100-overview-li">
+  <a href="/intermediate-cs/projects/reversi/100-overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi100-overview"><span class="">Reversi Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi105-structs-li">
+  <a href="/intermediate-cs/projects/reversi/105-structs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi105-structs"><span class="">Reversi Structs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi110-stage1-li">
+  <a href="/intermediate-cs/projects/reversi/110-stage1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi110-stage1"><span class="">Reversi Placement</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi120-indicator-li">
+  <a href="/intermediate-cs/projects/reversi/120-indicator/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi120-indicator"><span class="">Reversi Indicator</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi130-ray-li">
+  <a href="/intermediate-cs/projects/reversi/130-ray/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi130-ray"><span class="">Reversi Ray</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi135-board-li">
+  <a href="/intermediate-cs/projects/reversi/135-board/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi135-board"><span class="">Reversi Board</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi137-plan-li">
+  <a href="/intermediate-cs/projects/reversi/137-plan/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi137-plan"><span class="">Reversi Flip Plan</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi140-flips-li">
+  <a href="/intermediate-cs/projects/reversi/140-flips/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi140-flips"><span class="">Reversi Count Flips</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprojectsreversi150-stack-li">
+  <a href="/intermediate-cs/projects/reversi/150-stack/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprojectsreversi150-stack"><span class="">Reversi Stack</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-cssem2review-li">
+  <a href="/intermediate-cs/sem2review/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-cssem2review"><span class="">Sem.II Review</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2reviewsem2final-li">
+  <a href="/intermediate-cs/sem2review/sem2final/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2reviewsem2final"><span class="">2020 Sem.II Final</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2022-01-li">
+  <a href="/intermediate-cs/sem2review/2022-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2022-01"><span class="">2022 Review 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2022-02-li">
+  <a href="/intermediate-cs/sem2review/2022-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2022-02"><span class="">2022 Review 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2022-03-li">
+  <a href="/intermediate-cs/sem2review/2022-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2022-03"><span class="">2022 Review 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2022-04-li">
+  <a href="/intermediate-cs/sem2review/2022-04/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2022-04"><span class="">2022 Review 4</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2022-05-li">
+  <a href="/intermediate-cs/sem2review/2022-05/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2022-05"><span class="">2022 Review 5</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2023-01-li">
+  <a href="/intermediate-cs/sem2review/2023-01/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2023-01"><span class="">2023 Review 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2023-02-li">
+  <a href="/intermediate-cs/sem2review/2023-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2023-02"><span class="">2023 Review 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2023-03-li">
+  <a href="/intermediate-cs/sem2review/2023-03/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2023-03"><span class="">2023 Review 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cssem2review2024-02-li">
+  <a href="/intermediate-cs/sem2review/2024-02/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cssem2review2024-02"><span class="">2024 Review 2</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-cstyped-li">
+  <a href="/intermediate-cs/typed/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-cstyped"><span class="">Typed Racket</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-intro-li">
+  <a href="/intermediate-cs/typed/typed-intro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-intro"><span class="">Typed Intro</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-variables-li">
+  <a href="/intermediate-cs/typed/typed-variables/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-variables"><span class="">Typed Variables and Functions</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-structures-li">
+  <a href="/intermediate-cs/typed/typed-structures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-structures"><span class="">Typed Structures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-bigbang-li">
+  <a href="/intermediate-cs/typed/typed-bigbang/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-bigbang"><span class="">Typed Big Bang</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-ex1-li">
+  <a href="/intermediate-cs/typed/typed-ex1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-ex1"><span class="">Typed Exercises 1</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-ex2-li">
+  <a href="/intermediate-cs/typed/typed-ex2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-ex2"><span class="">Typed Exercises 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedtyped-ex3-li">
+  <a href="/intermediate-cs/typed/typed-ex3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedtyped-ex3"><span class="">Typed Exercises 3</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedbumper-cars-li">
+  <a href="/intermediate-cs/typed/bumper-cars/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedbumper-cars"><span class="">Bumper Cars</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedbumper-two-player-li">
+  <a href="/intermediate-cs/typed/bumper-two-player/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedbumper-two-player"><span class="">Bumper Two Player</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-intermediate-cstypedcheckers-li">
+  <a href="/intermediate-cs/typed/checkers/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-cstypedcheckers"><span class="">Checkers</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedcheckersoutline-li">
+  <a href="/intermediate-cs/typed/checkers/outline/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedcheckersoutline"><span class="">Checkers Outline</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedcheckersmodel-li">
+  <a href="/intermediate-cs/typed/checkers/model/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedcheckersmodel"><span class="">Checkers Model</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cstypedcheckerslegal-moves-li">
+  <a href="/intermediate-cs/typed/checkers/legal-moves/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cstypedcheckerslegal-moves"><span class="">Checkers Legal Moves</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-csdocs-li">
+  <a href="/intermediate-cs/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-csdocs"><span class="">Resources</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocsturn-in-work-li">
+  <a href="/intermediate-cs/docs/turn-in-work/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocsturn-in-work"><span class="">Turn in Work</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocswhy-racket-li">
+  <a href="/intermediate-cs/docs/why-racket/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocswhy-racket"><span class="">Why Racket?</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocse-courses-li">
+  <a href="/intermediate-cs/docs/e-courses/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocse-courses"><span class="">Online Resources</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocsics-wescheme-note-li">
+  <a href="/intermediate-cs/docs/ics-wescheme-note/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocsics-wescheme-note"><span class="">WeScheme</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocswescheme-ch1-li">
+  <a href="/intermediate-cs/docs/wescheme-ch1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocswescheme-ch1"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csdocswescheme-ch3-li">
+  <a href="/intermediate-cs/docs/wescheme-ch3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csdocswescheme-ch3"><span class=""></span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-intermediate-cspro-li">
+  <a href="/intermediate-cs/pro/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-intermediate-cspro"><span class="">Pro Features</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cspropro-string-li">
+  <a href="/intermediate-cs/pro/pro-string/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cspropro-string"><span class="">Strings for Experts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprobuild-image-li">
+  <a href="/intermediate-cs/pro/build-image/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprobuild-image"><span class="">Build Image</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprostruct-li">
+  <a href="/intermediate-cs/pro/struct/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprostruct"><span class="">Advanced Structures</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-cspromatch-li">
+  <a href="/intermediate-cs/pro/match/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cspromatch"><span class="">Match</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprofor-li">
+  <a href="/intermediate-cs/pro/for/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprofor"><span class="">For</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csprotopics-li">
+  <a href="/intermediate-cs/pro/topics/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csprotopics"><span class="">Topics to Study</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-intermediate-cse-courses-li">
+  <a href="/intermediate-cs/e-courses/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-cse-courses"><span class="">Online Help</span></a>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/maueroats/teaching--2024-2025/tree/main/www/content/intermediate-cs/sem1review/sem-review-6.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/edit/main/www/content/intermediate-cs/sem1review/sem-review-6.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/new/main/www/content/intermediate-cs/sem1review?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/issues/new?title=I.6%20Semester%20I%20Review%206" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-does-it-do">What does it do?</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/intermediate-cs/">IntermediateCS</a></li>
+  <li class="breadcrumb-item">
+    <a href="/intermediate-cs/sem1review/">Sem.I Review</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    I.6 Semester I Review 6</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>I.6 Semester I Review 6</h1>
+	<div class="lead">Random numbers. Gas gauge. Graphing in people coordinates.</div>
+	<header class="article-meta">
+		
+  </header>
+	<h2 id="what-does-it-do">What does it do?</h2>
+<p>Write check-expects.</p>
+<ol>
+<li>
+<p>Write two check-expects for the  <code>double-circle-img</code> function
+(abbeviate <code>dci</code>):</p>
+<pre><code> (define (double-circle-image img)
+   (image-width
+     (beside (circle 40 &quot;solid&quot; &quot;blue&quot;)
+             img
+             (circle 40 &quot;solid&quot; &quot;blue&quot;))))
+</code></pre>
+</li>
+<li>
+<p>Write and test a function <code>r2d</code> that returns a random two digit
+number. There is a 40% chance of the number beginning with a 2 and
+a 60% chance of it beginning with a 1. The ones digit should be
+random.</p>
+</li>
+<li>
+<p><strong>Gas gauge</strong>. You are making a <em>text</em> based gas gauge function.</p>
+<pre><code> gas-gauge: number -&gt; string
+</code></pre>
+<ul>
+<li>The readout result will be 16 X&rsquo;s when the tank is full, and then should O&rsquo;s
+for the part that is empty. For example, half full is <code>&quot;XXXXXXXXOOOOOOOO&quot;</code>.</li>
+<li>The gas tank can hold a maximum of 12 gallons.</li>
+<li>When the tank is over half full, round number of X&rsquo;s, so 96% reads full.</li>
+<li>When the tank is less than half full, always round down (floor)
+the number of X&rsquo;s to avoid suddenly running out of gas. (So 6%
+reads empty.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Graphing</strong>. You are making an animation where a red circle
+follows the people-coordinate graph of the function</p>
+<pre><code> y = 1/600 * (x-200) * (x+200)
+</code></pre>
+<ul>
+<li>Graphing window is 500x300.</li>
+<li>Both x and y axes are visible.</li>
+<li>People-coordinate origin is (250,150) in computer coordinates.</li>
+<li>Positive y-axis for the graph is up.</li>
+<li>As you move the mouse, the red point shows on the graph is
+directly above/below your mouse.</li>
+</ul>
+</li>
+</ol>
+
+	<div class="td-page-meta__lastmod">
+  Last modified January 9, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/2e92579bf6ba5dc60411ada92f0518c2dcf5a1c6">Clarifying edits. (2e92579)</a>
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Racket Docs" aria-label="Racket Docs">
+    <a target="_blank" rel="noopener" href="https://docs.racket-lang.org/" aria-label="Racket Docs">
+      <i class="fab fa-galactic-republic"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Picturing Programs" aria-label="Picturing Programs">
+    <a target="_blank" rel="noopener" href="https://picturingprograms.com" aria-label="Picturing Programs">
+      <i class="fas fa-book"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Python 3 Docs" aria-label="Python 3 Docs">
+    <a target="_blank" rel="noopener" href="https://docs.python.org/3/tutorial/index.html" aria-label="Python 3 Docs">
+      <i class="fab fa-python"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Learn You a Haskell" aria-label="Learn You a Haskell">
+    <a target="_blank" rel="noopener" href="https://learnyouahaskell.github.io/" aria-label="Learn You a Haskell">
+      <i class="fas fa-brain"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">A. Mauer-Oats</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.9f2d532ad613261cb02731a6aeb7adbc1a95b305450a6141ac2bafafacec523a.js" integrity="sha256-ny1TKtYTJhywJzGmrretvBqVswVFCmFBrCuvr6zsUjo=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
