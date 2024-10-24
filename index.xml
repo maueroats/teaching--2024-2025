@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Oct 2024 22:10:42 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2024 07:55:39 -0500</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -3563,6 +3563,13 @@
       <pubDate>Tue, 22 Jan 2019 09:05:31 -0600</pubDate>
       <guid>https://wy-cs.info/ap-cs/jm/ch12/12-quiz-1d-n/</guid>
       <description>&lt;p&gt;(&lt;code&gt;similarEnds&lt;/code&gt;)&#xA;An array has similar N-ends if the front and back N numbers are&#xA;in the reversed order.&lt;/p&gt;&#xA;&lt;p&gt;Return the largest N value for which an array has the same N-ends.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;N is a positive integer.&lt;/li&gt;&#xA;&lt;li&gt;Give 0 if the ends are not similar at all.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Examples:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,40])&lt;/code&gt; =&amp;gt; &lt;code&gt;0&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,4,5,30,20])&lt;/code&gt; =&amp;gt; &lt;code&gt;2&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,40,50,50,40,30,20])&lt;/code&gt; =&amp;gt; &lt;code&gt;8&lt;/code&gt;. The repeating segments overlap.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([10,20,30,20,10])&lt;/code&gt; =&amp;gt; &lt;code&gt;5&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>7. Review</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review/</link>
+      <pubDate>Thu, 24 Oct 2024 07:55:39 -0500</pubDate>
+      <guid>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;chapter-6&#34;&gt;Chapter 6&lt;/h2&gt;&#xA;&lt;p&gt;Common difficult topics: lambda and fold.&lt;/p&gt;&#xA;&lt;p&gt;Generally familiar topics, but don&amp;rsquo;t forget: map and filter.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The function &lt;code&gt;r1&lt;/code&gt; is supposed to remove multiples of a given number &lt;code&gt;m&lt;/code&gt;&#xA;from a list &lt;code&gt;nums&lt;/code&gt;, and then output a list whose items are &lt;code&gt;m&lt;/code&gt;&#xA;times the squares of the remaining items.&lt;/p&gt;</description>
     </item>
     <item>
       <title>11. Quiz B</title>
