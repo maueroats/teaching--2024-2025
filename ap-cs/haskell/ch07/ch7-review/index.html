@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Review questions for Ch 6 and Ch 7. Lambda. Fold. Sorting.">
   <meta itemprop="datePublished" content="2024-10-24T07:55:39-05:00">
   <meta itemprop="dateModified" content="2024-10-24T07:55:39-05:00">
-  <meta itemprop="wordCount" content="315">
+  <meta itemprop="wordCount" content="321">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="7. Review">
   <meta name="twitter:description" content="Review questions for Ch 6 and Ch 7. Lambda. Fold. Sorting.">
@@ -866,6 +866,9 @@ times the squares of the remaining items.</p>
  r1 m nums = []
 </code></pre>
 <p>Write <strong>a single (long) line of code</strong> that defines <code>r1</code>.</p>
+<p>Example:</p>
+<pre><code> r1 3 [10,12,13,15] == [3*10*10,3*13*13]
+</code></pre>
 </li>
 <li>
 <p>Review the signature (and purpose) of a general folding function!</p>
@@ -877,7 +880,7 @@ and produce one long word with underscores after each one?</p>
 <li>
 <p>Write a folding function <code>r3h</code> that will do all of the work of the <code>r1</code>
 function (first question) and add up the items in the output list.</p>
-<pre><code> r3 :: Int -&gt; [Int] -&gt; [Int]
+<pre><code> r3 :: Int -&gt; [Int] -&gt; Int
  r3 m nums = []
 </code></pre>
 </li>
