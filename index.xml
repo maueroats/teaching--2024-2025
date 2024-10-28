@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Oct 2024 07:55:39 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2024 11:42:14 -0500</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -3565,10 +3565,10 @@
       <description>&lt;p&gt;(&lt;code&gt;similarEnds&lt;/code&gt;)&#xA;An array has similar N-ends if the front and back N numbers are&#xA;in the reversed order.&lt;/p&gt;&#xA;&lt;p&gt;Return the largest N value for which an array has the same N-ends.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;N is a positive integer.&lt;/li&gt;&#xA;&lt;li&gt;Give 0 if the ends are not similar at all.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Examples:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,40])&lt;/code&gt; =&amp;gt; &lt;code&gt;0&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,4,5,30,20])&lt;/code&gt; =&amp;gt; &lt;code&gt;2&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([20,30,40,50,50,40,30,20])&lt;/code&gt; =&amp;gt; &lt;code&gt;8&lt;/code&gt;. The repeating segments overlap.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;similarEnds([10,20,30,20,10])&lt;/code&gt; =&amp;gt; &lt;code&gt;5&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
-      <title>7. Review</title>
-      <link>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review/</link>
+      <title>7. Review 1</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-1/</link>
       <pubDate>Thu, 24 Oct 2024 07:55:39 -0500</pubDate>
-      <guid>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review/</guid>
+      <guid>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-1/</guid>
       <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;chapter-6&#34;&gt;Chapter 6&lt;/h2&gt;&#xA;&lt;p&gt;Common difficult topics: lambda and fold.&lt;/p&gt;&#xA;&lt;p&gt;Generally familiar topics, but don&amp;rsquo;t forget: map and filter.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The function &lt;code&gt;r1&lt;/code&gt; is supposed to remove multiples of a given number &lt;code&gt;m&lt;/code&gt;&#xA;from a list &lt;code&gt;nums&lt;/code&gt;, and then output a list whose items are &lt;code&gt;m&lt;/code&gt;&#xA;times the squares of the remaining items.&lt;/p&gt;</description>
     </item>
     <item>
@@ -3584,6 +3584,13 @@
       <pubDate>Thu, 10 Jan 2019 14:21:43 -0600</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/ch20/aimbooster/</guid>
       <description>&lt;p&gt;In this animation you copy &lt;a href=&#34;https://aimbooster.com&#34;&gt;AimBooster.com&lt;/a&gt;,&#xA;but simplified so you can make it with what you know from Chapter 20.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A single circle is at a random place.&lt;/li&gt;&#xA;&lt;li&gt;Radius increases.&lt;/li&gt;&#xA;&lt;li&gt;Clicking on the circle gives you points inversely proportional to&#xA;the radius (maybe 100/radius).&lt;/li&gt;&#xA;&lt;li&gt;When the circle is hit, it disappears and another starts growing.&lt;/li&gt;&#xA;&lt;li&gt;When the circle reaches a certain radius it disappears.&lt;/li&gt;&#xA;&lt;li&gt;After missing three circles, the game is over.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>7. Review 2</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-2/</link>
+      <pubDate>Mon, 28 Oct 2024 11:42:14 -0500</pubDate>
+      <guid>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-2/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;(&lt;code&gt;rt&lt;/code&gt;) Make a function to produce a reversed running total of the&#xA;integers in the&#xA;input as well as the count of how many numbers appeared.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; checks = [&#xA;   rt [9] == ([9,0],1)&#xA;   ,rt [9,5] == ([14,9,0],2)&#xA;   ,rt [9,5,6] == ([20,14,9,0],3)&#xA; ]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Write a possible signature for &lt;code&gt;rt&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;You are required to use a fold to write the function &lt;code&gt;rt&lt;/code&gt;.&#xA;Suppose that you have &lt;em&gt;already completed&lt;/em&gt; a working helper&#xA;function called &lt;code&gt;rth&lt;/code&gt;. Write the body of&#xA;your main function &lt;code&gt;rt&lt;/code&gt; using a &lt;code&gt;fold&lt;/code&gt; and your helper.&lt;/li&gt;&#xA;&lt;li&gt;What signature does the helper function &lt;code&gt;rth&lt;/code&gt; need to have?&lt;/li&gt;&#xA;&lt;li&gt;Write the helper function &lt;code&gt;rth&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;(&lt;code&gt;short&lt;/code&gt;) The shortener packs all of the words in a list together&#xA;into one word and finds the last &lt;code&gt;n&lt;/code&gt; letters of the result.&lt;/p&gt;</description>
     </item>
     <item>
       <title>11. Quiz C</title>
