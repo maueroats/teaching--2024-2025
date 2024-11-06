@@ -33,7 +33,7 @@
   <meta itemprop="description" content="More sorting, folding, Maybe review. Ch 6 material.">
   <meta itemprop="datePublished" content="2024-11-06T06:56:06-06:00">
   <meta itemprop="dateModified" content="2024-11-06T06:56:06-06:00">
-  <meta itemprop="wordCount" content="360">
+  <meta itemprop="wordCount" content="445">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="7. Review 3">
   <meta name="twitter:description" content="More sorting, folding, Maybe review. Ch 6 material.">
@@ -821,6 +821,8 @@
   <ul>
     <li><a href="#maybe">Maybe</a></li>
     <li><a href="#data">Data</a></li>
+    <li><a href="#another-program">Another Program</a></li>
+    <li><a href="#discussion">Discussion</a></li>
   </ul>
 </nav>
       </div>
@@ -939,6 +941,31 @@ helper function.</p>
 <p>Using <code>sortBy</code>, write a function to sort a list of <code>Apple</code> so that
 the items with the most inventory appear first in the list,
 breaking ties by putting the most expensive unit cost first.</p>
+</li>
+</ol>
+<h2 id="another-program">Another Program</h2>
+<ol start="7">
+<li>
+<p>Given a list of points, write a fold helper function that will
+produce a <code>Picture</code> of radius 3 outline black circles with centers
+at each of the points.</p>
+<pre><code> circ :: [Point] -&gt; Picture
+ circ pts = foldl circhelp coordinateGrid pts
+</code></pre>
+</li>
+</ol>
+<h2 id="discussion">Discussion</h2>
+<ol start="8">
+<li>
+<p>What are the types of each input to <code>foldl</code>? What is the purpose of
+each input?</p>
+</li>
+<li>
+<p>Give a one sentence summary of the &ldquo;big picture&rdquo; view of a fold
+helper function.</p>
+</li>
+<li>
+<p>What is the signature of the helper function used by <code>sortBy</code>?</p>
 </li>
 </ol>
 
