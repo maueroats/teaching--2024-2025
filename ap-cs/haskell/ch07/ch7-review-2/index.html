@@ -27,13 +27,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="ap-cs">
     <meta property="article:published_time" content="2024-10-28T11:42:14-05:00">
-    <meta property="article:modified_time" content="2024-10-28T11:42:14-05:00">
+    <meta property="article:modified_time" content="2024-10-29T10:51:04-05:00">
 
   <meta itemprop="name" content="7. Review 2">
   <meta itemprop="description" content="Review of folding. Ch 6 material.">
   <meta itemprop="datePublished" content="2024-10-28T11:42:14-05:00">
-  <meta itemprop="dateModified" content="2024-10-28T11:42:14-05:00">
-  <meta itemprop="wordCount" content="178">
+  <meta itemprop="dateModified" content="2024-10-29T10:51:04-05:00">
+  <meta itemprop="wordCount" content="290">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="7. Review 2">
   <meta name="twitter:description" content="Review of folding. Ch 6 material.">
@@ -263,6 +263,8 @@
   <a href="/ap-cs/haskell/ch07/ch7-review-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-review-1"><span class="">7. Review 1</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-ap-cshaskellch07ch7-review-2-li">
   <a href="/ap-cs/haskell/ch07/ch7-review-2/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-review-2"><span class="td-sidebar-nav-active-item">7. Review 2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-ap-cshaskellch07ch7-review-3-li">
+  <a href="/ap-cs/haskell/ch07/ch7-review-3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-ap-cshaskellch07ch7-review-3"><span class="">7. Review 3</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-ap-cshaskellch08-li">
@@ -814,7 +816,14 @@
   
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#notes">Notes</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -847,6 +856,10 @@
     ol ol ol { list-style-type: lower-roman; }
     ol ol ol ol { list-style-type: decimal; }
 </style>
+<p>These exercises are written to give practice using a <code>fold</code>
+operation. Your solution should have the form</p>
+<pre><code>f xs = foldl fhelp initial xs
+</code></pre>
 <ol>
 <li>
 <p>(<code>rt</code>) Make a function to produce a reversed running total of the
@@ -875,7 +888,7 @@ into one word and finds the last <code>n</code> letters of the result.</p>
    short 5 [&quot;pine&quot;] == &quot;pine&quot;
    ,short 5 [&quot;pine&quot;,&quot;x&quot;] == &quot;pinex&quot;
    ,short 5 [&quot;pine&quot;,&quot;x&quot;,&quot;yeet&quot;] == &quot;xyeet&quot;
-   ,short 5 [&quot;pine&quot;,&quot;x&quot;,&quot;yeet&quot;,&quot;glues&quot;] == &quot;glues
+   ,short 5 [&quot;pine&quot;,&quot;x&quot;,&quot;yeet&quot;,&quot;glues&quot;] == &quot;glues&quot;
    ]
 </code></pre>
 <p>You are required to use a fold to write the <code>short</code> function.</p>
@@ -885,8 +898,22 @@ into one word and finds the last <code>n</code> letters of the result.</p>
 </ol>
 </li>
 </ol>
+<h2 id="notes">Notes</h2>
+<p>What are fold functions good for?
+They are an example of a way to write a &ldquo;streaming&rdquo; or &ldquo;online&rdquo;
+algorithm. A streaming algorithm does not need all of the data present
+before it starts the computation. Watching videos is a common example
+of &ldquo;streaming&rdquo; (you do not download the whole video before you start
+watching). Computer applications that process more data than can fit
+in memory are another realistic example. For example, particle physics
+experiments <a href="https://home.cern/science/computing/storage">easily collect a petabyte of
+data</a> (1 million
+gigabytes) in a second.</p>
 
-	
+	<div class="td-page-meta__lastmod">
+  Last modified October 29, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/a9d002b47738ed8235a80c3829820c771e588e43">New review material and typo correction. (a9d002b)</a>
+</div>
+
 </div>
 
 

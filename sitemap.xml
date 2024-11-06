@@ -336,7 +336,7 @@
     <lastmod>2023-10-23T21:55:47-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch08/15-warmup/</loc>
-    <lastmod>2023-10-19T17:44:13-05:00</lastmod>
+    <lastmod>2024-11-03T20:24:40-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/universe/u-walkthrough/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -405,7 +405,7 @@
     <lastmod>2024-01-24T07:04:31-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/code-world/02-graphics/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2024-10-29T13:02:04-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/start/replit/</loc>
     <lastmod>2024-08-27T11:31:12-05:00</lastmod>
@@ -990,7 +990,7 @@
     <lastmod>2023-11-29T14:56:54-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch07/ch7-data-list/</loc>
-    <lastmod>2024-10-21T20:50:34-05:00</lastmod>
+    <lastmod>2024-10-29T10:51:04-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch01/ch01e/</loc>
     <lastmod>2024-09-04T11:31:11-05:00</lastmod>
@@ -1503,7 +1503,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/110-instructions-1/</loc>
-    <lastmod>2024-10-21T20:51:44-05:00</lastmod>
+    <lastmod>2024-10-29T11:04:59-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/racket/struct-match/</loc>
     <lastmod>2024-10-17T10:58:55-05:00</lastmod>
@@ -1583,6 +1583,9 @@
     <loc>https://wy-cs.info/intermediate-cs/ch07/random/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/nand/ch06/120-instructions-2/</loc>
+    <lastmod>2024-10-29T11:05:18-05:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/ch20-quiz-c/</loc>
     <lastmod>2024-01-23T07:19:23-06:00</lastmod>
   </url><url>
@@ -1593,7 +1596,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch06/bigbang-02/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2024-11-01T10:56:15-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/reversi/120-indicator/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1812,7 +1815,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-1/</loc>
-    <lastmod>2024-10-24T07:55:39-05:00</lastmod>
+    <lastmod>2024-10-29T10:51:04-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/jm/ch11/11-quiz-b/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1824,7 +1827,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-2/</loc>
-    <lastmod>2024-10-28T11:42:14-05:00</lastmod>
+    <lastmod>2024-10-29T10:51:04-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/jm/ch11/11-quiz-c/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1834,6 +1837,9 @@
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch22a/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ap-cs/haskell/ch07/ch7-review-3/</loc>
+    <lastmod>2024-11-06T06:56:06-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch22b/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -2016,7 +2022,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/match/</loc>
-    <lastmod>2024-10-22T22:10:42-05:00</lastmod>
+    <lastmod>2024-10-29T11:08:26-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/</loc>
     <lastmod>2024-10-21T20:51:44-05:00</lastmod>

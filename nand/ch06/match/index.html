@@ -27,12 +27,12 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="nand">
     <meta property="article:published_time" content="2024-10-21T11:41:53-05:00">
-    <meta property="article:modified_time" content="2024-10-22T22:10:42-05:00">
+    <meta property="article:modified_time" content="2024-10-29T11:08:26-05:00">
 
   <meta itemprop="name" content="Match">
   <meta itemprop="description" content="Practice using match. No explanations.">
   <meta itemprop="datePublished" content="2024-10-21T11:41:53-05:00">
-  <meta itemprop="dateModified" content="2024-10-22T22:10:42-05:00">
+  <meta itemprop="dateModified" content="2024-10-29T11:08:26-05:00">
   <meta itemprop="wordCount" content="629">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Match">
@@ -164,6 +164,8 @@
   <a href="/nand/ch06/structures/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch06structures"><span class="">Structures</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandch06110-instructions-1-li">
   <a href="/nand/ch06/110-instructions-1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch06110-instructions-1"><span class="">Instructions I</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandch06120-instructions-2-li">
+  <a href="/nand/ch06/120-instructions-2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch06120-instructions-2"><span class="">Instructions II</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-nandch06match-li">
   <a href="/nand/ch06/match/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-nandch06match"><span class="td-sidebar-nav-active-item">Match</span></a>
 </li>
@@ -351,14 +353,14 @@ Note that you always get a list from these, so name your variables appropriately
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">match</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#0000cf;font-weight:bold">3</span> <span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#0000cf;font-weight:bold">6</span> <span style="color:#0000cf;font-weight:bold">7</span> <span style="color:#0000cf;font-weight:bold">8</span> <span style="color:#0000cf;font-weight:bold">9</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">[(</span><span style="color:#204a87">list</span> <span style="color:#000">xs</span> <span style="color:#000">..5</span> <span style="color:#000">ys</span> <span style="color:#000">..2</span> <span style="color:#000">z</span><span style="color:#000;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000">xs</span> <span style="color:#000">ys</span> <span style="color:#000">z</span><span style="color:#000;font-weight:bold">)])</span><span style="color:#a40000">
-</span></span></span></code></pre></div><ol start="5">
+</span></span></span></code></pre></div><ol start="6">
 <li>
-<p>(<code>q5</code>) FIXME - edit so that it is easier to write the match. The
+<p>(<code>q6</code>) (FIXME - edit so that it is easier to write the match?) The
 intent in this question is for you to practice the <code>...</code> or <code>..k</code>
 match form.</p>
 <p>Given a list like one of these:</p>
-<pre><code> (define q5-exA (list 1 2 3 4 5 6 7 8 'add))
- (define q5-exB (list 11 12 13 14 15 16 17 18 19 20 'multiply))
+<pre><code> (define q6-exA (list 1 2 3 4 5 6 7 8 'add))
+ (define q6-exB (list 11 12 13 14 15 16 17 18 19 20 'multiply))
 </code></pre>
 <ul>
 <li>When the list ends in
@@ -371,9 +373,9 @@ non-number is the last item in the list.</li>
 </ul>
 <p>Assume that there are at least 9 numbers in the list.</p>
 <p>Checks:</p>
-<pre><code> (check-expect (q5 q5-exA) (+ 5 8))
- (check-expect (q5 q5-exB) (* 18 19 20))
- (check-expect (q5 (list 21 'nope)) 0)
+<pre><code> (check-expect (q6 q6-exA) (+ 5 8))
+ (check-expect (q6 q6-exB) (* 18 19 20))
+ (check-expect (q6 (list 21 'nope)) 0)
 </code></pre>
 </li>
 </ol>
@@ -387,7 +389,7 @@ non-number is the last item in the list.</li>
 </div>
 
 	<div class="td-page-meta__lastmod">
-  Last modified October 22, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/a4a1bb7a3fcd3ebbe21d38ebdae22a59ef7ee0a3">Published and revised to correct errors in the check-expects. (a4a1bb7)</a>
+  Last modified October 29, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/0c2ed86691575853ad8887f848ffa5899c730e96">Heavily revised for clarity and with goals in mind. (0c2ed86)</a>
 </div>
 
 </div>
