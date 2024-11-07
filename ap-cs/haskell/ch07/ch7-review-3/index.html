@@ -33,7 +33,7 @@
   <meta itemprop="description" content="More sorting, folding, Maybe review. Ch 6 material.">
   <meta itemprop="datePublished" content="2024-11-06T06:56:06-06:00">
   <meta itemprop="dateModified" content="2024-11-06T06:56:06-06:00">
-  <meta itemprop="wordCount" content="569">
+  <meta itemprop="wordCount" content="684">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="7. Review 3">
   <meta name="twitter:description" content="More sorting, folding, Maybe review. Ch 6 material.">
@@ -822,8 +822,9 @@
     <li><a href="#maybe">Maybe</a></li>
     <li><a href="#data-i">Data I</a></li>
     <li><a href="#data-ii">Data II</a></li>
-    <li><a href="#another-program">Another Program</a></li>
+    <li><a href="#misc">Misc</a></li>
     <li><a href="#discussion">Discussion</a></li>
+    <li><a href="#more-maybe-practice">More Maybe Practice</a></li>
   </ul>
 </nav>
       </div>
@@ -951,8 +952,9 @@ apples in a warehouse. Each row of the table is an <code>Apple</code>.</p>
 <ol start="6">
 <li>
 <p>Write the function <code>val</code>, which takes in an <code>Apple</code> and produces
-the retail value of the inventory by multiplying two entries. Are
-there any potential pitfalls in writing this function?</p>
+the retail value of the inventory by multiplying. (What makes sense
+to multiply?) Are there any potential pitfalls in writing this
+function?</p>
 </li>
 <li>
 <p>Using <code>foldl</code>, write a <code>total_value</code> function by writing a folding
@@ -967,7 +969,7 @@ the items with the most inventory appear first in the list,
 breaking ties by putting the most expensive unit cost first.</p>
 </li>
 </ol>
-<h2 id="another-program">Another Program</h2>
+<h2 id="misc">Misc</h2>
 <ol start="9">
 <li>
 <p>Given a list of points, write a fold helper function that will
@@ -990,6 +992,32 @@ helper function.</p>
 </li>
 <li>
 <p>What is the signature of the helper function used by <code>sortBy</code>?</p>
+</li>
+<li>
+<p>What is wrong with this program?</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#000">f</span> <span style="color:#204a87;font-weight:bold">::</span> <span style="color:#204a87;font-weight:bold">Maybe</span> <span style="color:#204a87;font-weight:bold">Int</span> <span style="color:#204a87;font-weight:bold">-&gt;</span> <span style="color:#204a87;font-weight:bold">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">f</span> <span style="color:#000">y</span><span style="color:#ce5c00;font-weight:bold">@</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">Just</span> <span style="color:#000">x</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">y</span> <span style="color:#ce5c00;font-weight:bold">==</span> <span style="color:#204a87;font-weight:bold">Nothing</span>  <span style="color:#204a87;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ce5c00;font-weight:bold">|</span> <span style="color:#000">otherwise</span>     <span style="color:#204a87;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">x</span>
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="more-maybe-practice">More Maybe Practice</h2>
+<ol start="14">
+<li>
+<p>(<code>mdup</code>) Write a function that makes a list of n copies of a
+string, but produces nothing if either the inputs is nothing.</p>
+<pre><code>mdup :: Maybe Int -&gt; Maybe String -&gt; Maybe [String]
+mdup (Just 3) (Just &quot;Que&quot;) = [&quot;Que&quot;,&quot;Que&quot;,&quot;Que&quot;]
+</code></pre>
+</li>
+<li>
+<p>(<code>mmap</code>) Write a function that is like <code>map f</code> except that if the
+function <code>f</code> produces <code>Nothing</code>, then no answer is added to the
+output list.</p>
+<pre><code>mmap f [0..4] == [1,9]
+  where f n | even n = Nothing
+            | odd n  = Just (n*n)
+</code></pre>
 </li>
 </ol>
 
