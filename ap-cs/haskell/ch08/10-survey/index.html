@@ -33,7 +33,7 @@
   <meta itemprop="description" content="A walkthrough of the main ideas.">
   <meta itemprop="datePublished" content="2023-10-08T21:53:07-05:00">
   <meta itemprop="dateModified" content="2023-10-19T13:27:26-05:00">
-  <meta itemprop="wordCount" content="433">
+  <meta itemprop="wordCount" content="419">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="8. Overview">
   <meta name="twitter:description" content="A walkthrough of the main ideas.">
@@ -877,14 +877,14 @@ unfamiliar.</p>
 <li>
 <p>Use <code>deriving</code> to have an automatic simple output format and
 equality operation.</p>
-<pre><code>  data Point = Point Float Float deriving (Show, Eq)
+<pre><code>  data Point = Point Float Float
+     deriving (Show, Eq)
 </code></pre>
 </li>
 <li>
 <p>choices using <code>|</code></p>
-<pre><code>  data Point2D = Point2D Float Float deriving (Show, Eq)
-  data Point3D = Point2D Float Float Float deriving (Show, Eq)
-  data AbstractPoint = Point2D | Point3D
+<pre><code>  data WYClass = Regular | Honors | AP
+     deriving (Show, Eq)
 </code></pre>
 </li>
 <li>
