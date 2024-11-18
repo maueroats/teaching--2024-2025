@@ -33,7 +33,7 @@
   <meta itemprop="description" content="A light introduction to newtype, classes, and instances.">
   <meta itemprop="datePublished" content="2023-11-27T07:06:28-06:00">
   <meta itemprop="dateModified" content="2023-12-01T07:15:48-06:00">
-  <meta itemprop="wordCount" content="816">
+  <meta itemprop="wordCount" content="824">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Creating Classes">
   <meta name="twitter:description" content="A light introduction to newtype, classes, and instances.">
@@ -942,7 +942,7 @@ combine.</p>
 method (below) would give <code>&quot;Doc&quot;</code> in this case.</p>
 <p>Write code so that <code>Bracket b</code> means that there are two items
 available:</p>
-<pre><code> myname :: b
+<pre><code> basex :: b
  brack :: String -&gt; b
 </code></pre>
 </li>
@@ -950,17 +950,17 @@ available:</p>
 <p>(<strong>Danger</strong>, do at the end.)
 Make <code>String</code> an instance of <code>Bracket</code> so that these tests pass:</p>
 <pre><code> x :: String
- x = myname
- y = brack &quot;WY&quot;
- checkBracket = [x  == &quot;MrHarris&quot;, y == &quot;MrHarrisWYMrHarris&quot; ]
+ x = basex
+ y = brack &quot;-WY-&quot;
+ checkBracket = [x  == &quot;MrH&quot;, y == &quot;MrH-WY-MrH&quot; ]
 </code></pre>
 </li>
 <li>
 <p>(<strong>Extreme Danger</strong>, do very last.)
 Make a <code>newtype IntBrack</code> that is just like an <code>Int</code>. Make
 <code>IntBrack</code> an instance of the <code>Bracket</code> class by choosing the
-number 42 as the &ldquo;name&rdquo; and doing <code>42 + length word + 42</code> for the
-<code>brack</code> operation.</p>
+number 42 as the <code>basex</code> and doing <code>42 + length word + 42</code> for the
+<code>brack</code> operation. <em>Pay attention to types required by the signatures!</em></p>
 </li>
 </ol>
 <h2 id="creating-classes-iii">Creating Classes III</h2>
