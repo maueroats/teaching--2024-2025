@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Include a StdGen in your model to let you randomize.">
   <meta itemprop="datePublished" content="2023-11-13T08:56:45-06:00">
   <meta itemprop="dateModified" content="2023-12-14T21:00:58-06:00">
-  <meta itemprop="wordCount" content="425">
+  <meta itemprop="wordCount" content="462">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Randomness Setup">
   <meta name="twitter:description" content="Include a StdGen in your model to let you randomize.">
@@ -819,6 +819,7 @@
             <div class="td-toc">
         <nav id="TableOfContents">
   <ul>
+    <li><a href="#quick-example">Quick Example</a></li>
     <li><a href="#making-a-stdgen">Making a StdGen</a></li>
     <li><a href="#getting-random-numbers">Getting Random Numbers</a></li>
     <li><a href="#common-problems">Common Problems</a></li>
@@ -870,7 +871,14 @@ same output. A &ldquo;random number generator&rdquo; that just puts out differen
 numbers each time you call it is not pure. Instead, in Haskell, the
 randomization functions output a random value and a new random number
 generator that will give different results.</p>
-<h2 id="making-a-stdgen">Making a StdGen</h2>
+<h2 id="quick-example">Quick Example</h2>
+<p>A random function in Haskell should put out a random number generator
+in addition to the number or numbers it makes.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">import</span> <span style="color:#000">System.Random</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000">rand1to6</span> <span style="color:#204a87;font-weight:bold">::</span> <span style="color:#204a87;font-weight:bold">StdGen</span> <span style="color:#204a87;font-weight:bold">-&gt;</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">Int</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">StdGen</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">rand1to6</span> <span style="color:#000">g</span> <span style="color:#204a87;font-weight:bold">=</span> <span style="color:#000">randomR</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000">g</span>
+</span></span></code></pre></div><h2 id="making-a-stdgen">Making a StdGen</h2>
 <p>The best default choice is to use a <code>newStdGen</code>. You could also use
 <code>mkStdGen</code> if you want to specify the initial &ldquo;seed&rdquo; (so the random
 numbers will all follow the same pattern every time you run the program).

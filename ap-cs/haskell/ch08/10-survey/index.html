@@ -27,13 +27,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="ap-cs">
     <meta property="article:published_time" content="2023-10-08T21:53:07-05:00">
-    <meta property="article:modified_time" content="2023-10-19T13:27:26-05:00">
+    <meta property="article:modified_time" content="2024-11-15T16:05:43-06:00">
 
   <meta itemprop="name" content="8. Overview">
   <meta itemprop="description" content="A walkthrough of the main ideas.">
   <meta itemprop="datePublished" content="2023-10-08T21:53:07-05:00">
-  <meta itemprop="dateModified" content="2023-10-19T13:27:26-05:00">
-  <meta itemprop="wordCount" content="419">
+  <meta itemprop="dateModified" content="2024-11-15T16:05:43-06:00">
+  <meta itemprop="wordCount" content="498">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="8. Overview">
   <meta name="twitter:description" content="A walkthrough of the main ideas.">
@@ -882,26 +882,42 @@ equality operation.</p>
 </code></pre>
 </li>
 <li>
-<p>choices using <code>|</code></p>
+<p>Constant types represent choices but do not have any more
+information inside them. Usually combined with choices using <code>|</code>.</p>
 <pre><code>  data WYClass = Regular | Honors | AP
      deriving (Show, Eq)
 </code></pre>
 </li>
 <li>
-<p>Named fields, like a Racket struct or Python&rsquo;s  <code>@dataclass</code>  or
-perhaps just <code>namedtuple</code>.</p>
+<p>Choices can have different amounts of data.</p>
+<pre><code>  data Lightswitch = Off | On | Dimmer Double
+      deriving (Show, Eq)
+</code></pre>
+</li>
+<li>
+<p>Named fields create functions that give the values in each field.</p>
 <pre><code>  data Circle =
       Circle { center :: Point2D, radius :: Float }
           deriving (Show, Eq)
 </code></pre>
+<p>Named fields are like a Racket struct or Python&rsquo;s  <code>@dataclass</code>  or
+perhaps just <code>namedtuple</code>.</p>
 </li>
 <li>
-<p>Named fields make it easy to update. Using <code>{...}</code> after the name of
+<p>Use named fields when creating variables. Using <code>{...}</code> after the name of
 a variable makes a copy and only changes the fields listed.</p>
 <pre><code>  p = Point2D 20.0 50.0
-  c = Circle {center=p, radius=16.0}
+  c = Circle {center=p, radius=16.0} -- Note: created
   q = p{x=30.0} -- new x, same y=50 that pp had
   d = c{center=q} -- new center, same radius as c
+</code></pre>
+</li>
+<li>
+<p>Regardless of how you defined the record, you can pattern match
+partial or whole objects.</p>
+<pre><code>  f1 (Circle center radius) = center
+  f2 Circle{center=c, radius=r} = c
+  f3 Circle{center=c} = c
 </code></pre>
 </li>
 <li>
@@ -962,7 +978,7 @@ contain two Floats.</p>
 </ul>
 
 	<div class="td-page-meta__lastmod">
-  Last modified October 19, 2023: <a href="https://github.com/maueroats/teaching--2024-2025/commit/c6e0063b5c0e921967c8342ed19ef6c7091c691a">Material and projects using data types. (c6e0063)</a>
+  Last modified November 15, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/5ff684ed32ab65fdd1403df0c6b4fdd4df53aaba">Improved overview. (5ff684e)</a>
 </div>
 
 </div>
