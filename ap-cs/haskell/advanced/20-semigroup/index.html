@@ -853,7 +853,7 @@
 <a href="https://hackage.haskell.org/package/base-4.15.0.0/docs/Data-Semigroup.html">Data.Semigroup</a>.</p>
 <p>A Semigroup <code>a</code> has function called <code>&lt;&gt;</code>. That function&rsquo;s type is <code>a -&gt; a -&gt; a</code>, so it takes in two things and puts out one. That&rsquo;s
 all. This operation could be concatentation of lists or taking the
-maximum of two numbers.</p>
+maximum of two numbers. (For those of you who are reading the book, It is like a monoid except it does not need an identity element) </p>
 <p>You should always use a function that is <strong>associative</strong>.
 This means if are going to apply the function twice (so <code>x &lt;&gt; y &lt;&gt; z</code>) it
 doesn&rsquo;t matter which operation you do first. Familiar operations
