@@ -56,8 +56,8 @@
     <loc>https://wy-cs.info/ai/parsing/exercises/09-digit-commas/</loc>
     <lastmod>2024-03-15T13:35:27-05:00</lastmod>
   </url><url>
-    <loc>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/random-setup/</loc>
-    <lastmod>2024-11-21T13:42:06-06:00</lastmod>
+    <loc>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/random-setup/</loc>
+    <lastmod>2024-12-02T15:30:04-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/racket/overview/</loc>
     <lastmod>2024-10-19T13:19:19-05:00</lastmod>
@@ -90,10 +90,10 @@
     <lastmod>2024-02-22T22:53:39-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/duck-shoot/10-model/</loc>
-    <lastmod>2024-02-22T22:51:20-06:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/advanced/10-classes/</loc>
-    <lastmod>2024-11-21T13:40:57-06:00</lastmod>
+    <lastmod>2024-12-02T10:13:50-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/code-world/05-misc-ex/mini-a/</loc>
     <lastmod>2023-11-14T22:41:56-06:00</lastmod>
@@ -330,7 +330,7 @@
     <lastmod>2024-03-15T13:35:27-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/advanced/15-classes-param/</loc>
-    <lastmod>2023-12-01T07:15:48-06:00</lastmod>
+    <lastmod>2024-12-05T13:36:28-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ai/game/coding-standards/</loc>
     <lastmod>2023-10-23T21:55:47-05:00</lastmod>
@@ -372,13 +372,13 @@
     <lastmod>2024-02-22T22:53:39-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/advanced/20-semigroup/</loc>
-    <lastmod>2024-11-19T23:20:20-06:00</lastmod>
+    <lastmod>2024-12-05T13:36:28-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/code-world/05-misc-ex/mini-b/</loc>
     <lastmod>2023-11-14T22:41:56-06:00</lastmod>
   </url><url>
-    <loc>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/info/</loc>
-    <lastmod>2024-11-21T13:41:40-06:00</lastmod>
+    <loc>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/info/</loc>
+    <lastmod>2024-12-02T15:30:04-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ai/game/maze/draw-maze/</loc>
     <lastmod>2023-11-14T11:00:17-06:00</lastmod>
@@ -444,7 +444,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/prep/summer-assign/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/prep/reversi-walkthrough/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -765,7 +765,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/21-star-circle/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/bpj/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1257,7 +1257,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/universe/chat-app/</loc>
-    <lastmod>2024-03-21T22:03:28-05:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ai/logic/20-prolog/80-faq/</loc>
     <lastmod>2024-02-22T22:53:39-06:00</lastmod>
@@ -1482,7 +1482,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch13/ch13-intro-ex0/</loc>
-    <lastmod>2023-11-15T12:03:28-06:00</lastmod>
+    <lastmod>2024-12-04T14:31:24-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch08/pothole/</loc>
     <lastmod>2023-10-23T21:55:11-05:00</lastmod>
@@ -1514,11 +1514,8 @@
     <loc>https://wy-cs.info/nand/ch04/asm-ws01/</loc>
     <lastmod>2024-09-24T11:07:30-05:00</lastmod>
   </url><url>
-    <loc>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/rng-ex-1/</loc>
-    <lastmod>2024-11-21T13:41:40-06:00</lastmod>
-  </url><url>
-    <loc>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/</loc>
-    <lastmod>2023-12-14T21:00:58-06:00</lastmod>
+    <loc>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/rng-ex-1/</loc>
+    <lastmod>2024-12-02T15:30:04-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch08/tictactoe/</loc>
     <lastmod>2023-10-23T21:55:11-05:00</lastmod>
@@ -1590,7 +1587,7 @@
     <lastmod>2024-10-29T11:05:18-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/ch20-quiz-c/</loc>
-    <lastmod>2024-01-23T07:19:23-06:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/jm/ch12/12-arr2d-scan/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1695,7 +1692,7 @@
     <lastmod>2024-02-22T22:53:39-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem1review/sem-review-g/</loc>
-    <lastmod>2024-10-04T21:39:16-05:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch06/bigbang-05/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -1946,6 +1943,9 @@
     <loc>https://wy-cs.info/ap-cs/haskell/daily/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/</loc>
+    <lastmod>2024-12-02T15:30:04-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/videos/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
@@ -1983,7 +1983,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem2review/2023-02/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2024-11-22T20:41:52-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem2review/2023-03/</loc>
     <lastmod>2024-05-21T15:40:26-05:00</lastmod>

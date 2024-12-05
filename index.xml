@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Nov 2024 13:42:06 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2024 13:36:28 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -122,9 +122,9 @@
     </item>
     <item>
       <title>Random Setup</title>
-      <link>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/random-setup/</link>
+      <link>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/random-setup/</link>
       <pubDate>Thu, 21 Nov 2024 11:01:23 -0600</pubDate>
-      <guid>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/random-setup/</guid>
+      <guid>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/random-setup/</guid>
       <description>&lt;p&gt;You may have to install the random package. This only needs to happen&#xA;once.&lt;/p&gt;&#xA;&lt;h2 id=&#34;codespaces-or-simple-computer-install&#34;&gt;Codespaces or Simple Computer Install&lt;/h2&gt;&#xA;&lt;p&gt;In the terminal, in the folder you are doing your work, type:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;cabal install --lib random --package-env $PWD&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;The last item is the folder being used. You can write a period &lt;code&gt;.&lt;/code&gt;&#xA;instead of &lt;code&gt;$PWD&lt;/code&gt; if you want to feel even more mysterious.&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-world&#34;&gt;Code World&lt;/h2&gt;&#xA;&lt;p&gt;The random package is already included in the CodeWorld environment.&lt;/p&gt;</description>
     </item>
     <item>
@@ -195,7 +195,7 @@
       <link>https://wy-cs.info/intermediate-cs/projects/duck-shoot/10-model/</link>
       <pubDate>Thu, 08 Feb 2024 13:22:20 -0600</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/projects/duck-shoot/10-model/</guid>
-      <description>&lt;p&gt;There are videos giving help for each step of the construction process.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;div style=&amp;quot;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&amp;quot;&amp;gt;&#xA;  &amp;lt;iframe allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&amp;quot; allowfullscreen=&amp;quot;allowfullscreen&amp;quot; loading=&amp;quot;eager&amp;quot; referrerpolicy=&amp;quot;strict-origin-when-cross-origin&amp;quot; src=&amp;quot;https://www.youtube.com/embed/AjxBeNbBgjo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&amp;quot; style=&amp;quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&amp;quot; title=&amp;quot;YouTube video&amp;quot;&#xA;  &amp;gt;&amp;lt;/iframe&amp;gt;&#xA;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+      <description>&lt;p&gt;There are videos giving help for each step of the construction process.&lt;/p&gt;&#xA;&#xA;&#xA;    &#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/AjxBeNbBgjo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&#xA;      &gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
       <title>Creating Classes</title>
@@ -706,7 +706,7 @@
       <link>https://wy-cs.info/ap-cs/haskell/advanced/15-classes-param/</link>
       <pubDate>Wed, 29 Nov 2023 19:57:22 -0600</pubDate>
       <guid>https://wy-cs.info/ap-cs/haskell/advanced/15-classes-param/</guid>
-      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;The &lt;code&gt;Maybe&lt;/code&gt; &amp;ldquo;data type&amp;rdquo; has a definition like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;data Maybe a = Nothing | Just a&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This means that putting in types gives out different data types:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;data Maybe Double = Nothing | Just Double&#xA;data Maybe String = Nothing | Just String&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;(Warning: these are not legal Haskell; to make them legal, make the&#xA;left side one word like &lt;code&gt;Maybe_Double&lt;/code&gt;.)&lt;/p&gt;</description>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;The &lt;code&gt;Maybe&lt;/code&gt; &amp;ldquo;data type&amp;rdquo; has a definition like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;data Maybe a = Nothing | Just a&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This means that putting in types gives out different data types:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;data Maybe Double = Nothing | Just Double&#xA;data Maybe String = Nothing | Just String&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;(Warning: the lines are not legal Haskell because &lt;code&gt;Maybe&lt;/code&gt; is already defined.&#xA;To make them legal, make the left side one word like &lt;code&gt;Maybe_Double&lt;/code&gt;.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Coding Standards</title>
@@ -787,9 +787,9 @@
     </item>
     <item>
       <title>Random Intro</title>
-      <link>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/info/</link>
+      <link>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/info/</link>
       <pubDate>Mon, 13 Nov 2023 08:56:45 -0600</pubDate>
-      <guid>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/info/</guid>
+      <guid>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/info/</guid>
       <description>&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;Note&lt;/h4&gt;&#xA;&#xA;    These functions require &lt;code&gt;import System.Random&lt;/code&gt;.&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Source: &lt;a href=&#34;https://learnyouahaskell.github.io/input-and-output.html#randomness&#34;&gt;LYaH, Input and Output&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Haskell functions are pure, which means the same input must give the&#xA;same output. A &amp;ldquo;random number generator&amp;rdquo; that just puts out different&#xA;numbers each time you call it is not pure. Instead, in Haskell, the&#xA;randomization functions output a random value and a new random number&#xA;generator that will give different results.&lt;/p&gt;&#xA;&lt;h2 id=&#34;quick-example&#34;&gt;Quick Example&lt;/h2&gt;&#xA;&lt;p&gt;A random function in Haskell should put out a random number generator&#xA;in addition to the number or numbers it makes.&lt;/p&gt;</description>
     </item>
     <item>
@@ -2995,7 +2995,7 @@
       <link>https://wy-cs.info/intermediate-cs/ch13/ch13-intro-ex0/</link>
       <pubDate>Wed, 15 Nov 2023 11:08:39 -0600</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/ch13/ch13-intro-ex0/</guid>
-      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;Objectives:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I can simplify Boolean expressions.&lt;/li&gt;&#xA;&lt;li&gt;I know the two key simplifications of &lt;code&gt;boolean=?&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Simplify each as much as possible.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;(&amp;lt; 30 50)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(string=? &amp;quot;move&amp;quot; &amp;quot;button-down&amp;quot;)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(&amp;lt;= 30 40 60 50)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(image? 100)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(string-ci&amp;lt;? &amp;quot;cat&amp;quot; &amp;quot;DOG&amp;quot;)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(and (&amp;gt;= 50 40) (string&amp;lt;=? &amp;quot;wet&amp;quot; &amp;quot;frog&amp;quot;))&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(not (string=? &amp;quot;button-down &amp;quot;drag&amp;quot;))&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Assume each variable mentioned below has the correct type to be&#xA;used in the comparisons. Simplify as much as possible.&lt;/p&gt;</description>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;Objectives:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I can simplify Boolean expressions.&lt;/li&gt;&#xA;&lt;li&gt;I know the two key simplifications of &lt;code&gt;boolean=?&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Simplify each as much as possible.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;(&amp;lt; 30 50)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(string=? &amp;quot;move&amp;quot; &amp;quot;button-down&amp;quot;)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(&amp;lt;= 30 40 60 50)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(image? 100)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(string-ci&amp;lt;? &amp;quot;cat&amp;quot; &amp;quot;DOG&amp;quot;)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(and (&amp;gt;= 50 40) (string&amp;lt;=? &amp;quot;wet&amp;quot; &amp;quot;frog&amp;quot;))&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;(not (string=? &amp;quot;button-down&amp;quot; &amp;quot;drag&amp;quot;))&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Assume each variable mentioned below has the correct type to be&#xA;used in the comparisons. Simplify as much as possible.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pothole</title>
@@ -3055,9 +3055,9 @@
     </item>
     <item>
       <title>Random A</title>
-      <link>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/rng-ex-1/</link>
+      <link>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/rng-ex-1/</link>
       <pubDate>Mon, 13 Nov 2023 13:12:25 -0600</pubDate>
-      <guid>https://wy-cs.info/ap-cs/haskell/advanced/110-randomness/rng-ex-1/</guid>
+      <guid>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/rng-ex-1/</guid>
       <description>&lt;p&gt;Remember to include &lt;code&gt;System.Random&lt;/code&gt; to make these exercises work.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Print a random integer in the range [1,10].&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Print a random Double in the range [100,200].&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Make a circle of radius 2 centered at the origin with a random&#xA;color from this list:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; somecolors = [red, orange, yellow, green, blue, purple]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Create a function that takes in a &lt;code&gt;StdGen&lt;/code&gt; and produces a random&#xA;color from the &lt;code&gt;somecolors&lt;/code&gt; list (above).&lt;/p&gt;</description>
     </item>
     <item>
