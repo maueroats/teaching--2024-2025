@@ -21,14 +21,14 @@
 <meta name="description" content="Basics There will be a white Christmas if the temperature is below 32 and there is water?
 ;; white-christmas?: boolean(water?) number(temperature) ;; -&gt; boolean (define (white-christmas? water? temperature) ...) Give examples showing how to get &ldquo;ACE&rdquo;, &ldquo;BETA&rdquo;, and &ldquo;CROW&rdquo;.
 (define (q2 x y? z) (cond [(and y? (&lt; x 30)) &quot;ACE&quot;] [(or (not y?) (string=? z &quot;good&quot;)) &quot;BETA&quot;] [else &quot;CROW&quot;])) Write this function:
-;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is &ldquo;button-down&rdquo; give -20 when x &lt; 200 and e is &ldquo;button-down&rdquo; give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number Winning is indicated by adding 1000 to the number. The model 130 indicates that you should see &ldquo;LOSE 30&rdquo;. Write the win? and lose? functions. Write should-stop? by combining those two. Make a draw handler that WIN, LOSE, or PLAY on above the number. Make sure you can still see the number in all cases. Make a key handler that randomly choses 10 through 90. Clicking the mouse on the right side of the screen wins (button-down and x&gt;50). Clicking the mouse on the left side loses. No other mouse actions (including move) change the model. Notes Some people did confusing things.">
+;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is &ldquo;button-down&rdquo; give -20 when x &lt; 200 and e is &ldquo;button-down&rdquo; give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number, so the losing models will be 110, 120, &hellip;, 190. Winning is indicated by adding 1000 to the number, so the winning models will be 1010, 1020, &hellip;, 1090. Examples: when the model is 40, you see &ldquo;PLAY 40&rdquo;; when the model is 130, you see &ldquo;LOSE 30&rdquo;; when the model is 1070, you see &ldquo;WIN 70&rdquo;.">
 <meta property="og:url" content="http://localhost:1313/intermediate-cs/sem1review/sem-review-9/">
   <meta property="og:site_name" content="WY CS">
   <meta property="og:title" content="I.9 Semester I Review 9">
   <meta property="og:description" content="Basics There will be a white Christmas if the temperature is below 32 and there is water?
 ;; white-christmas?: boolean(water?) number(temperature) ;; -&gt; boolean (define (white-christmas? water? temperature) ...) Give examples showing how to get “ACE”, “BETA”, and “CROW”.
 (define (q2 x y? z) (cond [(and y? (&lt; x 30)) &#34;ACE&#34;] [(or (not y?) (string=? z &#34;good&#34;)) &#34;BETA&#34;] [else &#34;CROW&#34;])) Write this function:
-;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number Winning is indicated by adding 1000 to the number. The model 130 indicates that you should see “LOSE 30”. Write the win? and lose? functions. Write should-stop? by combining those two. Make a draw handler that WIN, LOSE, or PLAY on above the number. Make sure you can still see the number in all cases. Make a key handler that randomly choses 10 through 90. Clicking the mouse on the right side of the screen wins (button-down and x&gt;50). Clicking the mouse on the left side loses. No other mouse actions (including move) change the model. Notes Some people did confusing things.">
+;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number, so the losing models will be 110, 120, …, 190. Winning is indicated by adding 1000 to the number, so the winning models will be 1010, 1020, …, 1090. Examples: when the model is 40, you see “PLAY 40”; when the model is 130, you see “LOSE 30”; when the model is 1070, you see “WIN 70”.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="intermediate-cs">
@@ -39,16 +39,16 @@
   <meta itemprop="description" content="Basics There will be a white Christmas if the temperature is below 32 and there is water?
 ;; white-christmas?: boolean(water?) number(temperature) ;; -&gt; boolean (define (white-christmas? water? temperature) ...) Give examples showing how to get “ACE”, “BETA”, and “CROW”.
 (define (q2 x y? z) (cond [(and y? (&lt; x 30)) &#34;ACE&#34;] [(or (not y?) (string=? z &#34;good&#34;)) &#34;BETA&#34;] [else &#34;CROW&#34;])) Write this function:
-;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number Winning is indicated by adding 1000 to the number. The model 130 indicates that you should see “LOSE 30”. Write the win? and lose? functions. Write should-stop? by combining those two. Make a draw handler that WIN, LOSE, or PLAY on above the number. Make sure you can still see the number in all cases. Make a key handler that randomly choses 10 through 90. Clicking the mouse on the right side of the screen wins (button-down and x&gt;50). Clicking the mouse on the left side loses. No other mouse actions (including move) change the model. Notes Some people did confusing things.">
+;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number, so the losing models will be 110, 120, …, 190. Winning is indicated by adding 1000 to the number, so the winning models will be 1010, 1020, …, 1090. Examples: when the model is 40, you see “PLAY 40”; when the model is 130, you see “LOSE 30”; when the model is 1070, you see “WIN 70”.">
   <meta itemprop="datePublished" content="2024-12-17T13:34:25-06:00">
   <meta itemprop="dateModified" content="2024-12-17T13:34:25-06:00">
-  <meta itemprop="wordCount" content="289">
+  <meta itemprop="wordCount" content="387">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="I.9 Semester I Review 9">
   <meta name="twitter:description" content="Basics There will be a white Christmas if the temperature is below 32 and there is water?
 ;; white-christmas?: boolean(water?) number(temperature) ;; -&gt; boolean (define (white-christmas? water? temperature) ...) Give examples showing how to get “ACE”, “BETA”, and “CROW”.
 (define (q2 x y? z) (cond [(and y? (&lt; x 30)) &#34;ACE&#34;] [(or (not y?) (string=? z &#34;good&#34;)) &#34;BETA&#34;] [else &#34;CROW&#34;])) Write this function:
-;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number Winning is indicated by adding 1000 to the number. The model 130 indicates that you should see “LOSE 30”. Write the win? and lose? functions. Write should-stop? by combining those two. Make a draw handler that WIN, LOSE, or PLAY on above the number. Make sure you can still see the number in all cases. Make a key handler that randomly choses 10 through 90. Clicking the mouse on the right side of the screen wins (button-down and x&gt;50). Clicking the mouse on the left side loses. No other mouse actions (including move) change the model. Notes Some people did confusing things.">
+;; q3 : number number number string -&gt; number (define (q3 m x y e) ...) give -10 when x &gt; 200 and e is “button-down” give -20 when x &lt; 200 and e is “button-down” give m otherwise Simple Animation The model is a number, a multiple of 10 from 10 through 90. Losing is indicated by adding 100 to the number, so the losing models will be 110, 120, …, 190. Winning is indicated by adding 1000 to the number, so the winning models will be 1010, 1020, …, 1090. Examples: when the model is 40, you see “PLAY 40”; when the model is 130, you see “LOSE 30”; when the model is 1070, you see “WIN 70”.">
 
 
 
@@ -1051,14 +1051,22 @@
 <h2 id="simple-animation">Simple Animation</h2>
 <ul>
 <li>The model is a number, a multiple of 10 from 10 through 90.</li>
-<li>Losing is indicated by adding 100 to the number</li>
-<li>Winning is indicated by adding 1000 to the number.</li>
+<li>Losing is indicated by adding 100 to the number, so the losing
+models will be 110, 120, &hellip;, 190.</li>
+<li>Winning is indicated by adding 1000 to the number, so the winning
+models will be 1010, 1020, &hellip;, 1090.</li>
 </ul>
-<ol start="4">
-<li>The model 130 indicates that you should see &ldquo;LOSE 30&rdquo;.</li>
-<li>Write the <code>win?</code> and <code>lose?</code> functions.</li>
-<li>Write <code>should-stop?</code> by combining those two.</li>
-<li>Make a draw handler that WIN, LOSE, or PLAY on above the number.
+<p>Examples: when the model is 40, you see &ldquo;PLAY 40&rdquo;; when the model is
+130, you see &ldquo;LOSE 30&rdquo;; when the model is 1070, you see &ldquo;WIN 70&rdquo;.</p>
+<ol start="5">
+<li>Write the <code>win? : model(number) -&gt; boolean</code> function to give true
+when the model indicates a win. Write a similar function
+<code>lose?</code>. Write two check-expects for your <code>lose?</code> function, picking a
+winning value and a &ldquo;playing&rdquo; value
+check-expect for your <code>win?</code> function</li>
+<li>Write <code>should-stop?</code> by combining those two - stop when the model
+indicate a win or a lose.</li>
+<li>Make a draw handler that shows WIN, LOSE, or PLAY above the number.
 Make sure you can still see the number in all cases.</li>
 <li>Make a key handler that randomly choses 10 through 90.</li>
 <li>Clicking the mouse on the right side of the screen wins
@@ -1075,6 +1083,8 @@ because it is not a true or false value</li>
 <li>Boolean variables are themselves true or false; they do not need to
 be compared using <code>boolean=?</code>. The variable name poses a question,
 and the value inside answers it.</li>
+<li>The <code>win?</code> function should not just be the opposite of the <code>lose?</code>
+function.</li>
 </ul>
 
 	
