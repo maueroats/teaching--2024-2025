@@ -36,7 +36,7 @@ Write a Stone Age implementation of mapMaybe, which keeps the “Just” results
 Write a Stone Age implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.">
   <meta itemprop="datePublished" content="2024-12-16T13:31:24-06:00">
   <meta itemprop="dateModified" content="2024-12-16T13:31:24-06:00">
-  <meta itemprop="wordCount" content="93">
+  <meta itemprop="wordCount" content="123">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="2024 Review B">
   <meta name="twitter:description" content="Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.
@@ -972,9 +972,16 @@ they even avoid guards and if statements.</p>
 </li>
 <li>
 <p>Write a Stone Age implementation of <code>reverse</code>. Try to avoid using the
-<code>++</code> operator.</p>
+<code>++</code> operator. Stone age definitely means you should not use
+<code>init</code> or <code>last</code>.</p>
 </li>
 </ol>
+</li>
+<li>
+<p>The class definition for <code>Semigroup</code> looks like this:</p>
+<pre><code> class Semigroup c where
+     (&lt;&gt;) :: c -&gt; c -&gt; c
+</code></pre>
 </li>
 </ol>
 
