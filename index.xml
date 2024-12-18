@@ -758,6 +758,13 @@
       <description>&lt;p&gt;&lt;a href=&#34;http://regextutorials.com/excercise.html?Replace%20operators%20with%20function%20calls&#34;&gt;Original source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Replace addition operator a + b with Add(a, b), but not when the&#xA;variables are known to be ints.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int c = a+b;&#xA;var average = (a1 + a2)/2&#xA;sum(foo, bar, x) = foo(x) + bar(x)&#xA;var dotProduct(v1, v2) = v1.x*v2.x + v1.y*v2.y&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Desired result:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int c = a+b;&#xA;var average = (Add(a1, a2))/2&#xA;sum(foo, bar, x) = Add(foo(x), bar(x))&#xA;var dotProduct(v1, v2) = Add(v1.x*v2.x, v1.y*v2.y)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
+      <title>2024 Review B</title>
+      <link>https://wy-cs.info/ap-cs/haskell/review/20-review-b/</link>
+      <pubDate>Mon, 16 Dec 2024 13:31:24 -0600</pubDate>
+      <guid>https://wy-cs.info/ap-cs/haskell/review/20-review-b/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Stone age functions use pattern matching and recursion, but not&#xA;list comprehensions or any of the &amp;ldquo;fancy&amp;rdquo; machinery. Where possible,&#xA;they even avoid guards and if statements.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Write a Stone Age implementation of &lt;code&gt;mapMaybe&lt;/code&gt;, which keeps the&#xA;&amp;ldquo;Just&amp;rdquo; results and throws away the &amp;ldquo;Nothing&amp;rdquo; results.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Loops</title>
       <link>https://wy-cs.info/nand/ch04/examples/loop/</link>
       <pubDate>Tue, 24 Sep 2024 13:12:00 -0500</pubDate>
