@@ -880,7 +880,7 @@ they even avoid guards and if statements.</p>
 
  chop4 :: String -&gt; Maybe
  chop4 s  | length s &lt;= 4  = Nothing
-          | otherwise      = Just (take 4 s)
+          | otherwise      = Just (drop 4 s)
 </code></pre>
 </li>
 <li>
