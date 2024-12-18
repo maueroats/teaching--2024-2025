@@ -36,7 +36,7 @@ Write a Stone Age implementation of mapMaybe, which keeps the “Just” results
 Write a Stone Age implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.">
   <meta itemprop="datePublished" content="2024-12-16T13:31:24-06:00">
   <meta itemprop="dateModified" content="2024-12-16T13:31:24-06:00">
-  <meta itemprop="wordCount" content="228">
+  <meta itemprop="wordCount" content="340">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="2024 Review B">
   <meta name="twitter:description" content="Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.
@@ -875,12 +875,12 @@ they even avoid guards and if statements.</p>
 <li>
 <p>Write a Stone Age implementation of <code>mapMaybe</code>, which keeps the
 &ldquo;Just&rdquo; results and throws away the &ldquo;Nothing&rdquo; results.</p>
-<pre><code> chop4 :: String -&gt; Maybe String
-         chop4 s  | length s &lt;= 4  = Nothing
- | otherwise      = Just (take 4 s)
-
- ex1 = mapMaybe chop4 [&quot;dog&quot;, &quot;goldmedal&quot;, &quot;fish&quot;]
+<pre><code> ex1 = mapMaybe chop4 [&quot;dog&quot;, &quot;goldmedal&quot;, &quot;fish&quot;]
  check1 = (ex1 == [&quot;medal&quot;])
+
+ chop4 :: String -&gt; Maybe
+ chop4 s  | length s &lt;= 4  = Nothing
+          | otherwise      = Just (take 4 s)
 </code></pre>
 </li>
 <li>
@@ -915,6 +915,48 @@ would be <code>123*9</code>, which is <code>1107</code>.</p>
  check3 = (gcfl ex3 == 123 * 9)
 </code></pre>
 <p>Write <code>gcfl :: String -&gt; Integer</code>.</p>
+</li>
+<li>
+<p>What is the type signature, including common typeclasses, for each
+of these?</p>
+<ol>
+<li>
+<p><code>last</code></p>
+</li>
+<li>
+<p><code>sum</code></p>
+</li>
+<li>
+<p><code>replicate</code></p>
+</li>
+<li>
+<p>Average, as defined below.</p>
+<pre><code> average xs = (sum xs) / (fromIntegral len)
+     where len = length xs
+</code></pre>
+</li>
+<li>
+<p>Revjoin:</p>
+<pre><code> revjoin xs ys = (xs ++ [last xs / last ys] ++ ys)
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Write the data definition for:</p>
+</li>
+<li>
+<p>a <code>School</code>, which is just like a <code>String</code></p>
+</li>
+<li>
+<p>a <code>Studious</code>, including <code>hrs</code> for a
+decimal number of hours studied, <code>sch</code> for the school they
+attend, and <code>fd</code> for their main field of interest.</p>
+</li>
+<li>
+<p>(<code>schrs</code>) Write a signature and the function to find the total number of
+hours the students at each school study. The output should be a
+list of <code>(School, Double)</code>.</p>
 </li>
 </ol>
 
