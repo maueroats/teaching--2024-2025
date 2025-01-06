@@ -18,7 +18,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/review/review-topics/</loc>
-    <lastmod>2024-12-16T07:12:00-06:00</lastmod>
+    <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/</loc>
     <lastmod>2024-02-22T22:51:20-06:00</lastmod>
@@ -59,8 +59,11 @@
     <loc>https://wy-cs.info/ai/parsing/exercises/09-digit-commas/</loc>
     <lastmod>2024-03-15T13:35:27-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/nand/blog/guidelines/</loc>
+    <lastmod>2024-12-27T20:52:02-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/review/10-review-a/</loc>
-    <lastmod>2024-12-16T07:08:57-06:00</lastmod>
+    <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/advanced/910-randomness/random-setup/</loc>
     <lastmod>2024-12-02T15:30:04-06:00</lastmod>
@@ -360,7 +363,7 @@
     <lastmod>2024-03-15T13:35:27-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/review/20-review-b/</loc>
-    <lastmod>2024-12-16T13:31:24-06:00</lastmod>
+    <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch04/examples/loop/</loc>
     <lastmod>2024-09-25T13:35:16-05:00</lastmod>
@@ -816,7 +819,7 @@
     <lastmod>2024-02-22T22:51:20-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/advanced/40-functor/</loc>
-    <lastmod>2023-12-01T07:15:48-06:00</lastmod>
+    <lastmod>2024-12-21T10:09:13-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ai/game/maze/</loc>
     <lastmod>2023-11-03T11:48:16-05:00</lastmod>
@@ -1106,6 +1109,9 @@
     <loc>https://wy-cs.info/ap-cs/karel/ch4f-project/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/nand/ch06/</loc>
+    <lastmod>2024-12-27T20:19:48-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/intermediate-cs/pro/topics/</loc>
     <lastmod>2024-02-27T20:23:54-06:00</lastmod>
   </url><url>
@@ -1326,7 +1332,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem1review/sem-review-9/</loc>
-    <lastmod>2024-12-17T13:34:25-06:00</lastmod>
+    <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ai/logic/20-prolog/90-docs/</loc>
     <lastmod>2024-02-22T22:53:39-06:00</lastmod>
@@ -1515,7 +1521,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/review/</loc>
-    <lastmod>2024-12-16T07:08:44-06:00</lastmod>
+    <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/110-instructions-1/</loc>
     <lastmod>2024-10-29T11:04:59-05:00</lastmod>
@@ -1796,6 +1802,9 @@
     <loc>https://wy-cs.info/ap-cs/haskell/ch03/ch03-quiz-2/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/nand/blog/</loc>
+    <lastmod>2024-12-27T20:52:02-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/nand/ch05/writing-checks/</loc>
     <lastmod>2024-10-19T13:19:06-05:00</lastmod>
   </url><url>
@@ -2041,9 +2050,6 @@
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/match/</loc>
     <lastmod>2024-10-29T11:08:26-05:00</lastmod>
-  </url><url>
-    <loc>https://wy-cs.info/nand/ch06/</loc>
-    <lastmod>2024-10-21T20:51:44-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch03/review-questions/</loc>
     <lastmod>2024-09-24T11:07:30-05:00</lastmod>

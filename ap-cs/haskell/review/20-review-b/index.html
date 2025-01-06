@@ -18,29 +18,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>2024 Review B | WY CS</title>
-<meta name="description" content=" Stone age functions use pattern matching and recursion, but not list comprehensions or any of the &ldquo;fancy&rdquo; machinery. Where possible, they even avoid guards and if statements.
-Write a Stone Age implementation of mapMaybe, which keeps the &ldquo;Just&rdquo; results and throws away the &ldquo;Nothing&rdquo; results.">
+<meta name="description" content=" Write an implementation of mapMaybe, which keeps the &ldquo;Just&rdquo; results and throws away the &ldquo;Nothing&rdquo; results.
+ex1 = mapMaybe chop4 [&quot;dog&quot;, &quot;goldmedal&quot;, &quot;fish&quot;] check1 = (ex1 == [&quot;medal&quot;]) chop4 :: String -&gt; Maybe String chop4 s | length s &lt;= 4 = Nothing | otherwise = Just (drop 4 s) Stone age functions use pattern matching and recursion, but not list comprehensions or any of the &ldquo;fancy&rdquo; machinery. Where possible, they even avoid guards and if statements.">
 <meta property="og:url" content="https://wy-cs.info/ap-cs/haskell/review/20-review-b/">
   <meta property="og:site_name" content="WY CS">
   <meta property="og:title" content="2024 Review B">
-  <meta property="og:description" content="Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.
-Write a Stone Age implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.">
+  <meta property="og:description" content="Write an implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.
+ex1 = mapMaybe chop4 [&#34;dog&#34;, &#34;goldmedal&#34;, &#34;fish&#34;] check1 = (ex1 == [&#34;medal&#34;]) chop4 :: String -&gt; Maybe String chop4 s | length s &lt;= 4 = Nothing | otherwise = Just (drop 4 s) Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="ap-cs">
     <meta property="article:published_time" content="2024-12-16T13:31:24-06:00">
-    <meta property="article:modified_time" content="2024-12-16T13:31:24-06:00">
+    <meta property="article:modified_time" content="2024-12-21T09:51:59-06:00">
 
   <meta itemprop="name" content="2024 Review B">
-  <meta itemprop="description" content="Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.
-Write a Stone Age implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.">
+  <meta itemprop="description" content="Write an implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.
+ex1 = mapMaybe chop4 [&#34;dog&#34;, &#34;goldmedal&#34;, &#34;fish&#34;] check1 = (ex1 == [&#34;medal&#34;]) chop4 :: String -&gt; Maybe String chop4 s | length s &lt;= 4 = Nothing | otherwise = Just (drop 4 s) Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.">
   <meta itemprop="datePublished" content="2024-12-16T13:31:24-06:00">
-  <meta itemprop="dateModified" content="2024-12-16T13:31:24-06:00">
-  <meta itemprop="wordCount" content="341">
+  <meta itemprop="dateModified" content="2024-12-21T09:51:59-06:00">
+  <meta itemprop="wordCount" content="359">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="2024 Review B">
-  <meta name="twitter:description" content="Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.
-Write a Stone Age implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.">
+  <meta name="twitter:description" content="Write an implementation of mapMaybe, which keeps the “Just” results and throws away the “Nothing” results.
+ex1 = mapMaybe chop4 [&#34;dog&#34;, &#34;goldmedal&#34;, &#34;fish&#34;] check1 = (ex1 == [&#34;medal&#34;]) chop4 :: String -&gt; Maybe String chop4 s | length s &lt;= 4 = Nothing | otherwise = Just (drop 4 s) Stone age functions use pattern matching and recursion, but not list comprehensions or any of the “fancy” machinery. Where possible, they even avoid guards and if statements.">
 
 
 
@@ -868,27 +868,24 @@ Write a Stone Age implementation of mapMaybe, which keeps the “Just” results
 </style>
 <ol>
 <li>
-<p>Stone age functions use pattern matching and recursion, but not
-list comprehensions or any of the &ldquo;fancy&rdquo; machinery. Where possible,
-they even avoid guards and if statements.</p>
-<ol>
-<li>
-<p>Write a Stone Age implementation of <code>mapMaybe</code>, which keeps the
+<p>Write an implementation of <code>mapMaybe</code>, which keeps the
 &ldquo;Just&rdquo; results and throws away the &ldquo;Nothing&rdquo; results.</p>
-<pre><code> ex1 = mapMaybe chop4 [&quot;dog&quot;, &quot;goldmedal&quot;, &quot;fish&quot;]
- check1 = (ex1 == [&quot;medal&quot;])
+<pre><code>     ex1 = mapMaybe chop4 [&quot;dog&quot;, &quot;goldmedal&quot;, &quot;fish&quot;]
+     check1 = (ex1 == [&quot;medal&quot;])
 
- chop4 :: String -&gt; Maybe String
- chop4 s  | length s &lt;= 4  = Nothing
-          | otherwise      = Just (drop 4 s)
+     chop4 :: String -&gt; Maybe String
+     chop4 s  | length s &lt;= 4  = Nothing
+              | otherwise      = Just (drop 4 s)
 </code></pre>
 </li>
 <li>
+<p>Stone age functions use pattern matching and recursion, but not
+list comprehensions or any of the &ldquo;fancy&rdquo; machinery. Where possible,
+they even avoid guards and if statements.</p>
 <p>Write a Stone Age implementation of <code>reverse</code>. Try to avoid using the
 <code>++</code> operator. Stone age definitely means you should not use
-<code>init</code> or <code>last</code>.</p>
-</li>
-</ol>
+<code>init</code> or <code>last</code>. (Instead of re-implementing all of the tools you
+want to use, look for a simpler way using a helper function.)</p>
 </li>
 <li>
 <p>The class definition for <code>Semigroup</code> looks like this:</p>
@@ -960,7 +957,10 @@ list of <code>(School, Double)</code>.</p>
 </li>
 </ol>
 
-	
+	<div class="td-page-meta__lastmod">
+  Last modified December 21, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/8a5ce228e012cadcd206fa3900fb7f8869cf65b8">End of semester review and exams. (8a5ce22)</a>
+</div>
+
 </div>
 
 
@@ -1006,7 +1006,7 @@ list of <code>(School, Double)</code>.</p>
 
       </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
         <span class="td-footer__copyright">&copy;
-    2024
+    2025
     <span class="td-footer__authors">A. Mauer-Oats</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
       </div>
     </div>

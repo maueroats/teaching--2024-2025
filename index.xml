@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Dec 2024 13:34:25 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2024 20:52:02 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -126,6 +126,13 @@
       <pubDate>Fri, 15 Mar 2024 12:01:02 -0500</pubDate>
       <guid>https://wy-cs.info/ai/parsing/exercises/09-digit-commas/</guid>
       <description>&lt;h2 id=&#34;digit-commas-formatting&#34;&gt;Digit commas formatting&lt;/h2&gt;&#xA;&lt;p&gt;Insert commas in the numbers for greater readability before each group of three digits.&lt;/p&gt;&#xA;&lt;p&gt;Input text:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Ten Countries with the Highest Population:&#xA;1 China 1361220000&#xA;2 India 1236800000&#xA;3 United States 317121000&#xA;4 Indonesia 237641326&#xA;5 Brazil 201032714&#xA;6 Pakistan 184872000&#xA;7 Nigeria 173615000&#xA;8 Bangladesh 152518015&#xA;9 Russia 143600000&#xA;10 Japan 127290000&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Desired output:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Ten Countries with the Highest Population:&#xA;1 China 1,361,220,000&#xA;2 India 1,236,800,000&#xA;3 United States 317,121,000&#xA;4 Indonesia 237,641,326&#xA;5 Brazil 201,032,714&#xA;6 Pakistan 184,872,000&#xA;7 Nigeria 173,615,000&#xA;8 Bangladesh 152,518,015&#xA;9 Russia 143,600,000&#xA;10 Japan 127,290,000&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Honestly, this isn&amp;rsquo;t even that interesting for a parser. The important&#xA;thing is that you be able to execute code before making the&#xA;replacement. (This is Perl&amp;rsquo;s &lt;code&gt;/e&lt;/code&gt; modifier to the regex. &lt;a href=&#34;https://perldoc.perl.org/perlrequick#:~:text=The%20evaluation%20modifier%20s///e%20wraps%20an%20eval%7B...%7D%20around%20the%20replacement%20string%20and%20the%20evaluated%20result%20is%20substituted%20for%20the%20matched%20substring.&#34;&gt;Examples in Perl.&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guidelines</title>
+      <link>https://wy-cs.info/nand/blog/guidelines/</link>
+      <pubDate>Fri, 27 Dec 2024 16:28:04 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/blog/guidelines/</guid>
+      <description>&lt;p&gt;The construction of a good blog entry begins with &amp;ldquo;interesting&amp;rdquo;&#xA;details. Talk about the sources of the problems and (possibly) ways to&#xA;avoid them.&lt;/p&gt;&#xA;&lt;h2 id=&#34;interesting-details&#34;&gt;Interesting details&lt;/h2&gt;&#xA;&lt;p&gt;Interesting details are usually points that you found&#xA;difficult.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Was it hard to understand how to avoid code duplication?&lt;/li&gt;&#xA;&lt;li&gt;Did you misunderstand parts of the specification originally?&lt;/li&gt;&#xA;&lt;li&gt;What kinds of mistakes did you make?&lt;/li&gt;&#xA;&lt;li&gt;Did you notice yourself making the&#xA;same kinds of mistakes in more than one place?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A critical point here is that your interesting details must be&#xA;&lt;em&gt;concrete&lt;/em&gt;. Making general statements is &lt;em&gt;never&lt;/em&gt; interesting. The&#xA;details are your evidence.&lt;/p&gt;</description>
     </item>
     <item>
       <title>2024 Review A</title>
@@ -762,7 +769,7 @@
       <link>https://wy-cs.info/ap-cs/haskell/review/20-review-b/</link>
       <pubDate>Mon, 16 Dec 2024 13:31:24 -0600</pubDate>
       <guid>https://wy-cs.info/ap-cs/haskell/review/20-review-b/</guid>
-      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Stone age functions use pattern matching and recursion, but not&#xA;list comprehensions or any of the &amp;ldquo;fancy&amp;rdquo; machinery. Where possible,&#xA;they even avoid guards and if statements.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Write a Stone Age implementation of &lt;code&gt;mapMaybe&lt;/code&gt;, which keeps the&#xA;&amp;ldquo;Just&amp;rdquo; results and throws away the &amp;ldquo;Nothing&amp;rdquo; results.&lt;/p&gt;</description>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Write an implementation of &lt;code&gt;mapMaybe&lt;/code&gt;, which keeps the&#xA;&amp;ldquo;Just&amp;rdquo; results and throws away the &amp;ldquo;Nothing&amp;rdquo; results.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;     ex1 = mapMaybe chop4 [&amp;quot;dog&amp;quot;, &amp;quot;goldmedal&amp;quot;, &amp;quot;fish&amp;quot;]&#xA;     check1 = (ex1 == [&amp;quot;medal&amp;quot;])&#xA;&#xA;     chop4 :: String -&amp;gt; Maybe String&#xA;     chop4 s  | length s &amp;lt;= 4  = Nothing&#xA;              | otherwise      = Just (drop 4 s)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Stone age functions use pattern matching and recursion, but not&#xA;list comprehensions or any of the &amp;ldquo;fancy&amp;rdquo; machinery. Where possible,&#xA;they even avoid guards and if statements.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Loops</title>
