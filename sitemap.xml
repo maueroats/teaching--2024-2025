@@ -605,6 +605,9 @@
     <loc>https://wy-cs.info/docs/generic-cs-syllabus/</loc>
     <lastmod>2023-08-19T22:06:48-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/ap-cs/jm/intro/30-codespaces/</loc>
+    <lastmod>2025-01-08T08:35:28-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/nand/ch03/</loc>
     <lastmod>2024-10-19T13:18:50-05:00</lastmod>
   </url><url>
@@ -808,6 +811,9 @@
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/square-a/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ap-cs/jm/intro/40-jshell/</loc>
+    <lastmod>2025-01-08T10:15:50-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/structures/</loc>
     <lastmod>2024-10-21T20:51:44-05:00</lastmod>
@@ -2018,6 +2024,9 @@
     <loc>https://wy-cs.info/intermediate-cs/pro/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/sem1review/2020-sem1-review-notes/</loc>
+    <lastmod>2025-01-07T22:40:00-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem1review/sem1final2021/</loc>
     <lastmod>2023-12-20T14:08:46-06:00</lastmod>
   </url><url>
@@ -2151,9 +2160,6 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ml/rmisc/timeseries/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
-  </url><url>
-    <loc>https://wy-cs.info/intermediate-cs/sem1review/2020-sem1-review-notes/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch15/15-practice-all/</loc>
