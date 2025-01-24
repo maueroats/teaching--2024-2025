@@ -39,7 +39,7 @@ Abbreviated reference for Code World:
 Point is (Double, Double) pictures :: [Picture]-&gt;Picture circle r, rectangle width height solidCircle, solidRectangle, colored, translated x y, scaled x y Event : TimePassing 4.2, KeyPress “A”, PointerMovement (x,y), PointerPress (x,y) In your Code World animation, you want to keep track of a Point (pos), a Point for the direction (dir), a list of Points (pts), and a Double (gtime). Write a data definition for Game that allows you to include these elements in separate fields with the accessors given.">
   <meta itemprop="datePublished" content="2024-12-18T22:09:30-06:00">
   <meta itemprop="dateModified" content="2024-12-21T09:51:59-06:00">
-  <meta itemprop="wordCount" content="713">
+  <meta itemprop="wordCount" content="777">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="2024 Test A">
   <meta name="twitter:description" content="Write your answers on blank sheets of paper. Skip to a new page if you skip a problem, so you can put your answers in order in the final submission.
@@ -928,7 +928,14 @@ Point is (Double, Double) pictures :: [Picture]-&gt;Picture circle r, rectangle 
   
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#notes">Notes</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -1048,6 +1055,8 @@ as input the result from <code>readFile</code> and produce a matrix of numbers.<
 <pre><code> exInput=&quot;10 30 50 70\n21 43 65 87\n37 74 111 148\n&quot;
  getMatrix exInput == [[10,30,50,70],[21,43,65,87],[37,74,111,148]]
 </code></pre>
+<p>Show an example of what any helper function does. Try to keep this
+straightforward instead of overcomplicating it.</p>
 </li>
 <li>
 <p>Given a matrix of numbers, the function <code>isArith</code> determines
@@ -1060,21 +1069,26 @@ for different rows.</p>
 <li>the first row is created
 by adding 20 each time, so it is good;</li>
 <li>the second row is created by adding 22 each time, so is it is good;</li>
-<li>the third row is created by adding 37, so it is good. Since
-every row is created by adding
-a constant to the first number, <code>isArith</code> returns true.</li>
+<li>the third row is created by adding 37, so it is good.</li>
 </ul>
+<p>Since every row is created by adding
+a constant to the first number, <code>isArith</code> returns true.</p>
 <p>Write <code>isArith :: Matrix -&gt; Bool</code>.</p>
 </li>
 <li>
 <p>The function <code>toSquare :: Matrix -&gt; Matrix</code> adds rows or columns
 of zeros to make a square matrix. Write <code>toSquare</code>. You may assume
 the input matrix is a rectangle. Extra credit for handling non-rectangles.</p>
-<p>In the example above, the output of <code>toSquare</code> would be</p>
+<p>In the example above, the output of <code>toSquare</code> would be:</p>
 <pre><code>10 30  50  70
 21 43  65  87
 37 74 111 148
  0  0   0   0
+</code></pre>
+<p>Another example would be a 1 column matrix turning into a square matrix:</p>
+<pre><code>           10      10  0  0
+ toSquare  21  ==  21  0  0
+           37      37  0  0
 </code></pre>
 </li>
 <li>
@@ -1099,6 +1113,9 @@ row when you hit <code>Nothing</code>.</p>
 </code></pre>
 </li>
 </ol>
+<h2 id="notes">Notes</h2>
+<p>I did not like <code>matrixBuild</code> as a demonstration of <code>Maybe</code> skills.
+Look for another way to test that.</p>
 
 	<div class="td-page-meta__lastmod">
   Last modified December 21, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/8a5ce228e012cadcd206fa3900fb7f8869cf65b8">End of semester review and exams. (8a5ce22)</a>
