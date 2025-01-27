@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Jan 2025 10:29:34 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 10:39:55 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -763,6 +763,13 @@
       <pubDate>Fri, 15 Mar 2024 11:52:29 -0500</pubDate>
       <guid>https://wy-cs.info/ai/parsing/exercises/18-op-fncall/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://regextutorials.com/excercise.html?Replace%20operators%20with%20function%20calls&#34;&gt;Original source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Replace addition operator a + b with Add(a, b), but not when the&#xA;variables are known to be ints.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int c = a+b;&#xA;var average = (a1 + a2)/2&#xA;sum(foo, bar, x) = foo(x) + bar(x)&#xA;var dotProduct(v1, v2) = v1.x*v2.x + v1.y*v2.y&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Desired result:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int c = a+b;&#xA;var average = (Add(a1, a2))/2&#xA;sum(foo, bar, x) = Add(foo(x), bar(x))&#xA;var dotProduct(v1, v2) = Add(v1.x*v2.x, v1.y*v2.y)&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>VM II Discussion</title>
+      <link>https://wy-cs.info/nand/ch08/discussion/</link>
+      <pubDate>Mon, 27 Jan 2025 10:39:55 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/discussion/</guid>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;When a function is called, how are arguments passed? At least two parts&#xA;of VM code share the responsibility. Explain using a specific&#xA;example.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Suppose that a function &lt;code&gt;ken&lt;/code&gt; calls a function &lt;code&gt;bar&lt;/code&gt;. After the&#xA;function &lt;code&gt;bar&lt;/code&gt; finishes, execution needs to return to the place in&#xA;&lt;code&gt;ken&lt;/code&gt; that called it.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Why is this necessary? Why not take the code that needs to&#xA;happen next and just put it after the assembly for the function&#xA;&lt;code&gt;bar&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;What does the caller (&lt;code&gt;ken&lt;/code&gt;) do to make it possible for control&#xA;to go to the call site after &lt;code&gt;bar&lt;/code&gt; finishes?&lt;/li&gt;&#xA;&lt;li&gt;What does the callee (&lt;code&gt;bar&lt;/code&gt;) do in order to get the execution to&#xA;continue in &lt;code&gt;ken&lt;/code&gt;? Do not include any extraneous details! Just&#xA;stick with the basics.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>2024 Review B</title>
