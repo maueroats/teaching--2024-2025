@@ -18,33 +18,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>VM II Discussion | WY CS</title>
-<meta name="description" content=" When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Explain using a specific example.
-Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.
-Why is this necessary? Why not take the code that needs to happen next and just put it after the assembly for the function bar. What does the caller (ken) do to make it possible for control to go to the call site after bar finishes? What does the callee (bar) do in order to get the execution to continue in ken? Do not include any extraneous details! Just stick with the basics. ">
+<meta name="description" content=" When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Illustrate your explanation using a specific example.
+Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.">
 <meta property="og:url" content="https://wy-cs.info/nand/ch08/discussion/">
   <meta property="og:site_name" content="WY CS">
   <meta property="og:title" content="VM II Discussion">
-  <meta property="og:description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Explain using a specific example.
-Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.
-Why is this necessary? Why not take the code that needs to happen next and just put it after the assembly for the function bar. What does the caller (ken) do to make it possible for control to go to the call site after bar finishes? What does the callee (bar) do in order to get the execution to continue in ken? Do not include any extraneous details! Just stick with the basics.">
+  <meta property="og:description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Illustrate your explanation using a specific example.
+Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="nand">
     <meta property="article:published_time" content="2025-01-27T10:39:55-06:00">
-    <meta property="article:modified_time" content="2025-01-27T10:39:55-06:00">
+    <meta property="article:modified_time" content="2025-01-31T21:38:12-06:00">
 
   <meta itemprop="name" content="VM II Discussion">
-  <meta itemprop="description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Explain using a specific example.
-Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.
-Why is this necessary? Why not take the code that needs to happen next and just put it after the assembly for the function bar. What does the caller (ken) do to make it possible for control to go to the call site after bar finishes? What does the callee (bar) do in order to get the execution to continue in ken? Do not include any extraneous details! Just stick with the basics.">
+  <meta itemprop="description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Illustrate your explanation using a specific example.
+Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.">
   <meta itemprop="datePublished" content="2025-01-27T10:39:55-06:00">
-  <meta itemprop="dateModified" content="2025-01-27T10:39:55-06:00">
-  <meta itemprop="wordCount" content="123">
+  <meta itemprop="dateModified" content="2025-01-31T21:38:12-06:00">
+  <meta itemprop="wordCount" content="125">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="VM II Discussion">
-  <meta name="twitter:description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Explain using a specific example.
-Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.
-Why is this necessary? Why not take the code that needs to happen next and just put it after the assembly for the function bar. What does the caller (ken) do to make it possible for control to go to the call site after bar finishes? What does the callee (bar) do in order to get the execution to continue in ken? Do not include any extraneous details! Just stick with the basics.">
+  <meta name="twitter:description" content="When a function is called, how are arguments passed? At least two parts of VM code share the responsibility. Illustrate your explanation using a specific example.
+Suppose that a function ken calls a function bar. After the function bar finishes, execution needs to return to the place in ken that called it.">
 
 
 
@@ -234,30 +230,39 @@ Why is this necessary? Why not take the code that needs to happen next and just 
 	<header class="article-meta">
 		
   </header>
-	<ol>
+	<style type="text/css">
+    ol { list-style-type: roman; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    ol ol ol ol { list-style-type: decimal; }
+</style>
+<ol>
 <li>
 <p>When a function is called, how are arguments passed? At least two parts
-of VM code share the responsibility. Explain using a specific
-example.</p>
+of VM code share the responsibility. Illustrate your explanation
+using a specific example.</p>
 </li>
 <li>
 <p>Suppose that a function <code>ken</code> calls a function <code>bar</code>. After the
 function <code>bar</code> finishes, execution needs to return to the place in
 <code>ken</code> that called it.</p>
 <ol>
-<li>Why is this necessary? Why not take the code that needs to
-happen next and just put it after the assembly for the function
-<code>bar</code>.</li>
 <li>What does the caller (<code>ken</code>) do to make it possible for control
 to go to the call site after <code>bar</code> finishes?</li>
 <li>What does the callee (<code>bar</code>) do in order to get the execution to
 continue in <code>ken</code>? Do not include any extraneous details! Just
 stick with the basics.</li>
+<li>Why is this necessary? Why not take the code that needs to
+happen next and just put it after the assembly for the function
+<code>bar</code>?</li>
 </ol>
 </li>
 </ol>
 
-	
+	<div class="td-page-meta__lastmod">
+  Last modified January 31, 2025: <a href="https://github.com/maueroats/teaching--2024-2025/commit/6de54e3aa2a24a8cf483308f17826c4a09fe7312">Freezing all important files. (6de54e3)</a>
+</div>
+
 </div>
 
 

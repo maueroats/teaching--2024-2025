@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Moving colored dot animation, with a walkthrough including helper functions.">
   <meta itemprop="datePublished" content="2018-01-11T22:09:02-06:00">
   <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
-  <meta itemprop="wordCount" content="188">
+  <meta itemprop="wordCount" content="202">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="21. Worksheet B">
   <meta name="twitter:description" content="Moving colored dot animation, with a walkthrough including helper functions.">
@@ -403,6 +403,8 @@
   <a href="/intermediate-cs/ch20/square-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20square-a"><span class="">20. Silly Square</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20tightrope-li">
   <a href="/intermediate-cs/ch20/tightrope/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20tightrope"><span class="">20. Tightrope</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20ellipse-li">
+  <a href="/intermediate-cs/ch20/ellipse/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20ellipse"><span class="">20. Ellipse</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20click-rect-li">
   <a href="/intermediate-cs/ch20/click-rect/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-intermediate-csch20click-rect"><span class="">20. Click Rectangle</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-intermediate-csch20chase-li">
@@ -878,7 +880,7 @@
 
 
 <div class="alert alert-primary" role="alert">
-<h4 class="alert-heading">note</h4>
+<h4 class="alert-heading">Note</h4>
 
     Pay attention to contracts for the functions you are asked to write. When a <code>full-circle</code> is mentioned, that means the data type that you defined in question 1 and 2. Both &ldquo;takes in&rdquo; and &ldquo;given&rdquo; are indications that the parameters to the function are being specified.
 
@@ -889,8 +891,10 @@
 <li>Create a data definition for a type &ldquo;fc&rdquo; (for full-circle) that is able to store the location of the center, color, and radius of a dot.</li>
 <li>Write the actual struct definition.</li>
 <li>Test each feature (center, color, radius).</li>
-<li>Write a function to create a solid circle of the given color and radius.</li>
-<li>Design and test a function to draw the circle at the given position on the background.</li>
+<li>Write a function to create an image of an appropriate solid circle
+from a full-circle structure. (Signature: <code>fc -&gt; image</code>)</li>
+<li>Design and test a function to draw a given full circle at its position
+on a given background. (Signature <code>draw-fc: fc image -&gt; image</code>)</li>
 <li>Design and test a function <code>fc-move</code> that takes in a full-circle and a position, and returns a new full-circle with the same color and radius, but different position.</li>
 <li>Write a function <code>fc-set-color</code>. Include a sensible purpose and contract.</li>
 <li>Write a function <code>fc-change-radius</code> that takes in a full-circle and an amount to change the radius. Include sensible purpose and contract.</li>
