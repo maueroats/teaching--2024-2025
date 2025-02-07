@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Create a new struct to hold a number and a posn.">
   <meta itemprop="datePublished" content="2018-01-17T22:52:49-06:00">
   <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
-  <meta itemprop="wordCount" content="99">
+  <meta itemprop="wordCount" content="227">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="21. Worksheet C">
   <meta name="twitter:description" content="Create a new struct to hold a number and a posn.">
@@ -844,7 +844,14 @@
   
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#animation">Animation</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -887,9 +894,24 @@ you put in to the structure.</p>
 <li>
 <p>Design and test <code>np-set-posn: np(old) posn -&gt; np(new)</code> that makes the posn of the <code>np</code> into the given posn.</p>
 </li>
-<li>
-<p>Go do Exercise 21.6.3 using the idea from this worksheet.</p>
-</li>
+</ol>
+<h2 id="animation">Animation</h2>
+<p>Exercise 21.6.3 asks you to make a game where you try to click on a
+circle. The game counts the number of clicks until you succeed. The
+circle teleports randomly around the screen (not too quickly). Show
+the number of clicks when the game ends.</p>
+<p>Use an <code>np</code> structure for the model.</p>
+<p>Write a signature and two check-expects for each function in this section.</p>
+<ol start="6">
+<li>Create two variables with different <code>np</code> structures to use later in
+your check-expects. Make sure the difference is obvious visually.</li>
+<li>Draw handler.</li>
+<li>Stopping: how will you decide to stop? Write a <code>should-stop?</code>
+function and modify your draw handler if necessary.</li>
+<li>Mouse handler.</li>
+<li>If you don&rsquo;t have one already, add a check-expect for your mouse
+handler showing that clicking <em>near</em> the center of the circle, but
+not <em>on</em> it, still counts as a hit.</li>
 </ol>
 
 	<div class="td-page-meta__lastmod">

@@ -17,22 +17,34 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Blog | WY CS</title>
-<meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
-<meta property="og:url" content="https://wy-cs.info/nand/blog/">
+<title>Ch 08 Quiz A | WY CS</title>
+<meta name="description" content=" Stack Tracing Quiz Code A Please include LCL and ARG in your stack frame.
+Move to a new column in your stack tracing whenever you hit function, return, or the stack decreases (add, subtract, etc).
+110 function Sys.main 0 120 push constant 13 130 push constant 3 140 call grind 1 150 push constant 0 160 call grind 1 170 add 180 label INFINITE 185 goto INFINITE 190 function grind 1 200 push arg 0 210 push constant 1 220 add 230 pop local 0 240 push local 0 250 push local 0 260 push constant 2 270 gt 280 if-goto GDONE 290 call grind 1 300 label GDONE 310 return ">
+<meta property="og:url" content="https://wy-cs.info/nand/ch08/quiz-a/">
   <meta property="og:site_name" content="WY CS">
-  <meta property="og:title" content="Blog">
-  <meta property="og:description" content="Reflections on project construction.">
+  <meta property="og:title" content="Ch 08 Quiz A">
+  <meta property="og:description" content="Stack Tracing Quiz Code A Please include LCL and ARG in your stack frame.
+Move to a new column in your stack tracing whenever you hit function, return, or the stack decreases (add, subtract, etc).
+110 function Sys.main 0 120 push constant 13 130 push constant 3 140 call grind 1 150 push constant 0 160 call grind 1 170 add 180 label INFINITE 185 goto INFINITE 190 function grind 1 200 push arg 0 210 push constant 1 220 add 230 pop local 0 240 push local 0 250 push local 0 260 push constant 2 270 gt 280 if-goto GDONE 290 call grind 1 300 label GDONE 310 return">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="nand">
+    <meta property="article:published_time" content="2025-02-05T11:20:44-06:00">
+    <meta property="article:modified_time" content="2025-02-05T11:20:44-06:00">
 
-  <meta itemprop="name" content="Blog">
-  <meta itemprop="description" content="Reflections on project construction.">
-  <meta itemprop="datePublished" content="2024-12-27T16:26:05-06:00">
-  <meta itemprop="dateModified" content="2024-12-27T20:52:02-06:00">
+  <meta itemprop="name" content="Ch 08 Quiz A">
+  <meta itemprop="description" content="Stack Tracing Quiz Code A Please include LCL and ARG in your stack frame.
+Move to a new column in your stack tracing whenever you hit function, return, or the stack decreases (add, subtract, etc).
+110 function Sys.main 0 120 push constant 13 130 push constant 3 140 call grind 1 150 push constant 0 160 call grind 1 170 add 180 label INFINITE 185 goto INFINITE 190 function grind 1 200 push arg 0 210 push constant 1 220 add 230 pop local 0 240 push local 0 250 push local 0 260 push constant 2 270 gt 280 if-goto GDONE 290 call grind 1 300 label GDONE 310 return">
+  <meta itemprop="datePublished" content="2025-02-05T11:20:44-06:00">
+  <meta itemprop="dateModified" content="2025-02-05T11:20:44-06:00">
+  <meta itemprop="wordCount" content="111">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Blog">
-  <meta name="twitter:description" content="Reflections on project construction.">
+  <meta name="twitter:title" content="Ch 08 Quiz A">
+  <meta name="twitter:description" content="Stack Tracing Quiz Code A Please include LCL and ARG in your stack frame.
+Move to a new column in your stack tracing whenever you hit function, return, or the stack decreases (add, subtract, etc).
+110 function Sys.main 0 120 push constant 13 130 push constant 3 140 call grind 1 150 push constant 0 160 call grind 1 170 add 180 label INFINITE 185 goto INFINITE 190 function grind 1 200 push arg 0 210 push constant 1 220 add 230 pop local 0 240 push local 0 250 push local 0 260 push constant 2 270 gt 280 if-goto GDONE 290 call grind 1 300 label GDONE 310 return">
 
 
 
@@ -46,7 +58,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -153,19 +165,19 @@
   <a href="/nand/ch06/match/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch06match"><span class="">Match</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandch08-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-nandch08-li">
   <a href="/nand/ch08/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandch08"><span class="">8. Virtual Machine II</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch08discussion-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandch08discussion-li">
   <a href="/nand/ch08/discussion/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch08discussion"><span class="">VM II Discussion</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandch08quiz-a-li">
-  <a href="/nand/ch08/quiz-a/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandch08quiz-a"><span class="">Ch 08 Quiz A</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-nandch08quiz-a-li">
+  <a href="/nand/ch08/quiz-a/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-nandch08quiz-a"><span class="td-sidebar-nav-active-item">Ch 08 Quiz A</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-nandblog-li">
-  <a href="/nand/blog/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-nandblog"><span class="td-sidebar-nav-active-item">Blog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-nandblog-li">
+  <a href="/nand/blog/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-nandblog"><span class="">Blog</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-nandblogguidelines-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-nandblogguidelines-li">
   <a href="/nand/blog/guidelines/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-nandblogguidelines"><span class="">Guidelines</span></a>
 </li>
   </ul>
@@ -192,14 +204,21 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/maueroats/teaching--2024-2025/tree/main/www/content/nand/blog/_index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
-  <a href="https://github.com/maueroats/teaching--2024-2025/edit/main/www/content/nand/blog/_index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/maueroats/teaching--2024-2025/new/main/www/content/nand/blog?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/maueroats/teaching--2024-2025/issues/new?title=Blog" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/maueroats/teaching--2024-2025/tree/main/www/content/nand/ch08/quiz-A.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/edit/main/www/content/nand/ch08/quiz-A.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/new/main/www/content/nand/ch08?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/maueroats/teaching--2024-2025/issues/new?title=Ch%2008%20Quiz%20A" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#code-a">Code A</a></li>
+  </ul>
+</nav>
+      </div>
+    
             
 	
           </aside>
@@ -211,33 +230,57 @@
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
     <a href="/nand/">NAND</a></li>
+  <li class="breadcrumb-item">
+    <a href="/nand/ch08/">8. Virtual Machine II</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Blog</li>
+    Ch 08 Quiz A</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Blog</h1>
-  
+	<h1>Ch 08 Quiz A</h1>
+	
 	<header class="article-meta">
 		
   </header>
+	<style type="text/css">
+    ol { list-style-type: roman; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    ol ol ol ol { list-style-type: decimal; }
+</style>
+<h1 id="stack-tracing-quiz">Stack Tracing Quiz</h1>
+<h2 id="code-a">Code A</h2>
+<p>Please include <code>LCL</code> and <code>ARG</code> in your stack frame.</p>
+<p>Move to a new column in your stack tracing whenever you hit
+<code>function</code>, <code>return</code>, or the stack decreases (add, subtract, etc).</p>
+<pre tabindex="0"><code>110 function Sys.main 0
+120   push constant 13
+130   push constant 3
+140   call grind 1
+150   push constant 0
+160   call grind 1
+170   add
+180   label INFINITE
+185   goto INFINITE
+
+190 function grind 1
+200   push arg 0
+210   push constant 1
+220   add
+230   pop local 0
+240   push local 0
+250   push local 0
+260   push constant 2
+270   gt
+280   if-goto GDONE
+290   call grind 1
+300   label GDONE
+310   return
+</code></pre>
 	
-  <div class="section-index">
-    
-    
-    <hr class="panel-line">
-        <div class="entry">
-                <h5>
-                    <a href="/nand/blog/guidelines/">Guidelines</a>
-                </h5>
-                <p></p>
-            </div>
-        </div>
-<div class="td-page-meta__lastmod">
-  Last modified December 27, 2024: <a href="https://github.com/maueroats/teaching--2024-2025/commit/1369825ff75994033e082644c81c6885d48f4037">Reflection blog framework and (unshared) first entry. (1369825)</a>
 </div>
-</div>
+
 
           </main>
         </div>

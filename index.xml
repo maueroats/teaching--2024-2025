@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 31 Jan 2025 21:38:12 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2025 11:20:44 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -1281,6 +1281,13 @@
       <pubDate>Sat, 09 Sep 2017 15:50:00 -0500</pubDate>
       <guid>https://wy-cs.info/docs/generic-cs-syllabus/</guid>
       <description>&lt;h1 id=&#34;computer-science-syllabus&#34;&gt;Computer Science Syllabus&lt;/h1&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The most important information (contact information, grading scale) comes first.&#xA;Anything you need that you do not see here, check the following sources:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Class web site resources section&lt;/li&gt;&#xA;&lt;li&gt;Email me and ask: &lt;a href=&#34;mailto:amauer-oats@cps.edu&#34;&gt;amauer-oats@cps.edu&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;course-specific-information&#34;&gt;Course-specific information&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://wy-cs.info/docs/apcs-syllabus/&#34;&gt;AP Computer Science&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://wy-cs.info/docs/intermediatecs-syllabus/&#34;&gt;Intermediate Computer Science&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;contact-information&#34;&gt;Contact information&lt;/h2&gt;&#xA;&lt;p&gt;I read email regularly. Email &lt;a href=&#34;mailto:amauer-oats@cps.edu&#34;&gt;amauer-oats@cps.edu&lt;/a&gt;.&#xA;I will respond within two working days, usually one.&#xA;Make sure your contact information is correct in the CPS parent portal.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ch 08 Quiz A</title>
+      <link>https://wy-cs.info/nand/ch08/quiz-a/</link>
+      <pubDate>Wed, 05 Feb 2025 11:20:44 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/quiz-a/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;stack-tracing-quiz&#34;&gt;Stack Tracing Quiz&lt;/h1&gt;&#xA;&lt;h2 id=&#34;code-a&#34;&gt;Code A&lt;/h2&gt;&#xA;&lt;p&gt;Please include &lt;code&gt;LCL&lt;/code&gt; and &lt;code&gt;ARG&lt;/code&gt; in your stack frame.&lt;/p&gt;&#xA;&lt;p&gt;Move to a new column in your stack tracing whenever you hit&#xA;&lt;code&gt;function&lt;/code&gt;, &lt;code&gt;return&lt;/code&gt;, or the stack decreases (add, subtract, etc).&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;110 function Sys.main 0&#xA;120   push constant 13&#xA;130   push constant 3&#xA;140   call grind 1&#xA;150   push constant 0&#xA;160   call grind 1&#xA;170   add&#xA;180   label INFINITE&#xA;185   goto INFINITE&#xA;&#xA;190 function grind 1&#xA;200   push arg 0&#xA;210   push constant 1&#xA;220   add&#xA;230   pop local 0&#xA;240   push local 0&#xA;250   push local 0&#xA;260   push constant 2&#xA;270   gt&#xA;280   if-goto GDONE&#xA;290   call grind 1&#xA;300   label GDONE&#xA;310   return&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Java Setup 2025</title>
