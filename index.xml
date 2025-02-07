@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Feb 2025 12:11:58 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2025 13:15:33 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -3801,6 +3801,13 @@
       <pubDate>Wed, 13 Oct 2021 20:07:13 -0500</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/ch07/resources/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/193fiEVjSxTPF1i4WgTRjRHps3qDP1dcPxuBqJgEJAok/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;A&lt;/a&gt;:&#xA;Important basic info for working with numbers, including &lt;code&gt;#i&lt;/code&gt; and &lt;code&gt;check-within&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1aGHOEBBIaDv7YhWzprDr4v0WdzwZz1o40hTDViT9FXU/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;BC&lt;/a&gt;:&#xA;Lists of good problems from the book (Picturing Programs, Chapter 7).&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1w3D3FDAfiulQOswVmcWqs1ShFq46mLckEGKzKdqEsuI/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;D&lt;/a&gt;:&#xA;First big gradient creation practice.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1AZH9UpUeo7K8mb5cn4bYoUDXT686-vQpVs3WApLW-xQ/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;E&lt;/a&gt;:&#xA;More gradients, including a radial gradient!&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1bm-zTl0d4QM-Px9C9rF43uS05RjtWLGqhNwAPn0UyIQ/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;F&lt;/a&gt;:&#xA;Scaffolded practice with check-expects, more gradients.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/document/d/1lNz7j5k5pNnxG4OREckKYMDHY6EVp701nPoCbmfHWSA/edit?usp=sharing&#34;&gt;Chapter 7 Worksheet&#xA;G&lt;/a&gt;:&#xA;Mostly advanced exercises, including the &amp;ldquo;reverse greyscale&amp;rdquo; transformation.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Pro Tips</title>
+      <link>https://wy-cs.info/nand/ch08/pro-tips/</link>
+      <pubDate>Fri, 07 Feb 2025 13:15:33 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/pro-tips/</guid>
+      <description>Useful snippets of code.</description>
     </item>
     <item>
       <title>All Commands</title>
