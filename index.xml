@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Feb 2025 11:20:44 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 07 Feb 2025 12:11:58 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -3101,6 +3101,13 @@
       <pubDate>Sun, 06 Oct 2019 07:24:08 -0500</pubDate>
       <guid>https://wy-cs.info/ap-cs/haskell/ch03/daily-06/</guid>
       <description>&lt;p&gt;Write the type signature and function for each problem.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 3 to the front of a list of numbers.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 4 to the back of a list of numbers.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 5 in the middle of a list of numbers. If possible, insert the&#xA;5 so there are exactly the same number of numbers before and after&#xA;it, otherwise put the extra number after it.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Switch the front and back number in a list of numbers. Leave the&#xA;others the same.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://wy-cs.info/nand/ch08/sample-a/</link>
+      <pubDate>Fri, 07 Feb 2025 12:11:58 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/sample-a/</guid>
+      <description>Simple testing code for label, goto, and if-goto.</description>
     </item>
     <item>
       <title>Instructions I</title>
