@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Feb 2025 13:15:33 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 09:37:43 -0600</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -55,7 +55,7 @@
       <link>https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/</link>
       <pubDate>Thu, 08 Feb 2024 13:23:03 -0600</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;A duck moves horizontally across the screen.&lt;/li&gt;&#xA;&lt;li&gt;You can control the direction of the duck (left/right) with the&#xA;A and D keys.&lt;/li&gt;&#xA;&lt;li&gt;When the duck hits the edge of the screen, it changes direction.&lt;/li&gt;&#xA;&lt;li&gt;A turret sits at the bottom of the screen and can move horizontally,&#xA;controlled by left/right arrows.&lt;/li&gt;&#xA;&lt;li&gt;A bullet can be fired vertically using the space bar.&lt;/li&gt;&#xA;&lt;li&gt;When the duck is hit, it changes direction.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/Duck-Game-1.png&#34; width=&#34;200&#34;/&gt; &#xA;&lt;/figure&gt;&#xA;&lt;h2 id=&#34;enhancements&#34;&gt;Enhancements&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Graphic for duck changes when hit.&lt;/li&gt;&#xA;&lt;li&gt;Duck begins close (near the turret) and moves higher every time it is&#xA;hit.&lt;/li&gt;&#xA;&lt;li&gt;Track the number of hits and misses.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;A duck moves horizontally across the screen.&lt;/li&gt;&#xA;&lt;li&gt;You can control the direction of the duck (left/right) with the&#xA;A and D keys.&lt;/li&gt;&#xA;&lt;li&gt;When the duck hits the edge of the screen, it changes direction.&lt;/li&gt;&#xA;&lt;li&gt;A turret sits at the bottom of the screen and can move horizontally,&#xA;controlled by left/right arrows.&lt;/li&gt;&#xA;&lt;li&gt;A bullet can be fired vertically using the space bar.&lt;/li&gt;&#xA;&lt;li&gt;When the duck is hit, it changes direction.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;figure&gt;&#xA;    &lt;img src=&#34;https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/Duck-Game-1.png&#34; width=&#34;200&#34;/&gt; &#xA;&lt;/figure&gt;&#xA;&lt;h2 id=&#34;enhancements&#34;&gt;Enhancements&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Graphic for duck changes when hit.&lt;/li&gt;&#xA;&lt;li&gt;Duck begins close (near the turret) and moves higher every time it is&#xA;hit.&lt;/li&gt;&#xA;&lt;li&gt;Track the number of hits and misses.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;&#xA;&lt;p&gt;Using &lt;code&gt;key=?&lt;/code&gt; to compare keys is highly recommended!&lt;/p&gt;</description>
     </item>
     <item>
       <title>15. Book</title>
@@ -1696,6 +1696,13 @@
       <description>&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Draw handler using a posn model to draw a square on the screen.&lt;/li&gt;&#xA;&lt;li&gt;Arrow keys (left, right, up, down) to move a square on the screen.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;second-steps&#34;&gt;Second Steps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A little square randomly drifts around the screen.&lt;/li&gt;&#xA;&lt;li&gt;You win if you hit the &amp;ldquo;w&amp;rdquo; key.&lt;/li&gt;&#xA;&lt;li&gt;Hitting the &amp;ldquo;r&amp;rdquo; key moves the square back to its starting position.&lt;/li&gt;&#xA;&lt;li&gt;When you win, some win screen appears and the animation stops.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Items to practice:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Posters</title>
+      <link>https://wy-cs.info/nand/ch08/posters/</link>
+      <pubDate>Wed, 12 Feb 2025 14:50:42 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/posters/</guid>
+      <description>Poster topics.</description>
+    </item>
+    <item>
       <title>JShell</title>
       <link>https://wy-cs.info/ap-cs/jm/intro/40-jshell/</link>
       <pubDate>Wed, 08 Jan 2025 10:15:50 -0600</pubDate>
@@ -3103,6 +3110,13 @@
       <description>&lt;p&gt;Write the type signature and function for each problem.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 3 to the front of a list of numbers.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 4 to the back of a list of numbers.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Add a 5 in the middle of a list of numbers. If possible, insert the&#xA;5 so there are exactly the same number of numbers before and after&#xA;it, otherwise put the extra number after it.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Switch the front and back number in a list of numbers. Leave the&#xA;others the same.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Struct A</title>
+      <link>https://wy-cs.info/intermediate-cs/intensive/struct-a/</link>
+      <pubDate>Fri, 14 Feb 2025 12:35:57 -0600</pubDate>
+      <guid>https://wy-cs.info/intermediate-cs/intensive/struct-a/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;warmup&#34;&gt;Warmup&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Create a structure called &lt;code&gt;pqr&lt;/code&gt; with fields &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;z&lt;/code&gt;, and &lt;code&gt;w&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;struct-a&#34;&gt;Struct A&lt;/h2&gt;&#xA;&lt;p&gt;Given that:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are numbers&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;z&lt;/code&gt; is a color&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;w?&lt;/code&gt; is a boolean&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Make a variable &lt;code&gt;ex1&lt;/code&gt; that holds a &lt;code&gt;pqr&lt;/code&gt; with &lt;code&gt;x=10&lt;/code&gt;, &lt;code&gt;y=20&lt;/code&gt;,&#xA;&lt;code&gt;z=&amp;quot;blue&amp;quot;&lt;/code&gt;, and &lt;code&gt;w?&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title></title>
       <link>https://wy-cs.info/nand/ch08/sample-a/</link>
       <pubDate>Fri, 07 Feb 2025 12:11:58 -0600</pubDate>
@@ -3276,6 +3290,20 @@
       <pubDate>Tue, 17 Oct 2017 22:10:45 -0500</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/ch07/random/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Random numbers: &lt;code&gt;(random 3)&lt;/code&gt; gives a random number 0, 1, or 2. Notice that there are three possible answers, but they start counting at 0. Run the code below and you should get different answers each time.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-racket&#34; data-lang=&#34;racket&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;random&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;random&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;random&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;random-ranges&#34;&gt;Random ranges&lt;/h2&gt;&#xA;&#xA;&#xA;&#xA;&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;&#xA;&lt;h4 class=&#34;alert-heading&#34;&gt;note&lt;/h4&gt;&#xA;&#xA;    We use the phrase &amp;ldquo;from 10 to 200&amp;rdquo; or &amp;ldquo;between 10 and 200&amp;rdquo; to both mean all of the integers n so that 10&amp;lt;=n&amp;lt;=200.&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;How many numbers are there from 10 to 200, inclusive? It&amp;rsquo;s easy to make a mistake. My favorite method is to subtract a number to make the bottom of the range start counting at one.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sample Code B</title>
+      <link>https://wy-cs.info/nand/ch08/sample-b/</link>
+      <pubDate>Sat, 15 Feb 2025 09:37:43 -0600</pubDate>
+      <guid>https://wy-cs.info/nand/ch08/sample-b/</guid>
+      <description>A very simple call and return test.</description>
+    </item>
+    <item>
+      <title>Struct B</title>
+      <link>https://wy-cs.info/intermediate-cs/intensive/struct-b/</link>
+      <pubDate>Fri, 14 Feb 2025 12:46:50 -0600</pubDate>
+      <guid>https://wy-cs.info/intermediate-cs/intensive/struct-b/</guid>
+      <description>&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Make a structure &lt;code&gt;qqq&lt;/code&gt; that holds a number A, a color C, and&#xA;another number M.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Make a draw handler that shows two solid circles, one with radius&#xA;10 centered at (A,10), and one with radius 15 centered at&#xA;(100, M). Both circles are color C.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Instructions II</title>

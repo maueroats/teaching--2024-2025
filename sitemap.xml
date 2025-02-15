@@ -21,7 +21,7 @@
     <lastmod>2024-12-21T09:51:59-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/duck-shoot/05-description/</loc>
-    <lastmod>2024-02-22T22:51:20-06:00</lastmod>
+    <lastmod>2025-02-14T10:10:48-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch15/15-book/</loc>
     <lastmod>2023-11-29T14:57:42-06:00</lastmod>
@@ -555,7 +555,7 @@
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/21-ws-b/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2025-02-12T21:06:42-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/sem1review/sem-review-2/</loc>
     <lastmod>2023-12-20T13:49:16-06:00</lastmod>
@@ -762,7 +762,7 @@
     <lastmod>2023-12-20T13:49:16-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/21-ws-c/</loc>
-    <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+    <lastmod>2025-02-12T21:06:42-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/karel/ch3/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
@@ -817,6 +817,9 @@
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/square-a/</loc>
     <lastmod>2025-01-31T21:30:27-06:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/nand/ch08/posters/</loc>
+    <lastmod>2025-02-12T14:50:42-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/jm/intro/40-jshell/</loc>
     <lastmod>2025-01-11T10:29:34-06:00</lastmod>
@@ -1538,6 +1541,9 @@
     <loc>https://wy-cs.info/ap-cs/jm/interlude-jan/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/intensive/struct-a/</loc>
+    <lastmod>2025-02-14T12:35:57-06:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/nand/ch08/sample-a/</loc>
     <lastmod>2025-02-07T12:11:58-06:00</lastmod>
   </url><url>
@@ -1624,6 +1630,12 @@
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch07/random/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/nand/ch08/sample-b/</loc>
+    <lastmod>2025-02-15T09:37:43-06:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/intensive/struct-b/</loc>
+    <lastmod>2025-02-14T12:46:50-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/120-instructions-2/</loc>
     <lastmod>2024-10-29T11:05:18-05:00</lastmod>
@@ -2077,6 +2089,9 @@
   </url><url>
     <loc>https://wy-cs.info/ml/daily/2023-01-23/</loc>
     <lastmod>2023-08-18T21:41:43-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/intensive/</loc>
+    <lastmod>2025-02-14T12:35:48-06:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/nand/ch06/match/</loc>
     <lastmod>2024-10-29T11:08:26-05:00</lastmod>
