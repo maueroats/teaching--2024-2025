@@ -33,7 +33,7 @@
   <meta itemprop="description" content="A class for making a list of prime numbers.">
   <meta itemprop="datePublished" content="2025-03-04T12:04:58-06:00">
   <meta itemprop="dateModified" content="2025-03-04T12:04:58-06:00">
-  <meta itemprop="wordCount" content="206">
+  <meta itemprop="wordCount" content="226">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Checkpoint B">
   <meta name="twitter:description" content="A class for making a list of prime numbers.">
@@ -272,7 +272,13 @@
 	<header class="article-meta">
 		
   </header>
-	<h2 id="number-theory">Number Theory</h2>
+	<style type="text/css">
+    ol { list-style-type: roman; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    ol ol ol ol { list-style-type: decimal; }
+</style>
+<h2 id="number-theory">Number Theory</h2>
 <p>We are writing a bunch of number-related functions. Even though many
 of them have nothing to do with prime numbers, the class is called <code>Prime</code>.</p>
 <h3 id="fields">Fields</h3>
@@ -282,7 +288,8 @@ of them have nothing to do with prime numbers, the class is called <code>Prime</
 </ul>
 <h3 id="accessor-methods">Accessor methods</h3>
 <ul>
-<li><code>method int getNPrimes()</code>: How many primes are in the array?</li>
+<li><code>method int getNPrimes()</code>: How many primes are in the array? This
+should be stored in the <code>nprimes</code> variable.</li>
 <li><code>method int getPrime(int k)</code>: Get the kth prime, starting with
 getPrime(0) = 2.</li>
 </ul>
@@ -298,9 +305,14 @@ of k in ascending order.</li>
 <h3 id="more-methods">More Methods</h3>
 <ul>
 <li><code>constructor Prime new(int k)</code>: Create a Prime object.
-The object should an array of primes that is filled with the first
+The object should contain:
+<ol>
+<li>an integer: the number of primes found (this will be k);</li>
+<li>an array of integers that is filled with the first
 k prime numbers. When k=2 the array contains only the numbers 2
 and 3.</li>
+</ol>
+</li>
 <li><code>method boolean isKnownComposite(int n)</code>: True when the number is
 divisible by some number in the primes list, but is not itself prime.</li>
 </ul>
