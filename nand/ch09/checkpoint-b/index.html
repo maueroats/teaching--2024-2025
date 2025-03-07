@@ -33,7 +33,7 @@
   <meta itemprop="description" content="A class for making a list of prime numbers.">
   <meta itemprop="datePublished" content="2025-03-04T12:04:58-06:00">
   <meta itemprop="dateModified" content="2025-03-04T12:04:58-06:00">
-  <meta itemprop="wordCount" content="192">
+  <meta itemprop="wordCount" content="206">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Checkpoint B">
   <meta name="twitter:description" content="A class for making a list of prime numbers.">
@@ -243,6 +243,7 @@
       </ul>
     </li>
     <li><a href="#testing">Testing</a></li>
+    <li><a href="#common-issues">Common Issues</a></li>
   </ul>
 </nav>
       </div>
@@ -296,11 +297,12 @@ of k in ascending order.</li>
 </ul>
 <h3 id="more-methods">More Methods</h3>
 <ul>
-<li><code>constructor void new(int k)</code>: Create the array of primes and fill
-it with the first k prime numbers. When k=2 the array contains only
-the numbers 2 and 3</li>
+<li><code>constructor Prime new(int k)</code>: Create a Prime object.
+The object should an array of primes that is filled with the first
+k prime numbers. When k=2 the array contains only the numbers 2
+and 3.</li>
 <li><code>method boolean isKnownComposite(int n)</code>: True when the number is
-not prime by is divisible by some number in the primes list.</li>
+divisible by some number in the primes list, but is not itself prime.</li>
 </ul>
 <h2 id="testing">Testing</h2>
 <ul>
@@ -314,7 +316,11 @@ not prime by is divisible by some number in the primes list.</li>
   method int getPrime(int k) { return primes[k]; }
   // ...
 }
-</code></pre>
+</code></pre><h2 id="common-issues">Common Issues</h2>
+<ul>
+<li>Constructors need to return <code>this</code>.</li>
+</ul>
+
 	
 </div>
 
