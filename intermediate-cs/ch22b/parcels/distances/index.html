@@ -27,13 +27,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="intermediate-cs">
     <meta property="article:published_time" content="2021-04-13T21:48:41-05:00">
-    <meta property="article:modified_time" content="2023-08-18T21:41:43-05:00">
+    <meta property="article:modified_time" content="2025-03-18T15:27:54-05:00">
 
   <meta itemprop="name" content="Distances">
   <meta itemprop="description" content="Finding distances between depots and points on the grid. Important steps.">
   <meta itemprop="datePublished" content="2021-04-13T21:48:41-05:00">
-  <meta itemprop="dateModified" content="2023-08-18T21:41:43-05:00">
-  <meta itemprop="wordCount" content="187">
+  <meta itemprop="dateModified" content="2025-03-18T15:27:54-05:00">
+  <meta itemprop="wordCount" content="206">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Distances">
   <meta name="twitter:description" content="Finding distances between depots and points on the grid. Important steps.">
@@ -861,7 +861,7 @@
         <nav id="TableOfContents">
   <ul>
     <li><a href="#finding-distances-i">Finding Distances I</a></li>
-    <li><a href="#finding-distances-ii">Finding Distances II</a></li>
+    <li><a href="#finding-distances-ii---obsolete">Finding Distances II - Obsolete</a></li>
   </ul>
 </nav>
       </div>
@@ -904,11 +904,13 @@ your location to all of them.</li>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-racket" data-lang="racket"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">;; find-distances: posn(current) list-of-posn(warehouses) -&gt; list-of-numbers</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">define</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">find-distances</span> <span style="color:#000">current</span> <span style="color:#000">warehouses</span><span style="color:#000;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">))</span>
-</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">check-expect</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">find-distances</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span> 
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">check-expect</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">find-distances</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">)</span>
 </span></span><span style="display:flex;"><span>                              <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">)))</span>
 </span></span><span style="display:flex;"><span>              <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#0000cf;font-weight:bold">6</span> <span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">))</span><span style="color:#a40000">
-</span></span></span></code></pre></div><h2 id="finding-distances-ii">Finding Distances II</h2>
-<p>NOTE: While this approach works, students may find it easier just to
+</span></span></span></code></pre></div><h2 id="finding-distances-ii---obsolete">Finding Distances II - Obsolete</h2>
+<p><strong>Updated recommendation</strong>: Go straight from the finding distances to
+writing the draw handler. Ignore this part.</p>
+<p>NOTE: While this approach works, you may find it easier just to
 take the list of points from <a href="/intermediate-cs/ch22b/parcels/grid/">the grid making functions</a> and directly plot their distances to depots.</p>
 <p>Combine the results of the previous two sections to create a
 list of <code>(list posn number)</code> where the list records the distance from
@@ -918,10 +920,10 @@ the posn to the nearest warehouse.</p>
 </span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">-1</span> <span style="color:#0000cf;font-weight:bold">-2</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">)))</span>
 </span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">check-expect</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">find-distances-2</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">posn</span> <span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">posn</span> <span style="color:#0000cf;font-weight:bold">7</span> <span style="color:#0000cf;font-weight:bold">8</span><span style="color:#000;font-weight:bold">))</span>
 </span></span><span style="display:flex;"><span>                                <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000;font-weight:bold">)))</span>
-</span></span><span style="display:flex;"><span>              <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">)))</span><span style="color:#a40000">
+</span></span><span style="display:flex;"><span>              <span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">list</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#000">make-posn</span> <span style="color:#0000cf;font-weight:bold">5</span> <span style="color:#0000cf;font-weight:bold">6</span><span style="color:#000;font-weight:bold">)))</span><span style="color:#a40000">
 </span></span></span></code></pre></div>
 	<div class="td-page-meta__lastmod">
-  Last modified August 18, 2023: <a href="https://github.com/maueroats/teaching--2024-2025/commit/7352e874ce3f4f06ad847de97e1dbbf6523866ae">2022-2023 End State (7352e87)</a>
+  Last modified March 18, 2025: <a href="https://github.com/maueroats/teaching--2024-2025/commit/18035606ad8c1a6b40e3e7cd54e1959c9eaca0f1">Clarified that students should ignore Finding Distances II. (1803560)</a>
 </div>
 
 </div>
