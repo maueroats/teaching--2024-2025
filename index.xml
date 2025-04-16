@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Apr 2025 09:55:52 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 15 Apr 2025 19:53:19 -0500</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -756,6 +756,13 @@
       <pubDate>Tue, 24 Oct 2017 08:14:20 -0500</pubDate>
       <guid>https://wy-cs.info/intermediate-cs/ch07/exercises-4/</guid>
       <description>&lt;h2 id=&#34;planning-and-testing&#34;&gt;Planning and Testing&lt;/h2&gt;&#xA;&lt;p&gt;Write every part of the design process &lt;strong&gt;except&lt;/strong&gt; the function.&#xA;Do write tests!&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;count-factors: take a number N and find out how many numbers 1,2,&amp;hellip;,N divide N.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;angle-pts: take in six numbers (x1,y1) (x2,y2) (x3,y3) and give the angle in degrees made by line segments going to those three points in that order.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Classwork: make a point follow the graph of y = sqrt(100^2-x^2) from x=-95 to x=95&#xA;(Don&amp;rsquo;t like math? Use the &lt;a href=&#34;better-mathgraph.rkt&#34;&gt;graph of the function y = 3x+50&lt;/a&gt; on the same interval.)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Day and Night</title>
+      <link>https://wy-cs.info/intermediate-cs/universe/day-night/</link>
+      <pubDate>Tue, 15 Apr 2025 19:53:19 -0500</pubDate>
+      <guid>https://wy-cs.info/intermediate-cs/universe/day-night/</guid>
+      <description>&lt;p&gt;This is a &amp;ldquo;get familiar with universe&amp;rdquo; animation. There not be&#xA;anything complicated about it. Even on a whiteboard it can be done in&#xA;45-60 minutes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;&#xA;&lt;p&gt;During the daytime, the sky on Earth is blue, while the sky on&#xA;Mars is reddish. Other worlds might have other sky colors. During the&#xA;nighttime, it gets dark so the sky in every world is dark gray. (This&#xA;is easier to look at than pitch black.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>18 Op to Funcall</title>
