@@ -6,7 +6,7 @@
     <description>Recent content on WY CS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 May 2025 14:16:16 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 09 May 2025 10:01:55 -0500</lastBuildDate>
     <atom:link href="https://wy-cs.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Connect Four Overview</title>
@@ -4137,6 +4137,13 @@
       <pubDate>Mon, 23 Jan 2023 12:12:05 -0600</pubDate>
       <guid>https://wy-cs.info/ml/daily/2023-01-23/</guid>
       <description>&lt;script&gt;&#xA;MathJax = {&#xA;  tex: {&#xA;    inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]],&#xA;    macros: {&#xA;        Var: [&#34;\\operatorname{Var}&#34;],&#xA;        Cov: [&#34;\\operatorname{Cov}&#34;]&#xA;    },&#xA;  },&#xA; svg: {&#xA;     fontCache: &#39;global&#39;&#xA; }&#xA;};&#xA;&lt;/script&gt;&#xA;&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;&#xA;&lt;style type=&#34;text/css&#34;&gt;&#xA;    ol { list-style-type: roman; }&#xA;    ol ol { list-style-type: lower-alpha; }&#xA;    ol ol ol { list-style-type: lower-roman; }&#xA;    ol ol ol ol { list-style-type: decimal; }&#xA;&lt;/style&gt;&#xA;&lt;p&gt;Homework set ISL-05W, confidence intervals and the bootstrap method.&lt;/p&gt;&#xA;&lt;h2 id=&#34;weekly-homework&#34;&gt;Weekly Homework&lt;/h2&gt;&#xA;&lt;h3 id=&#34;big-picture&#34;&gt;Big Picture&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;What is the definition of a p-value? What (abstract) information do&#xA;you need to have in order to compute a p-value?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>For 1.4</title>
+      <link>https://wy-cs.info/intermediate-cs/pro/for/for-1.4/</link>
+      <pubDate>Fri, 09 May 2025 10:01:55 -0500</pubDate>
+      <guid>https://wy-cs.info/intermediate-cs/pro/for/for-1.4/</guid>
+      <description>&lt;p&gt;The review section contains a mix of &amp;ldquo;sequence-making&amp;rdquo; commands like&#xA;&lt;code&gt;in-range&lt;/code&gt; and lists. When the question gives a sequence-making command,&#xA;write the list it will produce. When the question gives a list, write&#xA;a sequence-making command that could be used to produce it.&lt;/p&gt;&#xA;&lt;p&gt;To write list answers, give the first three items, then &lt;code&gt;...&lt;/code&gt; to the&#xA;last item. The long list:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;(list 21 22 23 24 25 26 27 28 29 30)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;should be written:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Match</title>
