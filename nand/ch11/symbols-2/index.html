@@ -33,7 +33,7 @@
   <meta itemprop="description" content="Detailed instructions for creating symbol mappings.">
   <meta itemprop="datePublished" content="2025-05-19T11:41:03-05:00">
   <meta itemprop="dateModified" content="2025-05-19T11:41:03-05:00">
-  <meta itemprop="wordCount" content="218">
+  <meta itemprop="wordCount" content="389">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="11. Symbols II">
   <meta name="twitter:description" content="Detailed instructions for creating symbol mappings.">
@@ -346,6 +346,8 @@
       <ul>
         <li><a href="#helper-functions">Helper Functions</a></li>
         <li><a href="#loading-symbols">Loading Symbols</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#ways-to-match">Ways to Match</a></li>
       </ul>
     </li>
   </ul>
@@ -390,36 +392,89 @@ anything.</p>
 <pre><code>(displayln (format &quot;warning: did not unwrap ~a&quot; var))
 </code></pre>
 <p>You can also use the shortcut <code>~a</code> function.</p>
+<p>The recursive version of this <code>unwrap-recursive</code> applies unwrap
+recursively every time it finds a <code>list?</code>. Using one of the examples below:</p>
+<pre><code>(check-expect (unwrap-recursive VDex)
+              '(varDec &quot;int&quot; &quot;a&quot; &quot;b&quot;))
+</code></pre>
 <h3 id="loading-symbols">Loading Symbols</h3>
 <p>Use a single variable to represent an entire symbol table. If you want
-to hold more than one piece of information, make it a struct or a list.</p>
+to hold more than one piece of information, make it a struct or a list.
+On this page, we will use <code>all-symbols</code> to be the variable that holds
+the symbol table.</p>
 <p>Write a function to update the symbol table based on one line of
 Jack code.</p>
 <pre><code>(update-symbol-table! all-symbols code-line)
 </code></pre>
-<p>Examples of lines of code:</p>
+<p>Examples:</p>
 <ul>
 <li>
-<p><code>(classVarDec (keyword &quot;field&quot;) (keyword &quot;int&quot;) (identifier &quot;x&quot;) (identifier &quot;y&quot;) (identifier &quot;z&quot;)</code></p>
-<p>This should result in three variables being added to the symbol
+<p>Three variables added to the symbol
 table in the &ldquo;class&rdquo; scope. The variables <code>&quot;x&quot;</code>, <code>&quot;y&quot;</code>, and <code>&quot;z&quot;</code>
 are numbered 0, 1, and 2 in the <code>this</code> segment.</p>
+<pre><code>  (define cv1
+    '(classVarDec (keyword &quot;field&quot;) (keyword &quot;int&quot;)
+                  (identifier &quot;x&quot;) (identifier &quot;y&quot;) (identifier &quot;z&quot;)))
+</code></pre>
 </li>
 <li>
-<p><code>(classVarDec (keyword &quot;static&quot;) (keyword &quot;boolean&quot;) (identifier &quot;light&quot;))</code></p>
 <p>A single variable &ldquo;light&rdquo; is added to the class scope. It is in the
-<code>static</code> scope and is variable 0.</p>
+<code>static</code> scope and is variable number 0.</p>
+<pre><code> (define cv2
+   '(classVarDec (keyword &quot;static&quot;) (keyword &quot;boolean&quot;) (identifier &quot;light&quot;)))
+</code></pre>
 </li>
 <li>
 <p>Variables in a parameterList should go into the <code>args</code> segment.</p>
-<pre><code>  (parameterList (list (keyword &quot;int&quot;) (identifier &quot;n&quot;))
-                 (list (keyword &quot;boolean&quot;) (identifier &quot;bv&quot;)))
+<pre><code>  (define PLex
+    '(parameterList ((keyword &quot;int&quot;) (identifier &quot;n&quot;))
+                    ((keyword &quot;boolean&quot;) (identifier &quot;bv&quot;))))
 </code></pre>
 </li>
 <li>
 <p>Variables in a varDec should go into the <code>local</code> segment.</p>
+<pre><code>  (define VDex
+    '(varDec (keyword &quot;int&quot;) (identifier &quot;a&quot;) (identifier &quot;b&quot;)))
+</code></pre>
 </li>
 </ul>
+<h3 id="notes">Notes</h3>
+<p>The list <code>'(varDec (keyword &quot;int&quot;) (identifier &quot;cnt&quot;))</code> is internally
+represented by <code>(list 'varDec (list 'keyword &quot;int&quot;) (list 'identifier &quot;cnt&quot;))</code>. Use the latter form if using <code>match</code>.</p>
+<h3 id="ways-to-match">Ways to Match</h3>
+<p>Here are some ideas for matching.</p>
+<ol>
+<li>
+<p>Write everything out with lists.</p>
+<pre><code> (match '(keyword &quot;int&quot;)
+   [(list 'keyword type))    type])
+ =&gt; &quot;int&quot;
+</code></pre>
+</li>
+<li>
+<p>Use quasiquote and unquote (the backwards single quote and the
+comma).</p>
+<pre><code> (match '(keyword &quot;int&quot;)
+   [`(keyword ,type)        type])
+ =&gt; &quot;int&quot;
+</code></pre>
+</li>
+<li>
+<p>Ellipses make a list of 0 or more repetitions of the preceding pattern.</p>
+<pre><code> (match vDex
+    [`(varDec ,type ,ids ...)  ids])
+ =&gt; (list (identifier &quot;a&quot;) (identifier &quot;b&quot;))
+</code></pre>
+</li>
+<li>
+<p>Unwrapping everything before matching is also a viable strategy.</p>
+<pre><code> (define uPL (unwrap-recursive PLex))
+ (match uPL
+   [`(parameterList (t1 v1) (t2 v2))  (list t1 t2)])
+ =&gt; (list &quot;int&quot; &quot;boolean&quot;)
+</code></pre>
+</li>
+</ol>
 
 	
 </div>
