@@ -27,13 +27,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="nand">
     <meta property="article:published_time" content="2025-05-29T12:39:13-05:00">
-    <meta property="article:modified_time" content="2025-05-29T12:39:13-05:00">
+    <meta property="article:modified_time" content="2025-05-31T12:22:08-05:00">
 
   <meta itemprop="name" content="01">
   <meta itemprop="description" content="A comprehensive review.">
   <meta itemprop="datePublished" content="2025-05-29T12:39:13-05:00">
-  <meta itemprop="dateModified" content="2025-05-29T12:39:13-05:00">
-  <meta itemprop="wordCount" content="175">
+  <meta itemprop="dateModified" content="2025-05-31T12:22:08-05:00">
+  <meta itemprop="wordCount" content="253">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="01">
   <meta name="twitter:description" content="A comprehensive review.">
@@ -402,13 +402,29 @@
 pseudocode and explain how the save/restore mechanism works.</p>
 </li>
 <li>
+<p>What register setup does the function do upon entry?</p>
+</li>
+<li>
 <p>Who is responsible for restoring the registers when a function call
-ends? Explain how that works, including pseudo-code.</p>
+ends? How does the answer get returned to the caller? Explain how
+that works, including pseudo-code.</p>
+<p>Examples of pseudo-code: <code>(pop THAT)</code> <code>(set! SP ARG)</code>.</p>
+</li>
+<li>
+<p>How does a function give an answer back to the caller?</p>
+<pre><code> function int f(int n) {
+   var int answer;
+   let answer = 2 * n;
+   return answer;
+ }
+</code></pre>
 </li>
 <li>
 <p>What code is generated for this call to a two argument function?
-Assume both arguments are already pushed on the stack. (Expect a
-long-ish answer.)</p>
+Assume both arguments are already pushed on the stack. You do not need
+to repeat the details of your code from question 3 (&ldquo;how do you push
+onto the stack?).
+Use pseudocode to emphasize the main ideas.</p>
 <pre><code> //push constant 10
  //push constant 15
  call My.Work 2
@@ -429,7 +445,7 @@ long-ish answer.)</p>
 <li>What is the symbol table produced?</li>
 <li>Write the VM code.</li>
 </ol>
-<pre tabindex="0"><code>function void work (int a) {
+<pre tabindex="0"><code>function int work (int a) {
    var int b, c;
    let c = Math.random(256); // [0,255]
    return a+c;
@@ -445,7 +461,10 @@ ABABBABBB
 ABABBABBBA
 [...]
 </code></pre>
-	
+	<div class="td-page-meta__lastmod">
+  Last modified May 31, 2025: <a href="https://github.com/maueroats/teaching--2024-2025/commit/47ba8b3fac1108d11aa9d0a1e4a965c508239954">ICS finals, NAND review and solutions. (47ba8b3)</a>
+</div>
+
 </div>
 
 
